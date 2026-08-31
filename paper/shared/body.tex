@@ -1,0 +1,706 @@
+\section{Introduction}
+
+A large organisation typically buys from tens of thousands of distinct supplier
+records. Many of those records are not distinct suppliers. They are divisions, acquired
+subsidiaries, regional entities, and renamed business units of a much smaller number of
+ultimate parents. Until those records are grouped into corporate families, a buyer
+cannot answer the question that motivates the exercise: how much do we actually spend
+with this company, and what leverage does that give us? The same grouping underpins
+credit exposure aggregation, beneficial-ownership and sanctions screening, and supplier
+risk consolidation, and the same structure appears on the revenue side as account
+hierarchy in customer systems.
+
+This task is routinely treated as an instance of entity resolution, the problem of
+deciding whether two records refer to the same real-world
+entity~\citep{papadakis2021fourgenerations,barlaug2021survey}. The framing is convenient
+because entity resolution has mature benchmarks and a decade of strong neural
+methods~\citep{mudgal2018deepmatcher,li2020ditto,peeters2025entitymatchingllm}. It is also wrong
+in a way that matters. Entity resolution asks whether two records are the \emph{same}
+thing. Corporate-family resolution asks whether two records that are emphatically
+\emph{different} things, separate legal entities with separate registrations and often
+separate countries, belong to the same owner. The two questions have different
+evidence. For duplicate detection, the evidence is in the records: names, addresses,
+and identifiers of the same entity tend to look alike. For family linkage, the evidence
+is frequently in neither record. That \textsc{Heico Corp} owns \textsc{Blue Aerospace
+LLC} is a fact recorded in a corporate filing. It is not a fact about the two strings.
+
+If that is true, a benchmark that mixes both kinds of pair and reports a single number
+will systematically mislead. We introduce \textsc{CorpFam}, a public benchmark of
+\BenchPairs candidate pairs over \BenchFamilies corporate families built from
+\ArchiveRows federal award records, and stratify every pair by \emph{name visibility}:
+whether the two names are identical after normalisation, share a distinctive token, or
+share none at all.
+
+The stratification changes the conclusion, and it does so twice.
+
+First, at the matching stage. We report per-stratum \emph{recall} rather than $F_1$, for
+a reason that turns out to matter a great deal: the strata have positive rates ranging
+from \BaseVisibleRate to \BaseIdenticalRate, so a classifier that answers yes to every
+pair scores \BaseIdenticalF on identical pairs and \BaseVisibleF on visible ones without
+doing anything at all. Per-stratum $F_1$ therefore measures the base rate more than the
+method, whereas recall depends only on a stratum's own positives. On that footing the
+result is unambiguous: the best matcher recovers \BestRecallIdentical of identical
+pairs, \BestRecallVisible of visible pairs, and \BestRecallInvisible of invisible ones
+(95\% CI \BestRecallInvisibleCI). No method exceeds \AnyInvisibleRecallMax.
+
+Second, and this is the finding we think matters most, the failure does not begin
+at matching. Blocking decides which pairs a matcher ever sees. Part of this is true by
+definition and we say so plainly: the invisible stratum is defined by an empty
+intersection of distinctive tokens, and token blocking keys on exactly that function, so
+its \BlkTokenInvisible recall there is an identity rather than a discovery. The
+empirical question is what happens once the key is moved away from that function. We
+therefore also evaluate character q-grams, sorted-neighbourhood adjacency, phonetic
+keys, attribute keys that ignore the name entirely, and semantic nearest neighbours in
+an embedding space. None exceeds three percent on the invisible stratum: embedding
+nearest-neighbour blocking reaches \BlkAnnInvisible and attribute blocking
+\BlkAttrInvisible. Unioning every scheme recovers \BlkUnionInvisible, leaving
+\BlkInvisibleLost of these links outside the candidate set before any matcher runs. A
+better model cannot classify a pair it never sees.
+
+A reviewer might reasonably suspect that a stratum defined by dissimilar names and then
+shown to defeat name-based methods is circular, or that its links are registry errors.
+We address both. Against SEC Exhibit~21 subsidiary schedules, filed under securities
+law by the parent's own counsel and sharing no provenance with procurement registration,
+\EdgarInvisibleConfirmPct of invisible links are corroborated, against
+\EdgarRandomParentPct when the identical procedure is run against permuted parents, an
+excess over chance of \EdgarExcessOverChance points. And a supervised model given
+address, geography and phone features does not rescue the stratum either, for a
+structural reason: only \ParentsTransactingPct of parents ever appear as an award
+recipient, so for the rest there is no address to compare against.
+
+\paragraph{Contributions.}
+\begin{enumerate}
+\item \textbf{A public benchmark for corporate-family resolution}: \BenchPairs pairs
+over \BenchFamilies families, with ground truth that is self-reported to a government
+registry rather than hand-annotated or model-derived (Section~\ref{sec:benchmark}).
+
+\item \textbf{A name-visibility stratification} that we argue is the correct primary
+axis of evaluation for this task, and without which aggregate metrics are not
+interpretable (Section~\ref{sec:strata}).
+
+\item \textbf{Evidence that the standard pipeline fails at blocking, not matching.}
+\BlkInvisibleLost of invisible links are never proposed as candidates, including by
+blockers that are not functions of token overlap: phonetic, attribute-keyed, and
+embedding nearest-neighbour (Section~\ref{sec:blocking}).
+
+\item \textbf{Independent corroboration of the hard stratum} against SEC Exhibit~21,
+with a permutation control establishing that corroboration exceeds chance by
+\EdgarExcessOverChance points and that these are genuine corporate relationships rather
+than label noise (Section~\ref{sec:edgar}).
+
+\item \textbf{Baselines on a single protocol}: \NumMethods pairwise matchers spanning
+string similarity and sentence embeddings, supervised multi-attribute models over
+address, geography and phone features, and a family-level clustering task
+(Sections~\ref{sec:results}--\ref{sec:clustering}).
+\end{enumerate}
+
+\section{Related Work}
+
+\paragraph{Entity resolution benchmarks.} The standard suites established the task and
+drove rapid progress~\citep{li2020ditto,zeakis2023pretrained}: Magellan and
+DeepMatcher~\citep{konda2016magellan,mudgal2018deepmatcher}, WDC
+Products~\citep{peeters2024wdcproducts}, Alaska~\citep{crescenzi2021alaska}, and
+Machamp~\citep{wang2021machamp}. Several contain a company or organisation
+split, and recent work extends evaluation to large language
+models~\citep{peeters2023chatgpt,zhang2024jellyfish,peeters2025entitymatchingllm} and to
+unified cross-task models~\citep{tu2023unicorn}. Critiques have noted that easy
+negatives inflate reported
+performance~\citep{papadakis2023benchmarking,neuhof2024openbenchmark}, and that skewed positive-class
+ratios make reported scores incomparable across benchmarks~\citep{li2022bridging}, a
+hazard we take seriously enough that Section~\ref{sec:whyrecall} is devoted to it. Our
+concern is adjacent but distinct: not that the negatives are too easy, but that the
+\emph{positives} are heterogeneous in a way a single metric cannot express, because some
+are solvable from the records and some are not solvable from the records at all.
+MaDI-Bench~\citep{steiner2026madibench} moves in a similar direction by systematising
+corner-case and blocking difficulty across an integration pipeline; the difference is
+that its hard positives are synthesised as surface variants, whereas ours occur naturally
+and are certified by an external legal filing.
+
+\paragraph{Company graphs.} CompanyKG~\citep{cao2023companykg} is the closest public
+resource, a large heterogeneous graph of company relationships with an edge-prediction
+task that includes acquisition edges. It is complementary rather than overlapping: its
+nodes are already resolved company entities. The linkage problem we study, deciding
+whether two \emph{registration records} belong to one family given only what a
+procurement system actually holds, is assumed away before its task begins.
+
+\paragraph{Blocking and candidate generation.} Blocking is the step that makes entity
+resolution tractable, and it has a large literature of its own: token and q-gram
+blocking, sorted neighbourhood, canopies, meta-blocking and learned
+blockers~\citep{papadakis2021fourgenerations,thirumuruganathan2021blocking}. Evaluation is
+conventionally in terms of pair completeness and reduction ratio. What we add is the
+observation that on a task where the relationship is not encoded in the compared
+strings, every scheme in this family shares a single blind spot, and that measuring
+blocking per difficulty stratum exposes a ceiling that aggregate pair completeness
+hides.
+
+\paragraph{Company name matching and harmonisation.} A long line of work matches
+company names across sources, in patent
+data~\citep{magerman2006patentee,thoma2010harmonizing,peeters2010harmonizing}, in financial
+identifiers~\citep{chan2013lei,chan2019lei,arimond2023elf}, and with learned name
+representations~\citep{ziv2022companyname2vec}. This literature is largely concerned
+with recognising the \emph{same} company under spelling variation.
+Corporate-family resolution begins where that ends.
+
+\paragraph{Corporate hierarchies and ownership.} Ownership networks have been studied in
+economics and network
+science~\citep{vitali2011network,mizuno2020corporatecontrol,garciabernardo2017offshore}, in bank
+holding structures~\citep{flood2020bhc}, and in knowledge graphs of European business
+registers~\citep{roman2022eubusinessgraph,soylu2022theybuyforyou}. Hierarchical linkage
+has been treated as link prediction over enterprise
+data~\citep{ebeid2021hierarchical,ganesan2020linkprediction,ganesan2024xlp}. These works build
+or analyse hierarchies; to our knowledge none releases a public, reproducible benchmark
+with held-out splits, and none stratifies by whether the relationship is recoverable
+from the records.
+
+\paragraph{Procurement and master data.} The practical stakes are documented in work on
+supplier master data
+quality~\citep{athanasiadou2019suppliermdm,ibrahim2021masterdataquality,gantman2021vendormaster},
+duplicate invoice detection~\citep{ho2009duplicateinvoices,liao2026procurementduplicate},
+and purchasing consolidation
+savings~\citep{smart2007purchasingsynergy,carril2020consolidation}.
+
+\section{The \textsc{CorpFam} Benchmark}
+\label{sec:benchmark}
+
+\subsection{Source and ground truth}
+
+We build on United States federal contract award data, published in bulk and in
+full~\citep{usaspending_api}. Each award record identifies the recipient by a Unique Entity
+Identifier (UEI) and separately records the recipient's \emph{ultimate parent} UEI and
+name. That field is not an inference by us or by the publisher: it is self-reported by
+the supplier during federal registration, where misstatement carries legal consequence,
+and it is exactly the relation we want to predict. This gives ground truth independent
+of any matching system, which distinguishes it from benchmarks whose labels come from
+human annotation of the same strings a model will see.
+
+We processed the complete FY2025 contract archive: \ArchiveRows award rows covering
+\ArchiveEntities distinct entities.
+
+\subsection{The self-parent trap}
+\label{sec:selfparent}
+
+The parent field cannot be used naively. Of the entities reporting a parent at all,
+\ArchiveSelfParentPct report \emph{themselves}: the parent UEI equals the entity's own
+UEI. This is correct registration behaviour for a company with no corporate parent, but
+it means a pipeline treating every populated parent field as a family link would build a
+dataset in which the overwhelming majority of ``links'' join an entity to itself. Such
+pairs are trivially positive under any string method and would push every reported score
+toward the ceiling.
+
+We confirmed the pattern independently in the per-entity API, where \AuditSelfParentPct
+of child-level records are self-parenting, agreeing by both UEI equality and internal
+identifier stem. Removing self-parents leaves \ArchiveGenuineLinks genuine parent--child
+links, the population the benchmark is built from.
+
+\subsection{Name visibility as the primary stratum}
+\label{sec:strata}
+
+A second and subtler triviality remains. Many genuine links connect a child to a parent
+whose name, after normalisation, is identical: distinct legal registrations under a
+shared trading name. These links are genuine and belong in the data, but they are
+solvable by string equality and say nothing about a method's grasp of corporate
+structure. Of the \ArchiveGenuineLinks genuine links, \NvIdenticalRaw are name-identical,
+leaving \NvInformative informative links, of which \NvInvisiblePctInformative share no
+distinctive token with their parent.
+
+We therefore assign every pair to one of three strata:
+
+\begin{description}
+\item[Identical] the names are equal after case-folding, punctuation removal and
+whitespace normalisation;
+\item[Visible] the names differ but share at least one distinctive token, where
+distinctive excludes legal forms and generic corporate vocabulary (\textsc{inc},
+\textsc{holdings}, \textsc{international}, \textsc{services}, and similar);
+\item[Invisible] the names share no distinctive token at all.
+\end{description}
+
+Table~\ref{tab:composition} gives the composition: \BenchPosIdenticalPct identical,
+\BenchPosVisiblePct visible, \BenchPosInvisiblePct invisible. That first figure is why a
+single aggregate is not interpretable here. More than half the positives are solvable
+by exact match, so a method that only normalises strings starts from a high floor.
+
+\input{\tabledir/composition}
+
+The invisible stratum is not a curiosity. It contains the cases that motivate the task
+commercially: an acquired subsidiary trading under its original name, or a holding
+company whose operating units carry unrelated brands. It is also where spend
+concentrates, since acquisitive parents are large.
+
+\subsection{Why we report recall, not per-stratum $F_1$}
+\label{sec:whyrecall}
+
+Stratifying creates a measurement hazard that is easy to walk into, and we walked into
+it before catching it. The strata do not have comparable positive rates: on the test
+split they are \BaseIdenticalRate, \BaseVisibleRate and \BaseInvisibleRate respectively.
+A classifier that answers yes to every pair therefore scores \BaseIdenticalF on the
+identical stratum and \BaseVisibleF on the visible one, purely as a function of
+composition. Comparing $F_1$ across strata under those conditions largely compares base
+rates, and a large fraction of any apparent gap is an artifact of the denominators.
+Skewed positive-class ratios have been shown to make entity-matching results
+incomparable in exactly this way~\citep{li2022bridging}.
+
+Worse, the negative grades are strongly associated with stratum by construction: a
+hard-string negative shares a distinctive token and is therefore \emph{necessarily}
+visible, while a randomly drawn negative almost never shares one and is therefore almost
+always invisible. The hard stratum thus receives the easiest negatives, which biases
+per-stratum precision in the opposite direction to the effect we are measuring.
+
+We therefore report per-stratum \textbf{recall}, which depends only on the positives of
+that stratum and is invariant to both problems, and we report precision and average
+precision globally, where the negative pool is shared. Every table carries the
+majority-class baseline so no cell can be read without its floor. This is not a
+presentational choice: two intermediate results in this project reached $88$ and $59.9$
+on the invisible stratum and both were the base rate rather than a finding.
+
+\subsection{Splits, negatives, and leakage}
+\label{sec:splits}
+
+\paragraph{Splits are assigned by family, never by pair.} If members of one family appear
+in both training and test, a model can memorise the family during training and be scored
+on recall of that memory. We assign each family wholly to train, validation or test in a
+$60/20/20$ ratio, giving \BenchPosTrain, \BenchPosVal and \BenchPosTest positive pairs,
+and the build asserts that no family spans two splits, failing loudly rather than
+reconciling silently.
+
+\paragraph{Negatives match the role structure of positives.} Each negative pairs a child
+with the parent of a \emph{different} family. This is not cosmetic, and we report it
+because the alternative is a trap we initially fell into. An earlier build drew negatives
+as child--child pairs. Because parent entities are frequently holding companies that never
+transact directly, they carry no address in the award data, so ``both sides have an
+address'' separated the classes almost perfectly. A supervised model exploiting that
+shortcut reached $88$ $F_1$ on the invisible stratum while learning nothing about
+ownership. It had learned to detect entity \emph{role}. Matching the role composition
+of positives and negatives removes the shortcut. Any benchmark of hierarchical
+relationships is exposed to this failure, since the two sides of a hierarchical edge are
+by definition different kinds of object.
+
+\paragraph{Negatives come in three grades}, three per positive, drawn within each split:
+\emph{random} (a child and an unrelated family's parent), \emph{hard string} (sharing a
+distinctive token with an unrelated parent), and \emph{same block} (sharing a blocking
+key, i.e.\ what a deployed pipeline actually adjudicates). Reporting against random
+negatives alone is the standard way to overstate
+precision~\citep{papadakis2023benchmarking}.
+
+\section{Ground-Truth Quality}
+\label{sec:quality}
+
+A benchmark is only as trustworthy as its labels, and we think it more useful to
+quantify their limits than to assert their correctness.
+
+\subsection{The registry disagrees with itself}
+
+The same registration is exposed through two independent channels: a per-entity API and
+the bulk award archive. On the \ReconBoth entities where both report a distinct parent,
+they agree on the exact parent UEI in \ReconAgreeUei of cases, on the normalised parent
+name in \ReconAgreeName (Wilson 95\% CI \ReconAgreeNameCI), and on any shared distinctive
+token in \ReconAgreeToken. In \ReconDisagreePct of cases the two sources name a
+substantively different parent (Table~\ref{tab:reconciliation}). A further \ReconOnlyOne
+entities have a parent in one source and none in the other.
+
+\input{\tabledir/reconciliation}
+
+Two further instabilities are worth stating plainly. Within the archive alone,
+\ArchiveConflicting entities are assigned more than one distinct parent across their own
+award rows, which we resolve by obligated-value plurality. And in the per-entity API,
+\AuditMultiParent of \AuditChildRecords child records carry more than one parent in the
+returned history, up to \AuditMaxParents on a single record, because the field
+accumulates rather than replaces as ownership changes. We take the most recent, but the
+ambiguity is itself a finding about registry-derived ground truth.
+
+Inspection of the disagreements shows three causes: genuine ownership change between
+snapshots, registration identity lagging a completed acquisition, and outright error. We
+do not arbitrate. The practical consequence is a ceiling: a method credited with much
+more than roughly \ReconAgreeName agreement against this ground truth is likely fitting
+registry noise.
+
+\subsection{Independent corroboration from SEC filings}
+\label{sec:edgar}
+
+The two views above share a provenance. If a supplier misdeclared its parent at
+registration, both inherit the error identically, so their agreement bounds internal
+consistency without establishing correctness. This matters most for the invisible
+stratum, where a sceptic can reasonably propose that links with no name relationship are
+simply data-entry errors, which would make our headline finding an artifact of dirty
+labels rather than a property of the task.
+
+Exhibit~21 settles the question from outside. It is the ``Subsidiaries of the
+Registrant'' schedule filed with a 10-K, prepared by the parent's own counsel under
+securities law, and it shares no provenance with a procurement registration. We retrieved
+Exhibit~21 for the largest families in the benchmark, obtaining \EdgarFilings usable
+filings, and checked \EdgarLinks declared links against them.
+
+\input{\tabledir/edgar}
+
+Overall \EdgarConfirmPct of links are corroborated. On the invisible stratum
+(\EdgarInvisibleChecked links) \EdgarInvisibleConfirmPct are confirmed, with 95\%
+interval \EdgarInvisibleCI. \textsc{Aerojet Rocketdyne} under \textsc{L3Harris
+Technologies} is typical: a real acquisition, entirely invisible in the names, confirmed
+by filing.
+
+\paragraph{A rate is meaningless without a chance floor.} Exhibit~21 lists are long and
+our matcher is fuzzy, so some corroboration would occur by accident. We therefore re-ran
+the identical procedure with families matched to the \emph{wrong} parent's filing. Over
+\EdgarPermutations permutations, invisible-stratum corroboration against a randomly
+assigned parent is \EdgarRandomParentPct. A harder control assigns each family the
+filing whose parsed length is closest to its true parent's, removing any advantage from
+filing size, and gives \EdgarNearestSizePct. The observed rate therefore exceeds
+chance by \EdgarExcessOverChance points, and the corroboration is not an artifact of
+long filings or a permissive matcher.
+
+Two caveats belong here rather than in a footnote. Corroboration correlates with how much
+text our parser recovered from a filing (Spearman $\rho=\EdgarYieldRho$), which means the
+reported rate is attenuated by parser recall: \EdgarInvisibleConfirmPct is a lower bound
+on true corroboration, not an inflated figure. And because we resolve companies to SEC
+identifiers by name, the filings we obtain are selected on the parent's name being
+matchable against the registrant list, so coverage is not a random sample of families.
+Non-confirmation is in any case weak evidence in the other direction: Exhibit~21 omits
+immaterial subsidiaries and its formatting is unregulated.
+
+\subsection{Adjudicating family artifacts by hand}
+
+Some declared families are not families. The archive asserts, for instance, that an
+Australian subsidiary is the ultimate parent of \textsc{Raytheon Company}, and that a
+moving-services company is the parent of one hundred and three waste-management entities.
+
+Our first instinct was an automatic rule: flag a family when its children share a dominant
+token the declared parent lacks and the parent's own name does not reach its children.
+That rule catches the cases above. It also flagged \textsc{Arctic Slope Regional
+Corporation}, whose subsidiaries are entirely genuine. This is not a tuning failure. A
+rule keyed on name dissimilarity cannot distinguish a mislabelled family from a real
+conglomerate, because a real conglomerate looks exactly like a mislabelled family from the
+outside. Applied aggressively it would remove \textsc{Heico}, \textsc{TransDigm},
+\textsc{Berkshire Hathaway} and \textsc{Republic Services}, precisely the
+invisible-stratum families that make the benchmark worth building.
+
+We therefore adjudicated large families by hand against their child lists. We inspected
+\BenchInspected families, excluded \BenchExcludedParents and retained \BenchRetained,
+and publish the full log, retentions as well as rejections, each with a written
+reason. Publishing only the rejections would make a careful audit indistinguishable from
+a purge of inconvenient cases, and the retentions are the more informative half: they
+record where the automatic rule was wrong. Exclusions are keyed on entity identifier
+rather than on name string, which in a paper about name instability is the only
+defensible choice. This removes \BenchDroppedArtifact links, plus \BenchDroppedSovereign
+under sovereign catch-all entities, and the complete sovereign list of
+\BenchSovereignAll parents ships with the manifest rather than a truncated sample of it.
+
+\paragraph{The exclusions are not neutral, and we report their effect.} Of the links
+removed by hand adjudication, \BenchDropInvisiblePct fall in the invisible stratum,
+the very stratum the paper's argument rests on. That is expected, because a mislabelled
+family looks exactly like a name-invisible one, but it means a sceptic is entitled to ask
+whether the headline survives the filter being removed. We therefore rebuild the entire
+benchmark with no exclusions at all, \SensUnfilteredLinks links of which
+\SensUnfilteredInvisible are invisible, and re-run the matching experiments against
+it. The best invisible-stratum recall on the unfiltered build is
+\SensUnfilteredInvisibleRecall, against \SensFilteredInvisibleRecall on the filtered one.
+
+The conclusion therefore holds \emph{a fortiori}: removing the exclusions makes the task
+harder, not easier. Whatever the adjudication did, it did not manufacture the finding by
+discarding difficult cases. If anything it discarded cases that were unsolvable for
+the wrong reason, and the benchmark is marginally more tractable with them gone. Both
+builds ship. Smaller families are retained without automatic filtering in either, and we
+report this as a bounded source of label noise rather than one we claim to have
+eliminated.
+
+\subsection{Provenance and redistribution}
+\label{sec:provenance}
+
+Because the benchmark publishes company names in bulk, we checked whether we may
+redistribute them rather than assuming it. The data is public-domain United States
+Government work~\citep{usaspending_api}. However, SAM.gov's terms grant only a limited
+licence over ``D\&B Open Data'', which explicitly includes legal business name, and forbid
+disseminating it in bulk; those terms scope the restriction to records associated with
+base awards dated before \DnbCutoff.
+
+The definitive test named in those terms is an Entity Validation Service source field,
+which does not exist in the award data. We therefore bounded the exposure. Scanning all
+\DnbLinksScanned award rows and taking the earliest performance-period start across the
+transactions supporting each link, \DnbPctPre of positive pairs have at least one
+supporting award beginning before the cutoff. This is deliberately an upper bound: a task
+order placed in FY2025 against a long-running vehicle inherits that vehicle's original
+start date. Under the opposite reading, that every transaction here is an FY2025 action,
+the exposure is zero. We release the full benchmark and, alongside it, a conservative
+post-cutoff subset of \DnbConservativePos positive pairs.
+
+\section{Blocking: The Failure Before Matching}
+\label{sec:blocking}
+
+Every result reported so far in the literature, and every result in the next section,
+measures a matcher \emph{given} a pair. Deployed entity resolution never sees all pairs.
+A blocking step first proposes candidates, and anything it fails to propose is
+unrecoverable regardless of the matcher. On \BlkEntities entities the naive comparison
+space is \BlkPairSpace pairs, so blocking is not optional.
+
+\paragraph{One identity, stated up front.} Token blocking and first-token blocking key on
+the \texttt{core()} token function, and the invisible stratum is \emph{defined} as an
+empty intersection under that same function. Their \BlkTokenInvisible recall on that
+stratum is therefore a tautology, provable without running anything, and we claim no
+credit for it. Presenting it as an empirical discovery would be circular, and a reader
+who works on blocking would notice immediately.
+
+The empirical question is what happens once the key is no longer that function. We
+therefore evaluate \BlkNumSchemes schemes: the two \texttt{core()}-keyed ones for
+reference, plus character q-grams, sorted-neighbourhood adjacency over lexicographic
+order, phonetic Soundex keys, an attribute-keyed blocker on ZIP and city--state that
+never looks at the name, and semantic nearest neighbours ($k=\BlkAnnK$) in a MiniLM
+embedding space. Blocking is measured over the full recipient roster of \BlkEntities
+entities, a naive space of \BlkPairSpace pairs, rather than only over entities appearing
+in our own pairs file. Restricting to the latter would flatter reduction ratio and
+pairs quality, because that roster has already been filtered to entities of interest.
+
+\input{\tabledir/blocking}
+
+Table~\ref{tab:blocking} is, we think, the most consequential result in this paper, and
+the informative rows are the ones not marked with a dagger. Relaxing the key does not
+help. Character q-grams reach \BlkQgramInvisible on the invisible stratum, sorted
+neighbourhood \BlkSnInvisible, and phonetic keys \BlkPhonInvisible. Abandoning the name
+altogether and keying on address gives \BlkAttrInvisible. Semantic nearest neighbours
+reach \BlkAnnInvisible, and they are the strongest single scheme overall at \BlkAnnPC
+pair completeness and emphatically not a function of token overlap. Unioning every scheme, which
+bounds the whole family, gives \BlkUnionPC overall and \BlkUnionInvisible on the
+invisible stratum.
+
+So the barrier is not the choice of key, and it is not that practitioners have simply
+picked the wrong one. \BlkInvisibleLost of invisible links are absent from the candidate
+set produced by every blocking strategy we could construct, including semantic and
+non-name ones. Recent work has begun to measure pair-completeness disparity across
+subgroups as a first-class property of blockers~\citep{gagliardelli2024blockingbias};
+what we add is a task where the disparity is near-total and where the affected subgroup
+is the one that carries the commercial value.
+
+This reframes the matching results that follow. It is tempting to read a poor
+invisible-stratum $F_1$ as a call for a better matcher: a stronger encoder, a larger
+language model, better fine-tuning. That response cannot work, because in a deployed
+pipeline the pair is never presented to the matcher at all. Progress requires
+intervening at candidate generation, with evidence retrieved from outside the records:
+ownership filings, news, or a knowledge base. Reranking cannot recover a candidate that
+was never generated.
+
+\section{Matching Baselines}
+\label{sec:results}
+
+\subsection{Protocol}
+
+We evaluate \NumStringMethods string-similarity methods, all dependency-free so the
+benchmark reproduces from a bare Python: exact match on normalised strings, Jaccard
+overlap of distinctive tokens, a character sequence ratio standing in for edit distance,
+and character 3-gram TF--IDF cosine with idf fitted on the training split only. We add a
+neural baseline: cosine similarity between \EmbModel sentence
+embeddings~\citep{zeakis2023pretrained}, encoding \EmbNames distinct names into \EmbDim dimensions.
+For every method the decision threshold is chosen to maximise $F_1$ on validation and
+applied unchanged to test; selecting it on test would inflate every figure here.
+
+\subsection{The aggregate hides the failure}
+
+Table~\ref{tab:baselines} is the central matching result. Read the overall column alone
+and the task looks close to solved: \BestMethod reaches \BestOverallF $F_1$, with
+precision \BestOverallPrec and recall \BestOverallRecall. Read across the strata and a
+different picture emerges. On identical pairs it scores \BestIdenticalF, unsurprising
+because the pairs are string-equal. On visible pairs, \BestVisibleF. On invisible pairs,
+\BestInvisibleF, and no method exceeds \AnyInvisibleFMax.
+
+\input{\tabledir/baselines}
+
+The gap between the identical and invisible strata is \VisibilityGap $F_1$ points, and a
+single aggregate conceals all of it. Exact match and token Jaccard score \emph{zero} on
+the invisible stratum, which is not a deficiency of those methods but a definitional
+consequence: the stratum is constructed so no shared token exists, and methods operating
+on shared tokens have nothing to operate on.
+
+The sentence encoder is the strongest method overall and is meaningfully better on the
+visible stratum, which is what one expects: it handles paraphrase and abbreviation that
+token overlap misses. On the invisible stratum it gains \EmbOverStringInvisible points
+over the best string method. It recovers essentially none of the gap.
+
+\subsection{False positives concentrate where deployment lives}
+
+Table~\ref{tab:negatives} decomposes false positives by negative grade. Random negatives
+are nearly free for every method. False positives concentrate in the hard-string and
+same-block grades, confirming that the difficulty sits exactly where a deployed pipeline
+encounters it, after blocking and among candidates that already look alike, and that a
+benchmark using random negatives alone would report a substantially rosier precision than
+any practitioner will observe.
+
+\input{\tabledir/negatives}
+
+\subsection{Spend weighting}
+
+Procurement value is heavily concentrated: across all \BenchPositives links the top 1\%
+carry \SpendTopOnePct of obligated value and the top 10\% carry \SpendTopTenPct. (An
+earlier version of this figure was computed on the per-entity API sample, which an
+interrupted sorted fetch had left almost entirely composed of identifiers beginning with
+a single letter; it is not a population sample and is superseded here by the full link
+set.) A method that resolves many small suppliers while missing a few large ones is not
+equivalent to one that does the reverse, though $F_1$ scores them identically. We
+therefore also report recall weighted by the obligated amount on the child entity; for
+\BestMethod, spend-weighted recall on test is \BestSpendRecall against an unweighted
+recall of \BestOverallRecall.
+
+\subsection{Do attributes rescue the invisible stratum?}
+\label{sec:attributes}
+
+The sharpest objection to everything above is circularity: pairs are labelled invisible
+precisely because their names share nothing, and then name-based methods are shown to fail
+on them. Real entity resolution uses addresses, and the established benchmarks are
+multi-attribute for that reason. The objection deserves a measurement.
+
+The award archive carries address, city, state, ZIP, country, phone and a
+doing-business-as name for every recipient, giving attributes on \AttrEntities entities.
+We train logistic regression on the same validation-selected-threshold protocol over
+three feature sets: names only, attributes only, and both.
+
+The evaluation is restricted to the \AttrSubsetTest test pairs carrying attributes on
+\emph{both} sides. That restriction is necessary rather than convenient: over the full
+split an attribute-only model has an all-zero feature vector for most pairs and
+degenerates to predicting the majority class, producing a base-rate $F_1$ that measures
+nothing. Even on the restricted subset the base rates differ by stratum, so
+Table~\ref{tab:multiattribute} reports each cell against its majority-class floor.
+
+\input{\tabledir/multiattribute}
+
+The honest answer is that attributes do not rescue the stratum, and the reason is
+structural rather than a matter of feature engineering.
+
+\textbf{The parent usually has no attributes to compare.} Of \ParentsTotal distinct
+parents, only \ParentsTransacting (\ParentsTransactingPct) ever appear as an award
+recipient in their own right. For the remaining \ParentsNoFootprintPct there is no
+address, no phone and no location anywhere in the source, because a holding company that
+never transacts has no operating footprint to record. This is a property of what a parent
+\emph{is}, not a gap that better sourcing would close, and it caps attribute-based
+matching at a small minority of pairs before any model is trained.
+
+\textbf{Where attributes do exist, they mostly disagree.} Only
+\AttrInvisibleSameAddrPct of true invisible pairs with addresses on both sides actually
+share one. Subsidiaries operate from their own premises. That is largely what makes
+them subsidiaries rather than branches.
+
+Consequently the attribute-only and combined models on the restricted subset do not
+separate from their majority-class baselines by a margin the sample size can support
+($n=\AttrSubsetTest$, of which a minority are invisible positives). We report the
+comparison rather than a headline number, and we note the one robust qualitative finding:
+name features, which carry the identical and visible strata, contribute nothing on the
+invisible stratum and can be actively misleading there.
+
+\section{Family-Level Clustering}
+\label{sec:clustering}
+
+Pairwise linkage is not what a procurement or credit system needs. The deliverable is a
+partition: every supplier record assigned to a family so spend can be rolled up. Pairwise
+$F_1$ does not measure that, because pairwise errors compound through transitivity: one
+false link merges two families and corrupts both rollups.
+
+We therefore evaluate the end-to-end job over the \ClusFamilies families with at least two
+children, scoring connected components of the thresholded similarity graph with pairwise
+metrics, B-cubed metrics, and exact family recovery. Two conditions are reported:
+\emph{blocked}, where candidates come from token blocking as in deployment, and
+\emph{oracle}, where every within-split pair is scored.
+
+\input{\tabledir/clustering}
+
+Under blocking the system reaches \ClusBlockedBcubed B-cubed $F_1$ and recovers
+\ClusBlockedExact of families exactly. Removing blocking raises pairwise $F_1$ from
+\ClusBlockedPairF to \ClusOraclePairF, yet exact family recovery \emph{falls} to
+\ClusOracleExact and B-cubed $F_1$ to \ClusOracleBcubed. The extra candidates introduce
+false links, and transitive closure propagates each into a merger of two distinct
+families.
+
+We do not want to overstate this. The comparison rests on \ClusTestFamilies test
+families, the confidence intervals on exact recovery overlap, and the direction of the
+pairwise and partition metrics diverges rather than one dominating. The defensible claim
+is the narrow one, and it is still worth making: pairwise $F_1$ and exact partition
+recovery are not monotonically related, so a pipeline tuned on pairwise quality can move
+the deliverable backwards. Any evaluation of this task that reports only pairwise
+metrics is measuring something other than what the task exists to produce.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{The invisible stratum measures knowledge, not similarity.} The stratum is
+defined by the absence of shared distinctive tokens. For a pair such as (\textsc{Blue
+Aerospace LLC}, \textsc{Heico Corp}) there is no function of the two strings that returns
+the correct answer, because the strings do not contain it. The relationship exists in an
+SEC filing, as Section~\ref{sec:edgar} shows by going and reading one. Whatever supplies
+the answer has to come from outside the pair, which reframes corporate-family resolution
+as a retrieval and evidence-aggregation problem rather than a matching problem. That
+connects it to work on grounded factual
+verification~\citep{wei2024simpleqa,wei2025browsecomp,chen2025browsecompplus} rather than
+to the entity-matching literature it is usually filed under. We did not test whether a
+pretrained model already holds these facts, and we make no claim either way; that is a
+separate experiment with its own contamination problem, since the filings are on the open
+web.
+
+\paragraph{The intervention point is candidate generation, not ranking.}
+Section~\ref{sec:blocking} sharpens this considerably. Because \BlkInvisibleLost of
+invisible links never enter the candidate set, work at the matching stage is spent on
+pairs that a deployed system would never adjudicate. A retrieval-based blocker, one
+that consults ownership filings to propose candidates that share no string evidence,
+would change the achievable ceiling in a way that no matcher can.
+
+\paragraph{What this implies for evaluation practice.} The specific failure documented
+here, a defensible aggregate concealing near-zero performance on the subset that motivates
+the task, is not special to corporate families. It arises whenever a benchmark's positives
+are heterogeneous in difficulty and the easy majority correlates with a surface feature.
+We would suggest benchmark builders report a stratification along whatever axis makes the
+easy cases easy, and that reviewers ask for it. Our own negative-sampling error in
+Section~\ref{sec:splits} is a second, related caution: when the two sides of a relation are
+different kinds of object, a model can learn the object type instead of the relation, and
+an aggregate metric will not reveal it.
+
+\section{Self-Assessment of Relevance}
+
+\textsc{CorpFam} is a data-management contribution in three respects, and we state them
+explicitly because a benchmark drawn from procurement data could be mistaken for an
+applied data-cleaning exercise.
+
+First, the object of study is entity resolution, a core data-integration problem with a
+long history at this venue, and the artifact is a reusable benchmark with held-out splits
+of the kind the Experiment, Analysis \& Benchmark category exists to publish.
+
+Second, the central finding is about \emph{blocking}, the indexing and candidate
+generation step that is a database problem rather than a modelling one. We show that the
+standard family of blocking keys has a systematic blind spot that aggregate pair
+completeness hides, and we quantify it per stratum. That is a statement about the
+architecture of resolution pipelines, not about any particular classifier.
+
+Third, the paper contributes to evaluation methodology: a stratification that makes
+otherwise incomparable positives comparable, a spend-weighted metric reflecting that value
+is concentrated, a family-level clustering task showing pairwise and partition quality can
+move in opposite directions, and a quantified ceiling on the ground truth itself.
+
+\section{Limitations}
+
+Our ground truth is a single jurisdiction and a single fiscal year, so families are those
+visible in US federal contracting in FY2025; multinational structures appear only through
+their US-registered entities. The parent relation as recorded is one hop, so we evaluate
+child-to-ultimate-parent linkage, not intermediate holding chains. Label noise is bounded
+but real, as Section~\ref{sec:quality} quantifies, and our hand adjudication covers large
+families exhaustively and small families not at all. The Exhibit~21 corroboration covers
+SEC registrants only. The multi-attribute baseline is measured on the subset with
+attributes on both sides, which is a minority of pairs. Finally, our baselines establish
+the shape of the problem and a floor rather than the state of the art; we release the
+benchmark so stronger methods can be measured against the stratification rather than
+against the aggregate.
+
+\section{Conclusion}
+
+Corporate-family resolution is treated as a variant of entity matching and evaluated with
+a single aggregate metric. We built a public benchmark of \BenchPairs pairs over
+\BenchFamilies families from self-reported registry data and showed that this practice is
+misleading in two distinct ways. At the matching stage an overall $F_1$ of \BestOverallF
+coexists with at most \AnyInvisibleFMax on pairs where the relationship is not visible in
+the names. More fundamentally, the standard pipeline never gets that far: no string-keyed
+blocking scheme proposes those candidates, so \BlkInvisibleLost of them are lost before
+matching begins. The links are real: \EdgarInvisibleConfirmPct of them are corroborated
+by the parent's own SEC filings. Conventional attribute evidence mitigates the
+difficulty without resolving it. The pairs that matter commercially are the ones current pipelines
+cannot represent at all, and recognising that requires reporting the stratum rather than
+the average.
+
+\section*{Data and Code Availability}
+
+The benchmark, the adjudicated exclusion list with per-family reasons, and all code
+required to rebuild the dataset and reproduce every number in this paper are released. All
+source data is public United States federal award data~\citep{usaspending_api} and SEC
+EDGAR filings. No confidential or proprietary information was used. Every numeric claim in
+this manuscript is generated from a results file by \texttt{make\_tables.py} and verified
+by \texttt{check\_manuscript.py}; no figure is transcribed by hand. The build is seeded
+(\BenchSeed) and deterministic.

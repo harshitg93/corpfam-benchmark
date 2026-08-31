@@ -1,0 +1,21 @@
+{
+  "archive": "data/raw/usaspending/archive/FY2025_All_Contracts_Full.zip",
+  "csv_members": [
+    "FY2025_All_Contracts_Full_20260806_1.csv",
+    "FY2025_All_Contracts_Full_20260806_2.csv",
+    "FY2025_All_Contracts_Full_20260806_3.csv",
+    "FY2025_All_Contracts_Full_20260806_4.csv",
+    "FY2025_All_Contracts_Full_20260806_5.csv",
+    "FY2025_All_Contracts_Full_20260806_6.csv",
+    "FY2025_All_Contracts_Full_20260806_7.csv"
+  ],
+  "skipped_members": [],
+  "rows_read": 6638350,
+  "rows_with_uei": 6638350,
+  "distinct_uei": 104459,
+  "blank_parent": 209,
+  "self_parent": 89962,
+  "genuine_parent_links": 14288,
+  "entities_with_conflicting_parents": 1005,
+  "output": "data/raw/usaspending/archive_parents_fy2025.jsonl"
+}

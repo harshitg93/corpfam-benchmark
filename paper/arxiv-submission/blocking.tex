@@ -1,0 +1,33 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+& & & & \multicolumn{3}{c}{Pair completeness by visibility} \\
+\cmidrule(lr){5-7}
+Blocking scheme & Candidates & PC (\%) & RR (\%) & Identical & Visible & Invisible \\
+\midrule
+Token blocking$^\dagger$ & 1,534,063 & 68.7 & 99.977 & 92.22 & 83.68 & 0.00 \\
+First-token blocking$^\dagger$ & 636,042 & 52.9 & 99.990 & 78.70 & 44.80 & 0.00 \\
+Q-gram blocking (q=4) & 9,022,384 & 71.4 & 99.862 & 97.83 & 78.84 & 2.79 \\
+Sorted neighbourhood (w=20) & 2,170,180 & 71.2 & 99.967 & 99.95 & 73.48 & 2.05 \\
+Phonetic (Soundex) & 411,063 & 61.3 & 99.994 & 97.32 & 35.96 & 0.25 \\
+Attribute (ZIP / city-state) & 126,843 & 1.9 & 99.998 & 0.91 & 3.73 & 2.39 \\
+Embedding ANN (MiniLM, k=20) & 1,761,025 & 72.5 & 99.973 & 99.89 & 78.67 & 2.89 \\
+\midrule
+Union: string-keyed & 11,875,526 & 75.2 & 99.818 & 100.00 & 89.98 & 3.82 \\
+Union: all schemes & 13,074,120 & 76.2 & 99.800 & 100.00 & 91.03 & 6.77 \\
+\bottomrule
+\end{tabular}
+\caption{Blocking over the full recipient roster, not merely the entities appearing in
+our pairs file. PC is pair completeness, the recall of true links into the candidate
+set; RR is reduction ratio. Rows marked $^\dagger$ key on the same \texttt{core()}
+token function that \emph{defines} the invisible stratum, so their zero recall there is
+an identity and not a measurement. The informative rows are the others: character
+q-grams, sorted-neighbourhood adjacency, phonetic keys, attribute keys that ignore the
+name entirely, and semantic nearest neighbours in an embedding space. None of them
+exceeds three percent on the invisible stratum, and unioning every scheme still leaves
+the overwhelming majority of those links outside the candidate set. The failure is
+therefore a property of candidate generation rather than of any particular key.}
+\label{tab:blocking}
+\end{table*}

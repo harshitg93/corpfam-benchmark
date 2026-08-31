@@ -1,0 +1,50 @@
+{
+  "rows_scanned": 6638350,
+  "benchmark_entities": 23987,
+  "entities_with_any_attribute": 14288,
+  "entity_coverage_pct": 59.57,
+  "field_coverage": {
+    "address": {
+      "entities": 14287,
+      "pct_of_benchmark": 59.56,
+      "pct_with_conflicting_values": 25.64
+    },
+    "city": {
+      "entities": 14288,
+      "pct_of_benchmark": 59.57,
+      "pct_with_conflicting_values": 9.19
+    },
+    "state": {
+      "entities": 13518,
+      "pct_of_benchmark": 56.36,
+      "pct_with_conflicting_values": 2.4
+    },
+    "zip": {
+      "entities": 14233,
+      "pct_of_benchmark": 59.34,
+      "pct_with_conflicting_values": 20.94
+    },
+    "country": {
+      "entities": 14288,
+      "pct_of_benchmark": 59.57,
+      "pct_with_conflicting_values": 0.01
+    },
+    "county": {
+      "entities": 13513,
+      "pct_of_benchmark": 56.33,
+      "pct_with_conflicting_values": 5.86
+    },
+    "phone": {
+      "entities": 13485,
+      "pct_of_benchmark": 56.22,
+      "pct_with_conflicting_values": 20.36
+    },
+    "dba": {
+      "entities": 2387,
+      "pct_of_benchmark": 9.95,
+      "pct_with_conflicting_values": 10.39
+    }
+  },
+  "conflict_rule": "value backed by the most obligated dollars wins",
+  "output": "data/raw/usaspending/entity_attributes.jsonl"
+}

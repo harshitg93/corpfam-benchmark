@@ -1,0 +1,59 @@
+% PVLDB Volume 20 build, Experiment, Analysis & Benchmark category.
+% The manuscript body lives in ../shared/body.tex and is shared verbatim with the
+% arXiv build in ../latex, so the two cannot drift.
+%
+% Category page limit: 12 pages excluding references. References are unlimited.
+% Everything else -- appendices, acknowledgements -- counts against the limit.
+% VLDB is single-blind, so names and affiliations MUST appear on page one.
+
+\documentclass[sigconf, nonacm]{acmart}
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\usepackage{pvldb}
+%%% VLDB block end %%%
+
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{REPLACE_WITH_PUBLIC_ARTIFACT_URL}
+
+\usepackage{booktabs}
+\usepackage{xspace}
+
+\newcommand{\tabledir}{../latex/tables}
+\input{../latex/tables/macros}
+
+\begin{document}
+
+% The category suffix is mandatory in both the PDF title and the CMT submission
+% title. It is dropped from the camera-ready copy if the paper is accepted.
+\title{Corporate-Family Resolution Is Not a String-Matching Problem:
+A Public Benchmark Stratified by Name Visibility
+[Experiment, Analysis \& Benchmark]}
+
+\author{Harshit Gupta}
+\affiliation{%
+  \institution{Independent Researcher}
+  \city{San Francisco}
+  \state{California}
+  \country{USA}
+}
+\email{harshitg93@gmail.com}
+
+\begin{abstract}
+\input{../shared/abstract}
+\end{abstract}
+
+\maketitle
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\vldbtopmatter
+%%% VLDB block end %%%
+
+\input{../shared/body}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{../refs/refs}
+
+\end{document}

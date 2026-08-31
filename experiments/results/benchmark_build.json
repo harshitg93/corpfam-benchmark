@@ -1,0 +1,363 @@
+{
+  "seed": 20260827,
+  "exclusions_applied": true,
+  "source_links": 14288,
+  "dropped": {
+    "manually_adjudicated_artifact": 458,
+    "sovereign_entity": 114
+  },
+  "dropped_by_stratum": {
+    "manual_invisible": 388,
+    "manual_visible": 69,
+    "sovereign_visible": 84,
+    "sovereign_identical": 21,
+    "sovereign_invisible": 9,
+    "manual_identical": 1
+  },
+  "links_kept": 13716,
+  "families": 10307,
+  "components_after_union": 9982,
+  "pairs_total": 54864,
+  "positives": 13716,
+  "negatives": 41148,
+  "negative_kinds": {
+    "random": 13716,
+    "hard_string": 13716,
+    "same_block": 13716
+  },
+  "split_sizes": {
+    "train": 32916,
+    "test": 10972,
+    "val": 10976
+  },
+  "positive_split_sizes": {
+    "train": 8229,
+    "test": 2743,
+    "val": 2744
+  },
+  "visibility_of_positives": {
+    "visible": 2953,
+    "identical": 7541,
+    "invisible": 3222
+  },
+  "test_base_rates": {
+    "invisible": {
+      "test_pairs": 3761,
+      "test_positives": 637,
+      "positive_rate_pct": 16.94,
+      "all_positive_f1": 28.97,
+      "all_positive_recall": 100.0
+    },
+    "visible": {
+      "test_pairs": 5638,
+      "test_positives": 575,
+      "positive_rate_pct": 10.2,
+      "all_positive_f1": 18.51,
+      "all_positive_recall": 100.0
+    },
+    "identical": {
+      "test_pairs": 1573,
+      "test_positives": 1531,
+      "positive_rate_pct": 97.33,
+      "all_positive_f1": 98.65,
+      "all_positive_recall": 100.0
+    }
+  },
+  "negative_kind_by_stratum": {
+    "hard_string|identical": 127,
+    "hard_string|visible": 13589,
+    "random|invisible": 13688,
+    "random|visible": 28,
+    "same_block|identical": 93,
+    "same_block|invisible": 931,
+    "same_block|visible": 12692
+  },
+  "leak_checks": {
+    "family_level": "passed",
+    "entity_level": "passed - no entity appears in two splits",
+    "normalised_name_level": "passed - no name string appears in two splits",
+    "duplicate_pairs": "passed - every (child,parent) pair appears once"
+  },
+  "inspection_log": {
+    "AECOM": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "AMETEK INC": {
+      "verdict": "retain",
+      "reason": "genuine; Vision Research, NSI-MI, Navitar"
+    },
+    "ARCTIC SLOPE REGIONAL CORPORATION": {
+      "verdict": "retain",
+      "reason": "flagged automatically; ASRC Builders, Analytical Services and Broadleaf are genuine ASRC subsidiaries"
+    },
+    "BAY DISPOSAL, LLC": {
+      "verdict": "exclude",
+      "reason": "declared parent of Waste Connections entities"
+    },
+    "BERKSHIRE HATHAWAY INC.": {
+      "verdict": "retain",
+      "reason": "genuine; MidAmerican, TTI, Kitco"
+    },
+    "GENERAL DYNAMICS CORP": {
+      "verdict": "retain",
+      "reason": "genuine; CSRA"
+    },
+    "GOVERNMENT OF THE UNITED STATES": {
+      "verdict": "exclude",
+      "reason": "sovereign catch-all, not a corporate family"
+    },
+    "HANGER, INC.": {
+      "verdict": "retain",
+      "reason": "genuine; Hanger Prosthetics & Orthotics"
+    },
+    "HDR, INC": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "HEICO CORP": {
+      "verdict": "retain",
+      "reason": "genuine acquisitive conglomerate, wholly name-invisible"
+    },
+    "HONEYWELL SAFETY PRODUCTS USA, INC.": {
+      "verdict": "exclude",
+      "reason": "inverted: declared parent of HONEYWELL INTERNATIONAL INC., its own parent"
+    },
+    "JACOBS ENGINEERING GROUP INC.": {
+      "verdict": "retain",
+      "reason": "genuine; CH2M Hill"
+    },
+    "L3HARRIS TECHNOLOGIES, INC": {
+      "verdict": "retain",
+      "reason": "genuine; L3 Technologies, Aerojet"
+    },
+    "LEIDOS HOLDINGS, INC.": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "LEONARDO SPA": {
+      "verdict": "retain",
+      "reason": "genuine; DRS entities are Leonardo DRS"
+    },
+    "LOCKHEED MARTIN CORP": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "NORTHROP GRUMMAN CORPORATION": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "PAE-PARSONS GLOBAL LOGISTICS SERVICES, LLC": {
+      "verdict": "exclude",
+      "reason": "a joint venture declared parent of PAE and Amentum entities"
+    },
+    "PUROLATOR FACET, INC.": {
+      "verdict": "exclude",
+      "reason": "declared parent of PARKER-HANNIFIN CORPORATION and Meggitt entities"
+    },
+    "REPUBLIC SERVICES INC": {
+      "verdict": "retain",
+      "reason": "genuine; BFI, Allied Waste, US Ecology"
+    },
+    "ROCKWELL COLLINS AUSTRALIA PTY LIMITED": {
+      "verdict": "exclude",
+      "reason": "declared parent of RAYTHEON COMPANY and HAMILTON SUNDSTRAND; an Australian Pty Ltd is not the ultimate parent of RTX entities"
+    },
+    "TELEDYNE TECHNOLOGIES INCORPORATED": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "TETRA TECH, INC.": {
+      "verdict": "retain",
+      "reason": "genuine; Management Systems International"
+    },
+    "THE BOEING COMPANY": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "TRANSDIGM GROUP INCORPORATED": {
+      "verdict": "retain",
+      "reason": "genuine; Breeze-Eastern, Tactair"
+    },
+    "UNIFIRST CORPORATION": {
+      "verdict": "retain",
+      "reason": "genuine"
+    },
+    "WICO LIMITED": {
+      "verdict": "exclude",
+      "reason": "declared parent of General Dynamics operating companies"
+    },
+    "ZIPPY SHELL INCORPORATED": {
+      "verdict": "exclude",
+      "reason": "a moving company declared parent of 103 Waste Management entities"
+    }
+  },
+  "excluded_parent_ueis": [
+    "EGAVSJTA2D81",
+    "FAZSFFE6CST9",
+    "FKBHDS7BRJF4",
+    "NW2RJN8TQQW1",
+    "PLYSMJBAYE42",
+    "S87NWCKDBAT5",
+    "TU4KCXMM9AP6",
+    "UTMVXSN87H99"
+  ],
+  "sovereign_parents_excluded_all": [
+    "ALABAMA, STATE OF",
+    "ANCHORAGE, MUNICIPALITY OF (INC)",
+    "CITY OF ALBANY",
+    "CITY OF BOULDER CITY",
+    "CITY OF CLARKSBURG",
+    "CITY OF DENTON",
+    "CITY OF DETROIT",
+    "CITY OF DOLORES",
+    "CITY OF EUGENE",
+    "CITY OF FORT WORTH",
+    "CITY OF GULFPORT",
+    "CITY OF HENDERSONVILLE",
+    "CITY OF LITTLE ROCK",
+    "CITY OF MADISON",
+    "CITY OF MIAMI",
+    "CITY OF MIDWEST CITY",
+    "CITY OF PEKIN",
+    "CITY OF PHILADELPHIA",
+    "CITY OF RIGGINS",
+    "CITY OF TACOMA WASHINGTON",
+    "CITY OF WATERLOO",
+    "COMMONWEALTH OF KENTUCKY",
+    "COMMONWEALTH OF PENNSYLVANIA",
+    "COMMONWEALTH OF PUERTO RICO",
+    "COUNTY OF ALAMEDA",
+    "COUNTY OF BUTTE",
+    "COUNTY OF CHATHAM",
+    "COUNTY OF CROOK",
+    "COUNTY OF ERIE",
+    "COUNTY OF GRANT",
+    "COUNTY OF HEMPSTEAD",
+    "COUNTY OF HILLSBOROUGH",
+    "COUNTY OF IMPERIAL",
+    "COUNTY OF KITSAP",
+    "COUNTY OF LEE",
+    "COUNTY OF MARIN",
+    "COUNTY OF NAPA",
+    "COUNTY OF PERSHING",
+    "COUNTY OF POLK",
+    "COUNTY OF RIVERSIDE",
+    "COUNTY OF SCOTT",
+    "COUNTY OF ST LOUIS",
+    "COUNTY OF WARREN",
+    "EXECUTIVE OFFICE OF THE STATE OF LOUISIANA",
+    "GOVERNMENT OF ABU DHABI",
+    "GOVERNMENT OF GHANA",
+    "GOVERNMENT OF JAPAN",
+    "GOVERNMENT OF THE DISTRICT OF COLUMBIA",
+    "GOVERNMENT OF THE REPUBLIC OF KOREA",
+    "GOVERNMENT OF THE UNITED STATES",
+    "IOWA, STATE OF",
+    "KINGDOM OF SAUDI ARABIA",
+    "MINISTRY OF HEALTH, LABOUR AND WELFARE",
+    "OHIO STATE OF",
+    "SOUTH CAROLINA, STATE OF",
+    "STATE OF GEORGIA",
+    "STATE OF ILLINOIS",
+    "STATE OF IOWA",
+    "STATE OF MARYLAND",
+    "STATE OF MARYLAND EXECUTIVE OFFICE",
+    "STATE OF MISSOURI COMMISSION ON HUMAN RIGHTS",
+    "STATE OF MONTANA",
+    "STATE OF MONTANA EXECUTIVE BRANCH",
+    "STATE OF NEW HAMPSHIRE",
+    "STATE OF NEW YORK",
+    "STATE OF RHODE ISLAND",
+    "STATE OF SOUTH DAKOTA",
+    "STATE OF SOUTH DAKOTA-DIVISION OF OASI",
+    "STATE OF UTAH DIVISION OF TECHNOLOGY SERVICES",
+    "STATE OF WASHINGTON",
+    "STATE OF WYOMING",
+    "THE COMMONWEALTH OF MASSACHUSETTS",
+    "VILLANOVA UNIVERSITY IN THE STATE OF PENNSYLVANIA",
+    "WYOMING, STATE OF"
+  ],
+  "sovereign_parent_ueis": [
+    "CE8WGGXB5LM7",
+    "CERTDD6LKE95",
+    "CKCXHWGMHJT7",
+    "CSCLSRXU38C8",
+    "CTCMTRLMYMS9",
+    "D4KCZVHCLEG6",
+    "D7U7ERJWB5T8",
+    "DGWJPMN2QD69",
+    "E48TWBYADSQ5",
+    "EHJ5LMQM4DZ4",
+    "EJEEH8S7HW17",
+    "ENS6MKS1ZL18",
+    "F3D7ST2UGD21",
+    "FFQGKM77GAV3",
+    "FQCEMRCLKK71",
+    "FS3AZ3FV8JG8",
+    "FU1BH7EBV9X3",
+    "FXV5JB3EPZ99",
+    "G5NPS7CPL7A3",
+    "G6XSV1B8MVB9",
+    "G8SCFJ32K4N5",
+    "GCJLGKR6PJ64",
+    "GQ46SB5L2HK4",
+    "H1SWFB9K83W3",
+    "H859NHK2DVU3",
+    "HJEPRMTQMMR4",
+    "HMSXEMXEGF38",
+    "HPVMN6F4P7J7",
+    "HYNBDW8BGZ34",
+    "J7ZCXVNB6J71",
+    "JA1NU8CHNTC1",
+    "JFEXUQU4LQV4",
+    "JL58G7FLLMT4",
+    "JXG6UN5FMB88",
+    "K2NLUMNEJJV4",
+    "K3LGS8BABNH9",
+    "K4HGMWBXSXE1",
+    "KFU5QJ4DNRK5",
+    "KJT5RFPMWTK5",
+    "L25DE3FSY6M4",
+    "LKZVYNPALSL9",
+    "LMLJL24FC6E4",
+    "LZFNZUUCC715",
+    "MFC7HF5XUMG9",
+    "MMAZGB3ERDF5",
+    "MR2LQC5ZZ3E7",
+    "MTMJASJLURL1",
+    "NB1PENG4EFU5",
+    "NCRMJ9KJ3S58",
+    "NEY4K8UGN985",
+    "NSA8T7PLC9K3",
+    "NV36UDRMCSN3",
+    "NW2RJN8TQQW1",
+    "PA32TLEZLKH7",
+    "PDBHW7H4J6E9",
+    "PWPGLAUR6JW7",
+    "RQ4AD2FZ3F29",
+    "S8MFKFN1T9Y3",
+    "SDACDT7L3ZQ5",
+    "TGQANJMKHL13",
+    "TN75GJE1S7G3",
+    "UB23ZUH97ET3",
+    "UHS1SSVWXNE7",
+    "UWH4ZXKP9PG4",
+    "VK2DNC86A4Q2",
+    "W2NEWLAM2YM6",
+    "WWMNH261LJT7",
+    "X84ESAZNLPV6",
+    "X9UKXNMYN768",
+    "XCUBLG2VK698",
+    "XDPYSY54JYN5",
+    "XMLQEM3MEH17",
+    "YLJ3MQYJFG29",
+    "YLX2B1GBX891",
+    "YUWKM2N6N4G4",
+    "ZK45GWUKWMH2",
+    "ZLTTBUG57899",
+    "ZPJNA9HVBUK7"
+  ],
+  "output": "data/benchmark/corpfam_pairs.jsonl",
+  "sha256": "11fd85f052eece401b2a71e57464f3903450db26e57930ebbd0fa34046514089"
+}

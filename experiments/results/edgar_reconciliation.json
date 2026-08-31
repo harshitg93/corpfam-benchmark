@@ -1,0 +1,323 @@
+{
+  "exhibit21_filings_used": 132,
+  "families_matched_to_a_filing": 132,
+  "links_checked": 1393,
+  "links_confirmed": 834,
+  "confirmation_rate_pct": 59.87,
+  "confirmation_wilson95": [
+    57.27,
+    62.41
+  ],
+  "match_criteria_breakdown": {
+    "exact_normalised": 597,
+    "not_found_in_exhibit21": 559,
+    "core_token_containment": 143,
+    "same_core_tokens": 94
+  },
+  "by_visibility": {
+    "identical": {
+      "checked": 157,
+      "confirmed": 107,
+      "confirmation_rate_pct": 68.15,
+      "wilson95": [
+        60.51,
+        74.93
+      ]
+    },
+    "invisible": {
+      "checked": 692,
+      "confirmed": 336,
+      "confirmation_rate_pct": 48.55,
+      "wilson95": [
+        44.85,
+        52.28
+      ]
+    },
+    "visible": {
+      "checked": 544,
+      "confirmed": 391,
+      "confirmation_rate_pct": 71.88,
+      "wilson95": [
+        67.95,
+        75.49
+      ]
+    }
+  },
+  "permutation_control": {
+    "question": "what confirmation rate does the identical procedure produce when families are matched to the wrong parent's filing?",
+    "invisible_true_parent_pct": 48.55,
+    "invisible_random_parent_pct": 0.33,
+    "permutations": 20,
+    "random_parent_range": [
+      0.0,
+      3.95
+    ],
+    "invisible_nearest_size_parent_pct": 3.9,
+    "excess_over_chance_points": 48.23
+  },
+  "parser_yield_association": {
+    "spearman_rho_filing_length_vs_confirmation": 0.617,
+    "reading": "Confirmation rises with how much text was parsed out of a filing, so the reported rate is attenuated by parser recall. The observed figure is therefore a lower bound on true corroboration, not an inflated one."
+  },
+  "coverage_selection_caveat": "CIK resolution is by company name, so the filings we obtain are selected on the parent's name being matchable against the SEC registrant list. Coverage is not a random sample of families.",
+  "invisible_links_confirmed_by_sec": [
+    {
+      "child": "L3 TECHNOLOGIES, INC.",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 202058
+    },
+    {
+      "child": "AEROJET ROCKETDYNE OF DE, INC",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 202058
+    },
+    {
+      "child": "HARRIS CORPORATION",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "same_core_tokens",
+      "sec_cik": 202058
+    },
+    {
+      "child": "L3 TECHNOLOGIES INC",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 202058
+    },
+    {
+      "child": "AEROJET ROCKETDYNE, INC.",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 202058
+    },
+    {
+      "child": "HARRIS COMMUNICATIONS, INC.",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "core_token_containment",
+      "sec_cik": 202058
+    },
+    {
+      "child": "AEROJET ROCKETDYNE COLEMAN AEROSPACE INC",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "core_token_containment",
+      "sec_cik": 202058
+    },
+    {
+      "child": "CALZONI S.R.L.",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 202058
+    },
+    {
+      "child": "AEROJET ROCKETDYNE INC",
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 202058
+    },
+    {
+      "child": "MANAGEMENT SYSTEMS INTERNATIONAL, INC.",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "BLUEWATER FEDERAL SOLUTIONS, INC.",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "ARD, INC.",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "THE KAIZEN COMPANY, LLC",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "ADVANCED MANAGEMENT TECHNOLOGY, INC.",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "LS TECHNOLOGIES LLC",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "AMYX INC",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "SEGUE TECHNOLOGIES, INC",
+      "parent": "TETRA TECH, INC.",
+      "matched_by": "exact_normalised",
+      "sec_cik": 831641
+    },
+    {
+      "child": "US ECOLOGY WASHINGTON INC",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "BFI WASTE SERVICES, LLC",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "ALLIED WASTE TRANSPORTATION INC",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "ALLIED WASTE SYSTEMS OF ARIZONA LLC",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "ALLIED WASTE SERVICES OF NORTH AMERICA, LLC",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "NATIONAL RESPONSE CORPORATION",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "ALLIED SERVICES LLC",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    },
+    {
+      "child": "ALLIED WASTE SYSTEMS, INC.",
+      "parent": "REPUBLIC SERVICES INC",
+      "matched_by": "exact_normalised",
+      "sec_cik": 1060391
+    }
+  ],
+  "interpretation": "Exhibit 21 is filed under securities law by the parent's own counsel and shares no provenance with a supplier's federal procurement registration. A name-invisible link that also appears in the parent's SEC subsidiary schedule is therefore independently corroborated, which rules out the reading that the invisible stratum is an artifact of registry error. Non-confirmation is weak evidence: Exhibit 21 omits immaterial subsidiaries, its formatting is unregulated, and our parser is conservative.",
+  "top_families": [
+    {
+      "parent": "NORTHROP GRUMMAN CORPORATION",
+      "cik": 1133421,
+      "children": 72,
+      "confirmed": 60,
+      "exhibit21_entries_parsed": 21
+    },
+    {
+      "parent": "L3HARRIS TECHNOLOGIES, INC",
+      "cik": 202058,
+      "children": 72,
+      "confirmed": 53,
+      "exhibit21_entries_parsed": 258
+    },
+    {
+      "parent": "THE BOEING COMPANY",
+      "cik": 12927,
+      "children": 57,
+      "confirmed": 0,
+      "exhibit21_entries_parsed": 8
+    },
+    {
+      "parent": "LOCKHEED MARTIN CORP",
+      "cik": 936468,
+      "children": 55,
+      "confirmed": 50,
+      "exhibit21_entries_parsed": 13
+    },
+    {
+      "parent": "TETRA TECH, INC.",
+      "cik": 831641,
+      "children": 52,
+      "confirmed": 47,
+      "exhibit21_entries_parsed": 51
+    },
+    {
+      "parent": "REPUBLIC SERVICES INC",
+      "cik": 1060391,
+      "children": 49,
+      "confirmed": 48,
+      "exhibit21_entries_parsed": 1808
+    },
+    {
+      "parent": "AMETEK INC",
+      "cik": 1037868,
+      "children": 39,
+      "confirmed": 38,
+      "exhibit21_entries_parsed": 549
+    },
+    {
+      "parent": "HEICO CORP",
+      "cik": 46619,
+      "children": 34,
+      "confirmed": 33,
+      "exhibit21_entries_parsed": 451
+    },
+    {
+      "parent": "TRANSDIGM GROUP INCORPORATED",
+      "cik": 1260221,
+      "children": 33,
+      "confirmed": 28,
+      "exhibit21_entries_parsed": 417
+    },
+    {
+      "parent": "LEIDOS HOLDINGS, INC.",
+      "cik": 1336920,
+      "children": 31,
+      "confirmed": 20,
+      "exhibit21_entries_parsed": 48
+    },
+    {
+      "parent": "BERKSHIRE HATHAWAY INC.",
+      "cik": 1067983,
+      "children": 30,
+      "confirmed": 0,
+      "exhibit21_entries_parsed": 23
+    },
+    {
+      "parent": "GENERAL DYNAMICS CORP",
+      "cik": 40533,
+      "children": 29,
+      "confirmed": 19,
+      "exhibit21_entries_parsed": 34
+    },
+    {
+      "parent": "TELEDYNE TECHNOLOGIES INCORPORATED",
+      "cik": 1094285,
+      "children": 28,
+      "confirmed": 0,
+      "exhibit21_entries_parsed": 11
+    },
+    {
+      "parent": "UNIFIRST CORPORATION",
+      "cik": 717954,
+      "children": 27,
+      "confirmed": 26,
+      "exhibit21_entries_parsed": 37
+    },
+    {
+      "parent": "GENERAL ELECTRIC COMPANY",
+      "cik": 40545,
+      "children": 23,
+      "confirmed": 4,
+      "exhibit21_entries_parsed": 17
+    }
+  ]
+}

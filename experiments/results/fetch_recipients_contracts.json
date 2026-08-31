@@ -1,0 +1,14 @@
+{
+  "source": "https://api.usaspending.gov/api/v2/recipient/",
+  "award_type": "contracts",
+  "api_reported_total": 181472,
+  "pages_requested": 182,
+  "page_limit": 1000,
+  "rows_written": 181451,
+  "duplicate_ids_skipped": 549,
+  "output": "data/raw/usaspending/recipients_contracts.jsonl",
+  "sha256": "224bfe71f4c08497b917a10818d3d7de82419fc55ee814bc2e8385d7addbf795",
+  "bytes": 31021828,
+  "started_utc": "2026-08-27T09:52:16.889358+00:00",
+  "finished_utc": "2026-08-27T09:54:51.455388+00:00"
+}

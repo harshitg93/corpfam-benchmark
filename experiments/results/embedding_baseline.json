@@ -1,0 +1,96 @@
+{
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "unique_names_encoded": 18146,
+    "embedding_dim": 384,
+    "validation_f1_at_chosen_threshold": 79.38,
+    "test": {
+      "overall": {
+        "precision": 88.58,
+        "recall": 70.4,
+        "f1": 78.45,
+        "tp": 1931,
+        "fp": 249,
+        "fn": 812
+      },
+      "threshold": 0.738,
+      "spend_weighted_recall": 69.11,
+      "by_visibility": {
+        "identical": {
+          "precision": 97.33,
+          "recall": 100.0,
+          "f1": 98.65,
+          "tp": 1531,
+          "fp": 42,
+          "fn": 0,
+          "positives": 1531,
+          "stratum_pairs": 1573,
+          "positive_rate_pct": 97.33,
+          "all_positive_f1": 98.65,
+          "f1_lift_over_majority": 0.0,
+          "beats_majority_baseline": false,
+          "recall_wilson95": [
+            99.75,
+            100.0
+          ],
+          "f1_not_comparable_across_strata": true
+        },
+        "invisible": {
+          "precision": 93.75,
+          "recall": 4.71,
+          "f1": 8.97,
+          "tp": 30,
+          "fp": 2,
+          "fn": 607,
+          "positives": 637,
+          "stratum_pairs": 3761,
+          "positive_rate_pct": 16.94,
+          "all_positive_f1": 28.97,
+          "f1_lift_over_majority": -20.0,
+          "beats_majority_baseline": false,
+          "recall_wilson95": [
+            3.32,
+            6.64
+          ],
+          "f1_not_comparable_across_strata": true
+        },
+        "visible": {
+          "precision": 64.35,
+          "recall": 64.35,
+          "f1": 64.35,
+          "tp": 370,
+          "fp": 205,
+          "fn": 205,
+          "positives": 575,
+          "stratum_pairs": 5638,
+          "positive_rate_pct": 10.2,
+          "all_positive_f1": 18.51,
+          "f1_lift_over_majority": 45.84,
+          "beats_majority_baseline": true,
+          "recall_wilson95": [
+            60.35,
+            68.16
+          ],
+          "f1_not_comparable_across_strata": true
+        }
+      },
+      "false_positive_rate_by_negative_kind": {
+        "hard_string": {
+          "fp": 177,
+          "n": 2743,
+          "rate_pct": 6.45
+        },
+        "random": {
+          "fp": 0,
+          "n": 2743,
+          "rate_pct": 0.0
+        },
+        "same_block": {
+          "fp": 72,
+          "n": 2743,
+          "rate_pct": 2.62
+        }
+      }
+    }
+  }
+}

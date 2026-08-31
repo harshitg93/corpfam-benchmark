@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: If you use CorpFam, please cite the paper.
+title: "CorpFam: A Public Benchmark for Corporate-Family Resolution"
+version: 1.0.0
+type: dataset
+license: CC0-1.0
+abstract: >-
+  A public benchmark for corporate-family resolution: deciding whether two supplier
+  records belong to the same ultimate parent. 54,864 candidate pairs over 10,307
+  corporate families, derived from 6,638,350 United States federal contract award records
+  in which every supplier self-reports its ultimate parent to a government registry.
+  Every pair is stratified by name visibility, meaning whether the two names are identical
+  after normalisation, share a distinctive token, or share none at all. The stratification
+  is the point of the release: aggregate metrics on this task are carried by the pairs
+  that are already string-identical, and blocking never proposes the pairs that are not.
+authors:
+  - given-names: Harshit
+    family-names: Gupta
+    affiliation: Independent Researcher
+keywords:
+  - entity resolution
+  - record linkage
+  - blocking
+  - corporate hierarchy
+  - benchmark
+  - data integration
+  - public procurement
+  - master data management

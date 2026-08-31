@@ -1,0 +1,229 @@
+{
+  "api_records_unbiased": 2847,
+  "archive_entities": 104459,
+  "overlap_entities": 2451,
+  "comparison": {
+    "both_report_a_distinct_parent": 248,
+    "agree_exact_parent_uei": 161,
+    "agree_on_normalised_parent_name": 183,
+    "agree_on_any_shared_distinctive_token": 202,
+    "substantively_different_parent": 46,
+    "pct_agree_uei": 64.92,
+    "pct_agree_name": 73.79,
+    "pct_agree_token": 81.45,
+    "wilson95_pct_agree_name": [
+      67.98,
+      78.87
+    ],
+    "both_report_no_parent": 1939,
+    "only_one_source_reports_a_parent": 264,
+    "disagreement_examples": [
+      {
+        "uei": "HJ9KK2HKPAR6",
+        "name": "LINDE GAS ESPANA, S.A.",
+        "api_parent": "LINDE GAS THERAPEUTICS GMBH",
+        "archive_parent": "MESSER INDUSTRIE GMBH"
+      },
+      {
+        "uei": "RDX7VGUDWAH7",
+        "name": "MORTON BAHAMAS LIMITED",
+        "api_parent": "MORTON BAHAMAS LIMITED",
+        "archive_parent": "STONE CANYON INDUSTRIES HOLDINGS LLC"
+      },
+      {
+        "uei": "E2KSKV7YU9G4",
+        "name": "KOREA RAILROAD CORPORATION SEOUL BRANCH",
+        "api_parent": "JEONBUK NATIONAL UNIVERSITY",
+        "archive_parent": "GOVERNMENT OF THE REPUBLIC OF KOREA"
+      },
+      {
+        "uei": "Y33WNNTMNGJ5",
+        "name": "BALTIMORE GAS & ELECTRIC COMPANY",
+        "api_parent": "CONSTELLATION ENERGY GROUP, INC.",
+        "archive_parent": "EXELON CORPORATION"
+      },
+      {
+        "uei": "KNWLEGHNFU63",
+        "name": "SIXT GMBH & CO. AUTOVERMIETUNG KG",
+        "api_parent": "SIXT RENT A CAR  LLC",
+        "archive_parent": "ES ASSET MANAGEMENT AND SERVICES GMBH & CO. KG"
+      },
+      {
+        "uei": "KV8YDNS7VMT9",
+        "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "api_parent": "TITAN II INC.",
+        "archive_parent": "NORTHROP GRUMMAN CORPORATION"
+      },
+      {
+        "uei": "YQJ2MAGE2NY5",
+        "name": "SENSITECH INC",
+        "api_parent": "RTX CORP",
+        "archive_parent": "ROCKWELL COLLINS AUSTRALIA PTY LIMITED"
+      },
+      {
+        "uei": "XS4LGGJ1NA97",
+        "name": "RENAL CARE GROUP OF THE SOUTHEAST, INC.",
+        "api_parent": "FRESENIUS MEDICAL CARE LAKE CHARLES HOME, LLC",
+        "archive_parent": "WHITING DIALYSIS SERVICES, LLC"
+      },
+      {
+        "uei": "PBZMJHLNNCT1",
+        "name": "BIFFA WASTE SERVICES LIMITED",
+        "api_parent": "WASTEINVESTMENTS LLP",
+        "archive_parent": "WASTEHOLDCO 1 LIMITED"
+      },
+      {
+        "uei": "W9BJB2Y4Z4M6",
+        "name": "W.W. WILLIAMS COMPANY, THE LLC",
+        "api_parent": "W W WILLIAMS COMPANY, THE",
+        "archive_parent": "MYTHICS, INC."
+      },
+      {
+        "uei": "UXC1ANNKK2G1",
+        "name": "HANGER PROSTHETICS & ORTHOTICS INC",
+        "api_parent": "SPECTRUM ORTHOTICS & PROSTHETICS INC",
+        "archive_parent": "HANGER, INC."
+      },
+      {
+        "uei": "PH57UD5C1KZ3",
+        "name": "CHEMRING SENSORS AND ELECTRONIC SYSTEMS, INC.",
+        "api_parent": "CHEMRING GROUP PLC",
+        "archive_parent": "COMPAGNIE INDUSTRIELLE DE DELLE"
+      },
+      {
+        "uei": "YXV5MJRKQVX5",
+        "name": "CSR INC.",
+        "api_parent": "CVS HEALTH CORPORATION",
+        "archive_parent": "CSR INC."
+      },
+      {
+        "uei": "FSCXSF8FA9R8",
+        "name": "AMENTUM TECHNICAL SERVICES LLC",
+        "api_parent": "AECOM",
+        "archive_parent": "PAE-PARSONS GLOBAL LOGISTICS SERVICES, LLC"
+      },
+      {
+        "uei": "YZNQG917LBE4",
+        "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC.",
+        "api_parent": "GENERAL DYNAMICS CORP",
+        "archive_parent": "WICO LIMITED"
+      },
+      {
+        "uei": "XKM5LZNL28S8",
+        "name": "VICINITY ENERGY OKLAHOMA CITY, LLC",
+        "api_parent": "VEOLIA ENVIRONNEMENT",
+        "archive_parent": "SUEZ"
+      },
+      {
+        "uei": "SP7NYKY2JC95",
+        "name": "VERTIV SERVICES, INC.",
+        "api_parent": "EMERSON ELECTRIC CO",
+        "archive_parent": "VERTIV SERVICES  INC."
+      },
+      {
+        "uei": "ET41P9LFRN64",
+        "name": "CHANGE HEALTHCARE TECHNOLOGIES LLC",
+        "api_parent": "MCKESSON CORPORATION",
+        "archive_parent": "UNITEDHEALTH GROUP INCORPORATED"
+      },
+      {
+        "uei": "PCH4QN6YCBX9",
+        "name": "ESAOTE NORTH AMERICA INC",
+        "api_parent": "ESAOTE SPA",
+        "archive_parent": "SHANGHAI LUZI ENTERPRISE MANAGEMENT CONSULTING CENTER (LIMITED PARTNERSHIP)"
+      },
+      {
+        "uei": "LJR6UN1KRMD3",
+        "name": "HANGER PROSTHETICS & ORTHOTICS, INC.",
+        "api_parent": "SPECTRUM ORTHOTICS & PROSTHETICS INC",
+        "archive_parent": "HANGER, INC."
+      }
+    ]
+  },
+  "name_visibility_archive": {
+    "genuine_links": 14288,
+    "name_identical_trivial": 4850,
+    "informative_links": 9438,
+    "name_invisible_of_genuine": 3634,
+    "pct_of_genuine": 25.43,
+    "wilson95_pct_of_genuine": [
+      24.73,
+      26.15
+    ],
+    "name_invisible_of_informative": 3614,
+    "pct_of_informative": 38.29,
+    "wilson95_pct_of_informative": [
+      37.32,
+      39.28
+    ]
+  },
+  "family_sizes": {
+    "distinct_parents": 10392,
+    "size_distribution_top": {
+      "1": 9468,
+      "2": 463,
+      "3": 151,
+      "4": 86,
+      "5": 56,
+      "6": 35,
+      "7": 25,
+      "8": 11,
+      "9": 14,
+      "10": 12,
+      "11": 10,
+      "12": 4
+    },
+    "largest_families": [
+      {
+        "parent_uei": "MHA9XJE5FFN1",
+        "parent_name": "HANGER, INC.",
+        "children": 208
+      },
+      {
+        "parent_uei": "EGAVSJTA2D81",
+        "parent_name": "ROCKWELL COLLINS AUSTRALIA PTY LIMITED",
+        "children": 111
+      },
+      {
+        "parent_uei": "UTMVXSN87H99",
+        "parent_name": "ZIPPY SHELL INCORPORATED",
+        "children": 103
+      },
+      {
+        "parent_uei": "NKVZLJL93QT6",
+        "parent_name": "NORTHROP GRUMMAN CORPORATION",
+        "children": 72
+      },
+      {
+        "parent_uei": "SJULQDJ8NZU7",
+        "parent_name": "L3HARRIS TECHNOLOGIES, INC",
+        "children": 72
+      },
+      {
+        "parent_uei": "NW2RJN8TQQW1",
+        "parent_name": "GOVERNMENT OF THE UNITED STATES",
+        "children": 70
+      },
+      {
+        "parent_uei": "NU2UC8MX6NK1",
+        "parent_name": "THE BOEING COMPANY",
+        "children": 57
+      },
+      {
+        "parent_uei": "ZFN2JJXBLZT3",
+        "parent_name": "LOCKHEED MARTIN CORP",
+        "children": 55
+      },
+      {
+        "parent_uei": "LMRMKLLL3LG5",
+        "parent_name": "TETRA TECH, INC.",
+        "children": 52
+      },
+      {
+        "parent_uei": "K1JGB5EK1U53",
+        "parent_name": "REPUBLIC SERVICES INC",
+        "children": 49
+      }
+    ]
+  }
+}

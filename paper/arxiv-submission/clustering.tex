@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+& & & \multicolumn{3}{c}{B-cubed} & Exact \\
+\cmidrule(lr){4-6}
+Condition & Cands & Pair $F_1$ & P & R & $F_1$ & fam.\ (\%) \\
+\midrule
+Blocked & 5,080 & 32.2 & 85.8 & 45.4 & 59.3 & 16.6 \\
+Oracle & 536,130 & 39.4 & 84.3 & 45.1 & 58.8 & 14.9 \\
+\bottomrule
+\end{tabular}
+\caption{Family-level clustering over the 902 families with
+two or more children, scored on test with thresholds chosen on validation.
+\emph{Blocked} takes candidates from token blocking as in deployment;
+\emph{Oracle} scores every within-split pair. Removing blocking raises pairwise
+$F_1$ but \emph{lowers} exact family recovery, because the additional candidates
+introduce false links that merge distinct families through transitivity. Only a small
+minority of families are recovered exactly under either condition, and exact recovery
+is what a spend rollup depends on.}
+\label{tab:clustering}
+\end{table}

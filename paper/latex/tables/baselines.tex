@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+& & & \multicolumn{3}{c}{Recall (\%) by name visibility} \\
+\cmidrule(lr){4-6}
+Method & AP & Prec. & Identical & Visible & Invisible \\
+\midrule
+Exact (normalised) & 65.4 & 97.3 & 100.0 & 0.0 & 0.0 \\
+Token Jaccard & 73.5 & 91.8 & 99.2 & 43.5 & 0.0 \\
+Sequence ratio & 74.7 & 94.7 & 100.0 & 15.8 & 3.8 \\
+TF--IDF char 3-gram & 78.7 & 89.6 & 100.0 & 49.9 & 4.2 \\
+\midrule
+MiniLM embedding & -- & 88.6 & 100.0 & 64.3 & 4.7 \\
+\midrule
+\emph{Answer yes to everything} & -- & 25.0 & 100.0 & 100.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\caption{Baselines on the \textsc{CorpFam} test split, with thresholds selected on
+validation and applied unchanged to test. \textbf{Recall is reported per stratum
+rather than $F_1$}, because the strata have positive rates of roughly 97\%, 10\% and
+17\% respectively, so a per-stratum $F_1$ largely reflects that base rate rather than
+the method: the final row shows a classifier that answers yes to every pair, which
+attains perfect recall everywhere and an $F_1$ ranging from 18 to 99 across strata.
+Recall depends only on a stratum's positives and is therefore comparable across them.
+Average precision is threshold-free and computed over the whole split, since precision
+depends on the shared negative pool. Every method recovers essentially all identical
+pairs and almost no invisible ones.}
+\label{tab:baselines}
+\end{table*}

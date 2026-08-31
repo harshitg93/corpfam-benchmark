@@ -1,0 +1,18 @@
+{
+  "cutoff": "2022-04-04",
+  "positives": 6522,
+  "negatives": 10367,
+  "total_pairs": 16889,
+  "families": 5418,
+  "visibility_of_positives": {
+    "invisible": 1257,
+    "visible": 1247,
+    "identical": 4018
+  },
+  "split_sizes": {
+    "train": 10512,
+    "test": 3092,
+    "val": 3285
+  },
+  "output": "data/benchmark/corpfam_pairs_conservative.jsonl"
+}

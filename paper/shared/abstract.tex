@@ -1,0 +1,30 @@
+Deciding whether two supplier records belong to the same corporate family is a
+prerequisite for spend consolidation, credit exposure aggregation, and sanctions
+screening, yet it is usually evaluated as a special case of entity matching, in which
+two records refer to the same real-world entity. The two tasks are not the same. A
+family link connects records that are deliberately \emph{different} entities, and the
+evidence for the link frequently appears in neither record. We introduce
+\textsc{CorpFam}, a public benchmark of \BenchPairs candidate pairs over \BenchFamilies
+corporate families, derived from \ArchiveRows United States federal award records in
+which every supplier self-reports its ultimate parent to a government registry. Every
+pair is stratified by \emph{name visibility}: whether the two names are identical after
+normalisation, share a distinctive token, or share none at all. Because the strata have
+positive rates from \BaseVisibleRate to \BaseIdenticalRate, we report per-stratum
+\emph{recall}, which is base-rate invariant, rather than $F_1$, which is not.
+The result is stark: the strongest of \NumMethods matchers recovers
+\BestRecallIdentical of identical pairs and \BestRecallInvisible of invisible ones, and
+no method exceeds \AnyInvisibleRecallMax on the latter. More consequentially, the
+failure begins before matching. Blocking decides which pairs a matcher ever sees. Across
+\BlkNumSchemes schemes over the full recipient roster, among them phonetic keys,
+attribute keys that ignore the name, and semantic nearest neighbours, none a function of
+the token overlap that defines the stratum, no scheme exceeds three percent on invisible
+pairs, and their union recovers \BlkUnionInvisible. Roughly
+\BlkInvisibleLost of these links are absent from the candidate set before any matcher
+runs, so no improvement at the matching stage can reach them. The links are nonetheless
+real: against SEC Exhibit~21 subsidiary schedules, filed under securities law and
+sharing no provenance with procurement registration, \EdgarInvisibleConfirmPct of
+invisible links are corroborated, against \EdgarRandomParentPct when the same procedure
+is run with permuted parents. We argue that corporate-family resolution is a retrieval
+problem misfiled as a matching problem, and that the intervention point is candidate
+generation rather than ranking. The benchmark, the full adjudication log, and code
+reproducing every number are released.

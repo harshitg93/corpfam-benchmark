@@ -1,0 +1,15 @@
+{
+  "source": "https://api.usaspending.gov/api/v2/recipient/{rid}/",
+  "distinct_uei_in_roster": 101513,
+  "fetched_this_run": 300,
+  "failed_this_run": 0,
+  "total_records_in_file": 300,
+  "coverage_pct": 0.2955,
+  "workers": 4,
+  "per_worker_delay_s": 0.15,
+  "output": "data/raw/usaspending/entity_detail.jsonl",
+  "sha256": "0d28ab828c7e6fdac43a8d8c4b5b43895daea500c274c2c55954173c82d23fb7",
+  "bytes": 396395,
+  "started_utc": "2026-08-27T10:05:24.591299+00:00",
+  "finished_utc": "2026-08-27T10:06:00.286767+00:00"
+}

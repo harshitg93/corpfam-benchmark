@@ -1,0 +1,721 @@
+{
+  "attribute_source": "FY2025 award archive, all recipient rows",
+  "entities_with_attributes": 14288,
+  "test_pairs_with_address_on_both_sides_pct": 7.49,
+  "attributed_subset_sizes": {
+    "train": 2386,
+    "val": 937,
+    "test": 822
+  },
+  "attributed_subset_positive_strata": {
+    "visible": 110,
+    "invisible": 130,
+    "identical": 77
+  },
+  "primary_scope": "attributed_subset -- pairs with attributes on both sides. Over the full split an attribute-only model has no signal for ~92% of pairs and degenerates to predicting the majority class, so its full-split F1 is a base-rate artifact rather than a measurement.",
+  "feature_sets": {
+    "name_only__attributed_subset": {
+      "features": [
+        "tfidf",
+        "jaccard",
+        "seqratio",
+        "exact_name"
+      ],
+      "n_test": 822,
+      "coefficients": {
+        "tfidf": 1.7963,
+        "jaccard": -0.3641,
+        "seqratio": -1.0745,
+        "exact_name": 2.3087
+      },
+      "validation_f1": 69.3,
+      "test": {
+        "overall": {
+          "precision": 79.06,
+          "recall": 47.63,
+          "f1": 59.45,
+          "tp": 151,
+          "fp": 40,
+          "fn": 166
+        },
+        "threshold": 0.488,
+        "spend_weighted_recall": 84.68,
+        "by_visibility": {
+          "identical": {
+            "precision": 93.9,
+            "recall": 100.0,
+            "f1": 96.86,
+            "tp": 77,
+            "fp": 5,
+            "fn": 0,
+            "positives": 77,
+            "stratum_pairs": 82,
+            "positive_rate_pct": 93.9,
+            "all_positive_f1": 96.86,
+            "f1_lift_over_majority": 0.0,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              95.25,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "invisible": {
+            "precision": 100.0,
+            "recall": 18.46,
+            "f1": 31.17,
+            "tp": 24,
+            "fp": 0,
+            "fn": 106,
+            "positives": 130,
+            "stratum_pairs": 308,
+            "positive_rate_pct": 42.21,
+            "all_positive_f1": 59.36,
+            "f1_lift_over_majority": -28.19,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              12.73,
+              26.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "visible": {
+            "precision": 58.82,
+            "recall": 45.45,
+            "f1": 51.28,
+            "tp": 50,
+            "fp": 35,
+            "fn": 60,
+            "positives": 110,
+            "stratum_pairs": 432,
+            "positive_rate_pct": 25.46,
+            "all_positive_f1": 40.59,
+            "f1_lift_over_majority": 10.69,
+            "beats_majority_baseline": true,
+            "recall_wilson95": [
+              36.46,
+              54.76
+            ],
+            "f1_not_comparable_across_strata": true
+          }
+        },
+        "false_positive_rate_by_negative_kind": {
+          "hard_string": {
+            "fp": 31,
+            "n": 177,
+            "rate_pct": 17.51
+          },
+          "random": {
+            "fp": 0,
+            "n": 151,
+            "rate_pct": 0.0
+          },
+          "same_block": {
+            "fp": 9,
+            "n": 177,
+            "rate_pct": 5.08
+          }
+        },
+        "degenerate_all_positive": false
+      }
+    },
+    "name_only__full_split": {
+      "features": [
+        "tfidf",
+        "jaccard",
+        "seqratio",
+        "exact_name"
+      ],
+      "n_test": 10972,
+      "coefficients": {
+        "tfidf": 4.327,
+        "jaccard": -0.1756,
+        "seqratio": -4.2881,
+        "exact_name": 4.6379
+      },
+      "validation_f1": 76.66,
+      "test": {
+        "overall": {
+          "precision": 85.04,
+          "recall": 66.93,
+          "f1": 74.91,
+          "tp": 1836,
+          "fp": 323,
+          "fn": 907
+        },
+        "threshold": 0.474,
+        "spend_weighted_recall": 65.84,
+        "by_visibility": {
+          "identical": {
+            "precision": 97.33,
+            "recall": 100.0,
+            "f1": 98.65,
+            "tp": 1531,
+            "fp": 42,
+            "fn": 0,
+            "positives": 1531,
+            "stratum_pairs": 1573,
+            "positive_rate_pct": 97.33,
+            "all_positive_f1": 98.65,
+            "f1_lift_over_majority": 0.0,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              99.75,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "invisible": {
+            "precision": 30.77,
+            "recall": 0.63,
+            "f1": 1.23,
+            "tp": 4,
+            "fp": 9,
+            "fn": 633,
+            "positives": 637,
+            "stratum_pairs": 3761,
+            "positive_rate_pct": 16.94,
+            "all_positive_f1": 28.97,
+            "f1_lift_over_majority": -27.74,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              0.24,
+              1.6
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "visible": {
+            "precision": 52.53,
+            "recall": 52.35,
+            "f1": 52.44,
+            "tp": 301,
+            "fp": 272,
+            "fn": 274,
+            "positives": 575,
+            "stratum_pairs": 5638,
+            "positive_rate_pct": 10.2,
+            "all_positive_f1": 18.51,
+            "f1_lift_over_majority": 33.93,
+            "beats_majority_baseline": true,
+            "recall_wilson95": [
+              48.26,
+              56.4
+            ],
+            "f1_not_comparable_across_strata": true
+          }
+        },
+        "false_positive_rate_by_negative_kind": {
+          "hard_string": {
+            "fp": 207,
+            "n": 2743,
+            "rate_pct": 7.55
+          },
+          "random": {
+            "fp": 8,
+            "n": 2743,
+            "rate_pct": 0.29
+          },
+          "same_block": {
+            "fp": 108,
+            "n": 2743,
+            "rate_pct": 3.94
+          }
+        },
+        "degenerate_all_positive": false
+      }
+    },
+    "attributes_only__attributed_subset": {
+      "features": [
+        "same_address",
+        "addr_sim",
+        "same_city",
+        "same_state",
+        "same_zip5",
+        "same_phone",
+        "same_country",
+        "dba_hit",
+        "both_have_addr"
+      ],
+      "n_test": 822,
+      "coefficients": {
+        "same_address": 0.5237,
+        "addr_sim": 0.5019,
+        "same_city": 0.2461,
+        "same_state": 1.0255,
+        "same_zip5": 0.8877,
+        "same_phone": 2.4359,
+        "same_country": -0.5986,
+        "dba_hit": 0.1587,
+        "both_have_addr": -0.018
+      },
+      "validation_f1": 56.12,
+      "test": {
+        "overall": {
+          "precision": 40.1,
+          "recall": 98.42,
+          "f1": 56.99,
+          "tp": 312,
+          "fp": 466,
+          "fn": 5
+        },
+        "threshold": 0.359,
+        "spend_weighted_recall": 99.09,
+        "by_visibility": {
+          "identical": {
+            "precision": 93.83,
+            "recall": 98.7,
+            "f1": 96.2,
+            "tp": 76,
+            "fp": 5,
+            "fn": 1,
+            "positives": 77,
+            "stratum_pairs": 82,
+            "positive_rate_pct": 93.9,
+            "all_positive_f1": 96.86,
+            "f1_lift_over_majority": -0.66,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              93.0,
+              99.77
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "invisible": {
+            "precision": 43.3,
+            "recall": 96.92,
+            "f1": 59.86,
+            "tp": 126,
+            "fp": 165,
+            "fn": 4,
+            "positives": 130,
+            "stratum_pairs": 308,
+            "positive_rate_pct": 42.21,
+            "all_positive_f1": 59.36,
+            "f1_lift_over_majority": 0.5,
+            "beats_majority_baseline": true,
+            "recall_wilson95": [
+              92.36,
+              98.8
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "visible": {
+            "precision": 27.09,
+            "recall": 100.0,
+            "f1": 42.64,
+            "tp": 110,
+            "fp": 296,
+            "fn": 0,
+            "positives": 110,
+            "stratum_pairs": 432,
+            "positive_rate_pct": 25.46,
+            "all_positive_f1": 40.59,
+            "f1_lift_over_majority": 2.05,
+            "beats_majority_baseline": true,
+            "recall_wilson95": [
+              96.63,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          }
+        },
+        "false_positive_rate_by_negative_kind": {
+          "hard_string": {
+            "fp": 165,
+            "n": 177,
+            "rate_pct": 93.22
+          },
+          "random": {
+            "fp": 141,
+            "n": 151,
+            "rate_pct": 93.38
+          },
+          "same_block": {
+            "fp": 160,
+            "n": 177,
+            "rate_pct": 90.4
+          }
+        },
+        "degenerate_all_positive": false
+      }
+    },
+    "attributes_only__full_split": {
+      "features": [
+        "same_address",
+        "addr_sim",
+        "same_city",
+        "same_state",
+        "same_zip5",
+        "same_phone",
+        "same_country",
+        "dba_hit",
+        "both_have_addr"
+      ],
+      "n_test": 10972,
+      "coefficients": {
+        "same_address": 0.4745,
+        "addr_sim": 0.5469,
+        "same_city": 0.4919,
+        "same_state": 0.982,
+        "same_zip5": 0.7503,
+        "same_phone": 2.4814,
+        "same_country": -0.5739,
+        "dba_hit": 0.4737,
+        "both_have_addr": 0.507
+      },
+      "validation_f1": 40.01,
+      "test": {
+        "overall": {
+          "precision": 25.01,
+          "recall": 100.0,
+          "f1": 40.01,
+          "tp": 2743,
+          "fp": 8224,
+          "fn": 0
+        },
+        "threshold": 0.471,
+        "spend_weighted_recall": 100.0,
+        "by_visibility": {
+          "identical": {
+            "precision": 97.33,
+            "recall": 100.0,
+            "f1": 98.65,
+            "tp": 1531,
+            "fp": 42,
+            "fn": 0,
+            "positives": 1531,
+            "stratum_pairs": 1573,
+            "positive_rate_pct": 97.33,
+            "all_positive_f1": 98.65,
+            "f1_lift_over_majority": 0.0,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              99.75,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "invisible": {
+            "precision": 16.95,
+            "recall": 100.0,
+            "f1": 28.98,
+            "tp": 637,
+            "fp": 3122,
+            "fn": 0,
+            "positives": 637,
+            "stratum_pairs": 3761,
+            "positive_rate_pct": 16.94,
+            "all_positive_f1": 28.97,
+            "f1_lift_over_majority": 0.01,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              99.4,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "visible": {
+            "precision": 10.2,
+            "recall": 100.0,
+            "f1": 18.52,
+            "tp": 575,
+            "fp": 5060,
+            "fn": 0,
+            "positives": 575,
+            "stratum_pairs": 5638,
+            "positive_rate_pct": 10.2,
+            "all_positive_f1": 18.51,
+            "f1_lift_over_majority": 0.01,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              99.34,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          }
+        },
+        "false_positive_rate_by_negative_kind": {
+          "hard_string": {
+            "fp": 2741,
+            "n": 2743,
+            "rate_pct": 99.93
+          },
+          "random": {
+            "fp": 2741,
+            "n": 2743,
+            "rate_pct": 99.93
+          },
+          "same_block": {
+            "fp": 2742,
+            "n": 2743,
+            "rate_pct": 99.96
+          }
+        },
+        "degenerate_all_positive": true
+      }
+    },
+    "combined__attributed_subset": {
+      "features": [
+        "tfidf",
+        "jaccard",
+        "seqratio",
+        "exact_name",
+        "same_address",
+        "addr_sim",
+        "same_city",
+        "same_state",
+        "same_zip5",
+        "same_phone",
+        "same_country",
+        "dba_hit",
+        "both_have_addr"
+      ],
+      "n_test": 822,
+      "coefficients": {
+        "tfidf": 0.7751,
+        "jaccard": -0.2375,
+        "seqratio": -0.7264,
+        "exact_name": 2.5642,
+        "same_address": 0.7639,
+        "addr_sim": 0.4853,
+        "same_city": 0.2034,
+        "same_state": 0.8999,
+        "same_zip5": 0.8093,
+        "same_phone": 2.1663,
+        "same_country": -0.7759,
+        "dba_hit": -0.1902,
+        "both_have_addr": 0.0773
+      },
+      "validation_f1": 64.5,
+      "test": {
+        "overall": {
+          "precision": 49.52,
+          "recall": 81.7,
+          "f1": 61.67,
+          "tp": 259,
+          "fp": 264,
+          "fn": 58
+        },
+        "threshold": 0.336,
+        "spend_weighted_recall": 98.7,
+        "by_visibility": {
+          "identical": {
+            "precision": 93.9,
+            "recall": 100.0,
+            "f1": 96.86,
+            "tp": 77,
+            "fp": 5,
+            "fn": 0,
+            "positives": 77,
+            "stratum_pairs": 82,
+            "positive_rate_pct": 93.9,
+            "all_positive_f1": 96.86,
+            "f1_lift_over_majority": 0.0,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              95.25,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "invisible": {
+            "precision": 48.96,
+            "recall": 72.31,
+            "f1": 58.39,
+            "tp": 94,
+            "fp": 98,
+            "fn": 36,
+            "positives": 130,
+            "stratum_pairs": 308,
+            "positive_rate_pct": 42.21,
+            "all_positive_f1": 59.36,
+            "f1_lift_over_majority": -0.97,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              64.06,
+              79.28
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "visible": {
+            "precision": 35.34,
+            "recall": 80.0,
+            "f1": 49.03,
+            "tp": 88,
+            "fp": 161,
+            "fn": 22,
+            "positives": 110,
+            "stratum_pairs": 432,
+            "positive_rate_pct": 25.46,
+            "all_positive_f1": 40.59,
+            "f1_lift_over_majority": 8.44,
+            "beats_majority_baseline": true,
+            "recall_wilson95": [
+              71.57,
+              86.4
+            ],
+            "f1_not_comparable_across_strata": true
+          }
+        },
+        "false_positive_rate_by_negative_kind": {
+          "hard_string": {
+            "fp": 102,
+            "n": 177,
+            "rate_pct": 57.63
+          },
+          "random": {
+            "fp": 85,
+            "n": 151,
+            "rate_pct": 56.29
+          },
+          "same_block": {
+            "fp": 77,
+            "n": 177,
+            "rate_pct": 43.5
+          }
+        },
+        "degenerate_all_positive": false
+      }
+    },
+    "combined__full_split": {
+      "features": [
+        "tfidf",
+        "jaccard",
+        "seqratio",
+        "exact_name",
+        "same_address",
+        "addr_sim",
+        "same_city",
+        "same_state",
+        "same_zip5",
+        "same_phone",
+        "same_country",
+        "dba_hit",
+        "both_have_addr"
+      ],
+      "n_test": 10972,
+      "coefficients": {
+        "tfidf": 4.268,
+        "jaccard": -0.0872,
+        "seqratio": -4.4701,
+        "exact_name": 4.826,
+        "same_address": 0.596,
+        "addr_sim": 0.7013,
+        "same_city": 0.4286,
+        "same_state": 0.6353,
+        "same_zip5": 0.6289,
+        "same_phone": 1.9654,
+        "same_country": -0.6088,
+        "dba_hit": 0.1443,
+        "both_have_addr": 1.2499
+      },
+      "validation_f1": 75.04,
+      "test": {
+        "overall": {
+          "precision": 79.65,
+          "recall": 69.92,
+          "f1": 74.47,
+          "tp": 1918,
+          "fp": 490,
+          "fn": 825
+        },
+        "threshold": 0.457,
+        "spend_weighted_recall": 71.49,
+        "by_visibility": {
+          "identical": {
+            "precision": 97.33,
+            "recall": 100.0,
+            "f1": 98.65,
+            "tp": 1531,
+            "fp": 42,
+            "fn": 0,
+            "positives": 1531,
+            "stratum_pairs": 1573,
+            "positive_rate_pct": 97.33,
+            "all_positive_f1": 98.65,
+            "f1_lift_over_majority": 0.0,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              99.75,
+              100.0
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "invisible": {
+            "precision": 46.09,
+            "recall": 8.32,
+            "f1": 14.1,
+            "tp": 53,
+            "fp": 62,
+            "fn": 584,
+            "positives": 637,
+            "stratum_pairs": 3761,
+            "positive_rate_pct": 16.94,
+            "all_positive_f1": 28.97,
+            "f1_lift_over_majority": -14.87,
+            "beats_majority_baseline": false,
+            "recall_wilson95": [
+              6.42,
+              10.72
+            ],
+            "f1_not_comparable_across_strata": true
+          },
+          "visible": {
+            "precision": 46.39,
+            "recall": 58.09,
+            "f1": 51.58,
+            "tp": 334,
+            "fp": 386,
+            "fn": 241,
+            "positives": 575,
+            "stratum_pairs": 5638,
+            "positive_rate_pct": 10.2,
+            "all_positive_f1": 18.51,
+            "f1_lift_over_majority": 33.07,
+            "beats_majority_baseline": true,
+            "recall_wilson95": [
+              54.01,
+              62.05
+            ],
+            "f1_not_comparable_across_strata": true
+          }
+        },
+        "false_positive_rate_by_negative_kind": {
+          "hard_string": {
+            "fp": 266,
+            "n": 2743,
+            "rate_pct": 9.7
+          },
+          "random": {
+            "fp": 61,
+            "n": 2743,
+            "rate_pct": 2.22
+          },
+          "same_block": {
+            "fp": 163,
+            "n": 2743,
+            "rate_pct": 5.94
+          }
+        },
+        "degenerate_all_positive": false
+      }
+    }
+  },
+  "true_pairs_sharing_an_address": {
+    "identical": {
+      "pairs_with_both_addresses": 77,
+      "same_address": 2,
+      "pct": 2.6
+    },
+    "invisible": {
+      "pairs_with_both_addresses": 130,
+      "same_address": 13,
+      "pct": 10.0
+    },
+    "visible": {
+      "pairs_with_both_addresses": 110,
+      "same_address": 7,
+      "pct": 6.36
+    }
+  }
+}

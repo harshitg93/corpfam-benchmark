@@ -1,0 +1,1321 @@
+% =====================================================================
+% refs.bib  --  CorpFam: A Public Benchmark for Corporate-Family
+%               Resolution in Enterprise Supplier and Account Data
+%
+% Compiled 2026-08-27.  Companion to literature-landscape.md.
+%
+% VERIFICATION STATEMENT
+% Every entry below was verified against an authoritative registry on
+% 2026-08-27.  DOIs were resolved individually: 57 against the Crossref
+% REST API (api.crossref.org/works/{doi}) and 4 against DataCite
+% (api.datacite.org/dois/{doi}) -- the three OpenProceedings/EDBT DOIs
+% and the Zenodo DOI, which are not registered with Crossref.
+% arXiv-only entries were verified through the arXiv API
+% (export.arxiv.org/api/query?id_list=...).  Volume, issue, page and
+% author strings are taken from those registry responses.
+%
+% Entries carrying a "NOTE" comment have a metadata discrepancy between
+% registries; the note records which source was preferred and why.
+% Nothing in this file is reconstructed from memory.
+% =====================================================================
+
+
+% =====================================================================
+% 1. ENTITY RESOLUTION BENCHMARKS AND SURVEYS
+% =====================================================================
+
+@article{kopcke2010evaluation,
+  author  = {K{\"o}pcke, Hanna and Thor, Andreas and Rahm, Erhard},
+  title   = {Evaluation of entity resolution approaches on real-world
+             match problems},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {3},
+  number  = {1--2},
+  pages   = {484--493},
+  year    = {2010},
+  doi     = {10.14778/1920841.1920904}
+}
+
+@article{kopcke2010frameworks,
+  author  = {K{\"o}pcke, Hanna and Rahm, Erhard},
+  title   = {Frameworks for entity matching: A comparison},
+  journal = {Data \& Knowledge Engineering},
+  volume  = {69},
+  number  = {2},
+  pages   = {197--210},
+  year    = {2010},
+  doi     = {10.1016/j.datak.2009.10.003}
+}
+
+@book{papadakis2021fourgenerations,
+  author    = {Papadakis, George and Ioannou, Ekaterini and
+               Thanos, Emanouil and Palpanas, Themis},
+  title     = {The Four Generations of Entity Resolution},
+  series    = {Synthesis Lectures on Data Management},
+  publisher = {Springer International Publishing},
+  year      = {2021},
+  doi       = {10.2200/S01067ED1V01Y202012DTM064}
+}
+
+@inproceedings{papadakis2023benchmarking,
+  author    = {Papadakis, George and Fisichella, Marco and
+               Schoger, Franziska and Mandilaras, George and
+               Augsten, Nikolaus and Nejdl, Wolfgang},
+  title     = {Benchmarking Filtering Techniques for Entity Resolution},
+  booktitle = {2023 IEEE 39th International Conference on Data
+               Engineering (ICDE)},
+  pages     = {653--666},
+  publisher = {IEEE},
+  year      = {2023},
+  doi       = {10.1109/ICDE55515.2023.00389}
+}
+
+@article{neuhof2024openbenchmark,
+  author  = {Neuhof, Franziska and Fisichella, Marco and
+             Papadakis, George and Nikoletos, Konstantinos and
+             Augsten, Nikolaus and Nejdl, Wolfgang and
+             Koubarakis, Manolis},
+  title   = {Open benchmark for filtering techniques in entity
+             resolution},
+  journal = {The VLDB Journal},
+  volume  = {33},
+  number  = {5},
+  pages   = {1671--1696},
+  year    = {2024},
+  doi     = {10.1007/s00778-024-00868-7}
+}
+
+@article{konda2016magellan,
+  author  = {Konda, Pradap and Das, Sanjib and
+             Suganthan G. C., Paul and Doan, AnHai and
+             Ardalan, Adel and Ballard, Jeffrey R. and Li, Han and
+             Panahi, Fatemah and Zhang, Haojun and Naughton, Jeff and
+             Prasad, Shishir and Krishnan, Ganesh and Deep, Rohit and
+             Raghavendra, Vijay},
+  title   = {Magellan: Toward Building Entity Matching Management
+             Systems},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {9},
+  number  = {12},
+  pages   = {1197--1208},
+  year    = {2016},
+  doi     = {10.14778/2994509.2994535}
+}
+
+@article{doan2020magellan,
+  author  = {Doan, AnHai and Konda, Pradap and
+             Suganthan G. C., Paul and Govind, Yash and
+             Paulsen, Derek and Chandrasekhar, Kaushik and
+             Martinkus, Philip and Christie, Matthew},
+  title   = {Magellan: toward building ecosystems of entity matching
+             solutions},
+  journal = {Communications of the ACM},
+  volume  = {63},
+  number  = {8},
+  pages   = {83--91},
+  year    = {2020},
+  doi     = {10.1145/3405476}
+}
+
+@inproceedings{govind2019magellanprogress,
+  author    = {Govind, Yash and Konda, Pradap and
+               Suganthan G. C., Paul and Martinkus, Philip and
+               Nagarajan, Palaniappan and Li, Han and
+               Soundararajan, Aravind and Mudgal, Sidharth and
+               Ballard, Jeffrey R. and Zhang, Haojun and
+               Ardalan, Adel and Das, Sanjib and Paulsen, Derek and
+               Saini, Amanpreet Singh and Paulson, Erik and
+               Park, Youngchoon and Carter, Marshall and Sun, Mingju and
+               Fung, Glenn M. and Doan, AnHai},
+  title     = {Entity Matching Meets Data Science: A Progress Report
+               from the Magellan Project},
+  booktitle = {Proceedings of the 2019 International Conference on
+               Management of Data (SIGMOD)},
+  pages     = {389--403},
+  publisher = {ACM},
+  year      = {2019},
+  doi       = {10.1145/3299869.3314042}
+}
+
+@misc{magellandata,
+  author       = {Das, Sanjib and Doan, AnHai and
+                  Suganthan G. C., Paul and Gokhale, Chaitanya and
+                  Konda, Pradap and Govind, Yash and Paulsen, Derek},
+  title        = {The Magellan Data Repository},
+  howpublished = {\url{https://sites.google.com/site/anhaidgroup/useful-stuff/the-magellan-data-repository}},
+  institution  = {University of Wisconsin-Madison},
+  note         = {Accessed 2026-08-27. Source of the ER-Magellan
+                  dataset collection, including the \texttt{Company}
+                  dataset. The suggested citation key on the page is
+                  \texttt{magellandata}},
+  year         = {2026}
+}
+
+@inproceedings{peeters2024wdcproducts,
+  author    = {Peeters, Ralph and Der, Reng Chiz and Bizer, Christian},
+  title     = {{WDC} Products: A Multi-Dimensional Entity Matching
+               Benchmark},
+  booktitle = {Proceedings of the 27th International Conference on
+               Extending Database Technology (EDBT)},
+  pages     = {22--33},
+  publisher = {OpenProceedings.org},
+  year      = {2024},
+  doi       = {10.48786/edbt.2024.03},
+  eprint    = {2301.09521},
+  archivePrefix = {arXiv},
+  note      = {DOI verified via DataCite; not registered with Crossref}
+}
+
+@inproceedings{primpeli2019wdc,
+  author    = {Primpeli, Anna and Peeters, Ralph and Bizer, Christian},
+  title     = {The {WDC} Training Dataset and Gold Standard for
+               Large-Scale Product Matching},
+  booktitle = {Companion Proceedings of The 2019 World Wide Web
+               Conference},
+  pages     = {381--386},
+  publisher = {ACM},
+  year      = {2019},
+  doi       = {10.1145/3308560.3316609}
+}
+
+@article{wang2021machamp,
+  author        = {Wang, Jin and Li, Yuliang and Hirota, Wataru},
+  title         = {Machamp: A Generalized Entity Matching Benchmark},
+  journal       = {arXiv preprint arXiv:2106.08455},
+  year          = {2021},
+  eprint        = {2106.08455},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2106.08455}
+}
+
+@article{crescenzi2021alaska,
+  author        = {Crescenzi, Valter and De Angelis, Andrea and
+                   Firmani, Donatella and Mazzei, Maurizio and
+                   Merialdo, Paolo and Piai, Federico and
+                   Srivastava, Divesh},
+  title         = {Alaska: A Flexible Benchmark for Data Integration
+                   Tasks},
+  journal       = {arXiv preprint arXiv:2101.11259},
+  year          = {2021},
+  eprint        = {2101.11259},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2101.11259}
+}
+
+@article{thirumuruganathan2021blocking,
+  author  = {Thirumuruganathan, Saravanan and Li, Han and Tang, Nan and
+             Ouzzani, Mourad and Govind, Yash and Paulsen, Derek and
+             Fung, Glenn and Doan, AnHai},
+  title   = {Deep learning for blocking in entity matching: A design
+             space exploration},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {14},
+  number  = {11},
+  pages   = {2459--2472},
+  year    = {2021},
+  doi     = {10.14778/3476249.3476294}
+}
+
+@article{zeakis2023pretrained,
+  author  = {Zeakis, Alexandros and Papadakis, George and
+             Skoutas, Dimitrios and Koubarakis, Manolis},
+  title   = {Pre-Trained Embeddings for Entity Resolution: An
+             Experimental Analysis},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {16},
+  number  = {9},
+  pages   = {2225--2238},
+  year    = {2023},
+  doi     = {10.14778/3598581.3598594}
+}
+
+@article{steiner2026madibench,
+  author        = {Steiner, Aaron and Peeters, Ralph and
+                   Bizer, Christian},
+  title         = {{MaDI-Bench}: An End-to-End Data Integration
+                   Benchmark},
+  journal       = {arXiv preprint arXiv:2606.30371},
+  year          = {2026},
+  eprint        = {2606.30371},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2606.30371},
+  note          = {Verified at metadata level only (DBLP CoRR record);
+                   contents not read}
+}
+
+
+% =====================================================================
+% 2. DEEP LEARNING AND LLMs FOR ENTITY MATCHING
+% =====================================================================
+
+@inproceedings{mudgal2018deepmatcher,
+  author    = {Mudgal, Sidharth and Li, Han and Rekatsinas, Theodoros and
+               Doan, AnHai and Park, Youngchoon and Krishnan, Ganesh and
+               Deep, Rohit and Arcaute, Esteban and Raghavendra, Vijay},
+  title     = {Deep Learning for Entity Matching: A Design Space
+               Exploration},
+  booktitle = {Proceedings of the 2018 International Conference on
+               Management of Data (SIGMOD)},
+  pages     = {19--34},
+  publisher = {ACM},
+  year      = {2018},
+  doi       = {10.1145/3183713.3196926},
+  note      = {Introduces the \texttt{Company} dataset: 112{,}632
+               labelled pairs, 28{,}200 positives, one long-text
+               attribute, Wikipedia article to company homepage}
+}
+
+@article{ebraheem2018deeper,
+  author  = {Ebraheem, Muhammad and Thirumuruganathan, Saravanan and
+             Joty, Shafiq and Ouzzani, Mourad and Tang, Nan},
+  title   = {Distributed representations of tuples for entity
+             resolution},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {11},
+  number  = {11},
+  pages   = {1454--1467},
+  year    = {2018},
+  doi     = {10.14778/3236187.3236198}
+}
+
+@inproceedings{kasai2019lowresource,
+  author    = {Kasai, Jungo and Qian, Kun and Gurajada, Sairam and
+               Li, Yunyao and Popa, Lucian},
+  title     = {Low-resource Deep Entity Resolution with Transfer and
+               Active Learning},
+  booktitle = {Proceedings of the 57th Annual Meeting of the
+               Association for Computational Linguistics},
+  pages     = {5851--5861},
+  publisher = {Association for Computational Linguistics},
+  year      = {2019},
+  doi       = {10.18653/v1/p19-1586}
+}
+
+@article{li2020ditto,
+  author  = {Li, Yuliang and Li, Jinfeng and Suhara, Yoshihiko and
+             Doan, AnHai and Tan, Wang-Chiew},
+  title   = {Deep entity matching with pre-trained language models},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {14},
+  number  = {1},
+  pages   = {50--60},
+  year    = {2020},
+  doi     = {10.14778/3421424.3421431},
+  eprint  = {2004.00584},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{brunner2020transformer,
+  author    = {Brunner, Ursin and Stockinger, Kurt},
+  title     = {Entity Matching with Transformer Architectures --- A Step
+               Forward in Data Integration},
+  booktitle = {Proceedings of the 23rd International Conference on
+               Extending Database Technology (EDBT)},
+  pages     = {463--473},
+  publisher = {OpenProceedings.org},
+  year      = {2020},
+  doi       = {10.5441/002/edbt.2020.58},
+  note      = {DOI verified via DataCite; not registered with Crossref}
+}
+
+@article{peeters2021dualobjective,
+  author  = {Peeters, Ralph and Bizer, Christian},
+  title   = {Dual-objective fine-tuning of {BERT} for entity matching},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {14},
+  number  = {10},
+  pages   = {1913--1921},
+  year    = {2021},
+  doi     = {10.14778/3467861.3467878}
+}
+
+@inproceedings{peeters2022contrastive,
+  author    = {Peeters, Ralph and Bizer, Christian},
+  title     = {Supervised Contrastive Learning for Product Matching},
+  booktitle = {Companion Proceedings of the Web Conference 2022},
+  pages     = {248--251},
+  publisher = {ACM},
+  year      = {2022},
+  doi       = {10.1145/3487553.3524254}
+}
+
+@inproceedings{peeters2023chatgpt,
+  author    = {Peeters, Ralph and Bizer, Christian},
+  title     = {Using {ChatGPT} for Entity Matching},
+  booktitle = {Advances in Databases and Information Systems (ADBIS)},
+  series    = {Communications in Computer and Information Science},
+  pages     = {221--230},
+  publisher = {Springer Nature Switzerland},
+  year      = {2023},
+  doi       = {10.1007/978-3-031-42941-5_20},
+  eprint    = {2305.03423},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{peeters2025entitymatchingllm,
+  author    = {Peeters, Ralph and Steiner, Aaron and Bizer, Christian},
+  title     = {Entity Matching using Large Language Models},
+  booktitle = {Proceedings of the 28th International Conference on
+               Extending Database Technology (EDBT)},
+  pages     = {529--541},
+  publisher = {OpenProceedings.org},
+  year      = {2025},
+  doi       = {10.48786/edbt.2025.42},
+  eprint    = {2310.11244},
+  archivePrefix = {arXiv},
+  note      = {DOI verified via DataCite; not registered with Crossref}
+}
+
+@inproceedings{steiner2025finetuning,
+  author    = {Steiner, Aaron and Peeters, Ralph and Bizer, Christian},
+  title     = {Fine-Tuning Large Language Models for Entity Matching},
+  booktitle = {2025 IEEE 41st International Conference on Data
+               Engineering Workshops (ICDEW)},
+  pages     = {9--17},
+  publisher = {IEEE},
+  year      = {2025},
+  doi       = {10.1109/ICDEW67478.2025.00006},
+  eprint    = {2409.08185},
+  archivePrefix = {arXiv}
+}
+
+@article{wang2024comem,
+  author        = {Wang, Tianshu and Chen, Xiaoyang and Lin, Hongyu and
+                   Chen, Xuanang and Han, Xianpei and Wang, Hao and
+                   Zeng, Zhenyu and Sun, Le},
+  title         = {Match, Compare, or Select? An Investigation of Large
+                   Language Models for Entity Matching},
+  journal       = {arXiv preprint arXiv:2405.16884},
+  year          = {2024},
+  eprint        = {2405.16884},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2405.16884},
+  note          = {arXiv comment states acceptance at COLING 2025;
+                   code at \url{https://github.com/tshu-w/ComEM}}
+}
+
+@article{zhang2024anymatch,
+  author        = {Zhang, Zeyu and Groth, Paul and Calixto, Iacer and
+                   Schelter, Sebastian},
+  title         = {{AnyMatch} --- Efficient Zero-Shot Entity Matching
+                   with a Small Language Model},
+  journal       = {arXiv preprint arXiv:2409.04073},
+  year          = {2024},
+  eprint        = {2409.04073},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2409.04073}
+}
+
+@inproceedings{zhang2024jellyfish,
+  author    = {Zhang, Haochen and Dong, Yuyang and Xiao, Chuan and
+               Oyamada, Masafumi},
+  title     = {Jellyfish: Instruction-Tuning Local Large Language Models
+               for Data Preprocessing},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods
+               in Natural Language Processing (EMNLP)},
+  pages     = {8754--8782},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.emnlp-main.497}
+}
+
+@article{tu2023unicorn,
+  author  = {Tu, Jianhong and Fan, Ju and Tang, Nan and Wang, Peng and
+             Li, Guoliang and Du, Xiaoyong and Jia, Xiaofeng and
+             Gao, Song},
+  title   = {Unicorn: A Unified Multi-tasking Model for Supporting
+             Matching Tasks in Data Integration},
+  journal = {Proceedings of the ACM on Management of Data},
+  volume  = {1},
+  number  = {1},
+  pages   = {1--26},
+  year    = {2023},
+  doi     = {10.1145/3588938}
+}
+
+@article{barlaug2021survey,
+  author  = {Barlaug, Nils and Gulla, Jon Atle},
+  title   = {Neural Networks for Entity Matching: A Survey},
+  journal = {ACM Transactions on Knowledge Discovery from Data},
+  volume  = {15},
+  number  = {3},
+  pages   = {1--37},
+  year    = {2021},
+  doi     = {10.1145/3442200}
+}
+
+@inproceedings{yao2022hiergat,
+  author    = {Yao, Dezhong and Gu, Yuhong and Cong, Gao and Jin, Hai and
+               Lv, Xinqiao},
+  title     = {Entity Resolution with Hierarchical Graph Attention
+               Networks},
+  booktitle = {Proceedings of the 2022 International Conference on
+               Management of Data (SIGMOD)},
+  pages     = {429--442},
+  publisher = {ACM},
+  year      = {2022},
+  doi       = {10.1145/3514221.3517872},
+  note      = {``Hierarchical'' refers to hierarchical attention over
+               tokens, attributes and records --- NOT to hierarchical
+               entities}
+}
+
+@article{pulsone2026beacon,
+  author  = {Pulsone, Nicholas and Shraga, Roee and Goren, Gregory},
+  title   = {{BEACON}: Budget-Aware Entity Matching Across Domains},
+  journal = {Proceedings of the ACM on Management of Data},
+  volume  = {4},
+  number  = {3},
+  pages   = {1--26},
+  year    = {2026},
+  doi     = {10.1145/3802021},
+  eprint  = {2603.11391},
+  archivePrefix = {arXiv}
+}
+
+@article{kamsteeg2025calibration,
+  author        = {Kamsteeg, Iris and Cardenas-Cartagena, Juan and
+                   van Beers, Floris and ten Holt, Gineke and
+                   Tashu, Tsegaye Misikir and Valdenegro-Toro, Matias},
+  title         = {Confidence Calibration in Large Language Model-Based
+                   Entity Matching},
+  journal       = {arXiv preprint arXiv:2509.19557},
+  year          = {2025},
+  eprint        = {2509.19557},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2509.19557},
+  note          = {arXiv comment states UncertaiNLP 2025 Workshop at
+                   EMNLP}
+}
+
+@article{baas2021transitivity,
+  author        = {Baas, Jurian and Dastani, Mehdi and Feelders, Ad},
+  title         = {Exploiting Transitivity Constraints for Entity
+                   Matching in Knowledge Graphs},
+  journal       = {arXiv preprint arXiv:2104.12589},
+  year          = {2021},
+  eprint        = {2104.12589},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2104.12589}
+}
+
+@incollection{ebeid2021hierarchical,
+  author    = {Ebeid, Islam Akef and Talburt, John R. and
+               Siddique, Md Abdus Salam},
+  title     = {Graph-Based Hierarchical Record Clustering for
+               Unsupervised Entity Resolution},
+  booktitle = {Advances in Intelligent Systems and Computing},
+  pages     = {107--118},
+  publisher = {Springer International Publishing},
+  year      = {2021},
+  doi       = {10.1007/978-3-030-97652-1_14},
+  eprint    = {2112.06331},
+  archivePrefix = {arXiv},
+  note      = {METADATA DISCREPANCY: Crossref registers the year as
+               2012, which is inconsistent with the 2021 arXiv posting
+               and the volume. Year 2021 used here; prefer citing the
+               arXiv version}
+}
+
+
+% =====================================================================
+% 3. COMPANY ENTITY RESOLUTION AND CORPORATE HIERARCHY
+% =====================================================================
+
+@inproceedings{ziv2022companyname2vec,
+  author    = {Ziv, Ran and Gronau, Ilan and Fire, Michael},
+  title     = {{CompanyName2Vec}: Company Entity Matching based on
+               Job Ads},
+  booktitle = {2022 IEEE 9th International Conference on Data Science
+               and Advanced Analytics (DSAA)},
+  pages     = {1--10},
+  publisher = {IEEE},
+  year      = {2022},
+  doi       = {10.1109/dsaa54385.2022.10032350},
+  eprint    = {2201.04687},
+  archivePrefix = {arXiv},
+  note      = {AUTHOR-NAME DISCREPANCY: arXiv and the IEEE DOI record
+               give ``Ran Ziv''; OpenAlex renders it ``Ziv Ran''.
+               arXiv/IEEE form used here}
+}
+
+@article{basile2024disambiguation,
+  author  = {Basile, Alessandro and Crupi, Riccardo and Grasso, Michele
+             and Mercanti, Alessandro and Regoli, Daniele and
+             Scarsi, Simone and Yang, Shuyi and
+             Cosentini, Andrea Claudio},
+  title   = {Disambiguation of company names via deep recurrent
+             networks},
+  journal = {Expert Systems with Applications},
+  volume  = {238},
+  pages   = {122035},
+  year    = {2024},
+  doi     = {10.1016/j.eswa.2023.122035},
+  note    = {METADATA DISCREPANCY: OpenAlex dates this 2023; Crossref
+             registers the issue year as 2024. Crossref preferred}
+}
+
+@inproceedings{belz2023bibliometric,
+  author    = {Belz, Andrea and Graddy-Reed, Alexandra and Shweta, FNU
+               and Giga, Aleksandar and Meenakshi Murali, Shivesh},
+  title     = {Deterministic bibliometric disambiguation challenges in
+               company names},
+  booktitle = {2023 IEEE 17th International Conference on Semantic
+               Computing (ICSC)},
+  pages     = {239--243},
+  publisher = {IEEE},
+  year      = {2023},
+  doi       = {10.1109/icsc56153.2023.00047}
+}
+
+@article{libgober2024linking,
+  author  = {Libgober, Brian and Jerzak, Connor T.},
+  title   = {Linking datasets on organizations using half a billion
+             open-collaborated records},
+  journal = {Political Science Research and Methods},
+  volume  = {13},
+  number  = {4},
+  pages   = {923--942},
+  year    = {2024},
+  doi     = {10.1017/psrm.2024.55},
+  note    = {AUTHOR-ORDER DISCREPANCY: the journal version lists
+             Libgober \& Jerzak; the SSRN preprint
+             (10.2139/ssrn.4770770) lists Jerzak \& Libgober. Journal
+             version preferred. Replication data:
+             \url{https://doi.org/10.7910/dvn/ehrqql}}
+}
+
+@article{arora2023clippings,
+  author        = {Arora, Abhishek and Yang, Xinmei and Jheng, Shao-Yu
+                   and Dell, Melissa},
+  title         = {Linking Representations with Multimodal Contrastive
+                   Learning},
+  journal       = {arXiv preprint arXiv:2304.03464},
+  year          = {2023},
+  eprint        = {2304.03464},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2304.03464}
+}
+
+@inproceedings{arora2024linktransformer,
+  author    = {Arora, Abhishek and Dell, Melissa},
+  title     = {{LinkTransformer}: A Unified Package for Record Linkage
+               with Transformer Language Models},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the
+               Association for Computational Linguistics (Volume 3:
+               System Demonstrations)},
+  pages     = {221--231},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.acl-demos.21},
+  eprint    = {2309.00789},
+  archivePrefix = {arXiv}
+}
+
+@misc{doherr2023searchengine,
+  author       = {Doherr, Thorsten},
+  title        = {The {SearchEngine}: A Holistic Approach to Matching},
+  howpublished = {SSRN Electronic Journal preprint},
+  year         = {2023},
+  doi          = {10.2139/ssrn.4326848}
+}
+
+@article{tellotrillo2026compustat,
+  author  = {Tello-Trillo, Cristina and Schmidt, Lawrence and
+             Streiff, Sean},
+  title   = {Matching Compustat data to the Longitudinal Business
+             Database, 1976--2020},
+  journal = {Journal of Economic and Social Measurement},
+  year    = {2026},
+  doi     = {10.1177/07479662261458730}
+}
+
+@article{arimond2023elf,
+  author        = {Arimond, Alexander and Molteni, Mauro and
+                   Jany, Dominik and Manolova, Zornitsa and
+                   Borth, Damian and Hoepner, Andreas G. F.},
+  title         = {Transformer-based Entity Legal Form Classification},
+  journal       = {arXiv preprint arXiv:2310.12766},
+  year          = {2023},
+  eprint        = {2310.12766},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2310.12766}
+}
+
+@article{chan2019lei,
+  author  = {Chan, Ka Kei and Milne, Alistair},
+  title   = {The Global Legal Entity Identifier System: How Can It
+             Deliver?},
+  journal = {Journal of Risk and Financial Management},
+  volume  = {12},
+  number  = {1},
+  pages   = {39},
+  year    = {2019},
+  doi     = {10.3390/jrfm12010039}
+}
+
+@misc{chan2013lei,
+  author       = {Chan, Ka Kei and Milne, Alistair K. L.},
+  title        = {The Global Legal Entity Identifier System: Will It
+                  Deliver?},
+  howpublished = {SSRN Electronic Journal preprint},
+  year         = {2013},
+  doi          = {10.2139/ssrn.2325889}
+}
+
+@article{bottega2012linchpin,
+  author  = {Bottega, John A. and Powell, Linda F.},
+  title   = {Creating a linchpin for financial data: Toward a universal
+             legal entity identifier},
+  journal = {Journal of Economics and Business},
+  volume  = {64},
+  number  = {1},
+  pages   = {105--115},
+  year    = {2012},
+  doi     = {10.1016/j.jeconbus.2011.06.002},
+  note    = {METADATA DISCREPANCY: OpenAlex dates this 2011; Crossref
+             registers the issue year as 2012. Crossref preferred}
+}
+
+@article{roman2022eubusinessgraph,
+  author  = {Roman, Dumitru and Alexiev, Vladimir and Paniagua, Javier
+             and Elves{\ae}ter, Brian and von Zernichow, Bj{\o}rn Marius
+             and Soylu, Ahmet and Simeonov, Boyan and Taggart, Chris},
+  title   = {The {euBusinessGraph} ontology: A lightweight ontology for
+             harmonizing basic company information},
+  journal = {Semantic Web},
+  volume  = {13},
+  number  = {1},
+  pages   = {41--68},
+  year    = {2022},
+  doi     = {10.3233/sw-210424},
+  note    = {Crossref registers the issued date as 2021 (IOS Press
+             pre-press); the issue of record is volume 13 (2022).
+             Ontology file inspected directly at
+             \url{https://github.com/euBusinessGraph/eubg-data}:
+             34 object properties, none expressing ownership,
+             parenthood or corporate-group membership}
+}
+
+@article{soylu2022theybuyforyou,
+  author  = {Soylu, Ahmet and Corcho, Oscar and Elves{\ae}ter, Brian and
+             Badenes-Olmedo, Carlos and Blount, Tom and
+             Yedro Mart{\'\i}nez, Francisco and Kovacic, Matej and
+             Posinkovic, Matej and Makgill, Ian and Taggart, Chris and
+             Simperl, Elena and Lech, Till C. and Roman, Dumitru},
+  title   = {{TheyBuyForYou} platform and knowledge graph: Expanding
+             horizons in public procurement with open linked data},
+  journal = {Semantic Web},
+  volume  = {13},
+  number  = {2},
+  pages   = {265--291},
+  year    = {2022},
+  doi     = {10.3233/sw-210442},
+  note    = {Full text inspected: supplier reconciliation to
+             OpenCorporates via owl:sameAs; zero occurrences of
+             ``subsidiary'', ``ultimate'' or ``ownership''; no gold
+             standard and no reconciliation accuracy reported}
+}
+
+@article{vitali2011network,
+  author  = {Vitali, Stefania and Glattfelder, James B. and
+             Battiston, Stefano},
+  title   = {The Network of Global Corporate Control},
+  journal = {PLoS ONE},
+  volume  = {6},
+  number  = {10},
+  pages   = {e25995},
+  year    = {2011},
+  doi     = {10.1371/journal.pone.0025995}
+}
+
+@article{garciabernardo2017offshore,
+  author  = {Garcia-Bernardo, Javier and Fichtner, Jan and
+             Takes, Frank W. and Heemskerk, Eelke M.},
+  title   = {Uncovering Offshore Financial Centers: Conduits and Sinks
+             in the Global Corporate Ownership Network},
+  journal = {Scientific Reports},
+  volume  = {7},
+  number  = {1},
+  year    = {2017},
+  doi     = {10.1038/s41598-017-06322-9}
+}
+
+@article{mizuno2020corporatecontrol,
+  author  = {Mizuno, Takayuki and Doi, Shohei and Kurizaki, Shuhei},
+  title   = {The power of corporate control in the global ownership
+             network},
+  journal = {PLOS ONE},
+  volume  = {15},
+  number  = {8},
+  pages   = {e0237862},
+  year    = {2020},
+  doi     = {10.1371/journal.pone.0237862}
+}
+
+@article{flood2020bhc,
+  author  = {Flood, Mark D. and Kenett, Dror Y. and
+             Lumsdaine, Robin L. and Simon, Jonathan K.},
+  title   = {The Complexity of Bank Holding Companies: A Topological
+             Approach},
+  journal = {Journal of Banking \& Finance},
+  volume  = {118},
+  pages   = {105789},
+  year    = {2020},
+  doi     = {10.1016/j.jbankfin.2020.105789},
+  note    = {NBER working paper version: w23755,
+             \url{https://doi.org/10.3386/w23755}}
+}
+
+@techreport{thoma2010harmonizing,
+  author      = {Thoma, Grid and Torrisi, Salvatore and
+                 Gambardella, Alfonso and Guellec, Dominique and
+                 Hall, Bronwyn and Harhoff, Dietmar},
+  title       = {Harmonizing and Combining Large Datasets --- An
+                 Application to Firm-Level Patent and Accounting Data},
+  institution = {National Bureau of Economic Research},
+  type        = {NBER Working Paper},
+  number      = {15851},
+  year        = {2010},
+  doi         = {10.3386/w15851}
+}
+
+@misc{magerman2006patentee,
+  author       = {Magerman, Tom and Van Looy, Bart and Song, Xiaoyan},
+  title        = {Data Production Methods for Harmonized Patent
+                  Statistics: Patentee Name Harmonization},
+  howpublished = {SSRN Electronic Journal preprint},
+  year         = {2006},
+  doi          = {10.2139/ssrn.944470}
+}
+
+@techreport{peeters2010harmonizing,
+  author      = {Peeters, Bert and Song, Xiaoyan and Callaert, Julie and
+                 Grouwels, Joris and Van Looy, Bart},
+  title       = {Harmonizing harmonized patentee names: An exploratory
+                 assessment of top patentees},
+  institution = {KU Leuven},
+  year        = {2010},
+  url         = {https://lirias.kuleuven.be/bitstream/123456789/264238/1/2010-03-18%20-%20HARMONIZING_HARMONIZED_PATENTEE_NAMES_FINAL.pdf},
+  note        = {No DOI located; Lirias repository record}
+}
+
+@misc{khalaf2017opencorporates,
+  author    = {Khalaf, Hala and Henderson, Alexandra and
+               van Breen, Laureen and Heithaus, Theresa and
+               Gkatziaki, Vasiliki and Diplaris, Sotiris},
+  title     = {Ground Truth Dataset with mappings of companies to
+               {OpenCorporates} legal entities},
+  publisher = {Zenodo},
+  year      = {2017},
+  doi       = {10.5281/zenodo.824191},
+  note      = {CC-BY-4.0. Fields: company name, country of HQ, state of
+               HQ (US), address of HQ. No parent or hierarchy
+               information. DOI verified via DataCite}
+}
+
+
+% =====================================================================
+% 4. MASTER DATA MANAGEMENT IN PROCUREMENT AND CRM
+% =====================================================================
+
+@article{smith2008mdm,
+  author  = {Smith, Heather A. and McKeen, James D.},
+  title   = {Developments in Practice {XXX}: Master Data Management:
+             Salvation Or Snake Oil?},
+  journal = {Communications of the Association for Information Systems},
+  volume  = {23},
+  year    = {2008},
+  doi     = {10.17705/1cais.02304}
+}
+
+@article{gantman2021vendormaster,
+  author  = {Gantman, Sonia and Metzger, Lorrie},
+  title   = {Vendor Master Data Cleaning---A Project for Accounting
+             Class},
+  journal = {Journal of Emerging Technologies in Accounting},
+  volume  = {19},
+  number  = {1},
+  pages   = {165--171},
+  year    = {2021},
+  doi     = {10.2308/jeta-2020-028},
+  note    = {METADATA DISCREPANCY: OpenAlex lists volume 18 and year
+             2021; Crossref registers volume 19, issue 1,
+             pages 165--171, issued 2021. Crossref preferred}
+}
+
+@article{ibrahim2021masterdataquality,
+  author  = {Ibrahim, Azira and Mohamed, Ibrahim and Safie, Nurhizam},
+  title   = {Factors Influencing Master Data Quality: A Systematic
+             Review},
+  journal = {International Journal of Advanced Computer Science and
+             Applications},
+  volume  = {12},
+  number  = {2},
+  year    = {2021},
+  doi     = {10.14569/ijacsa.2021.0120224}
+}
+
+@inproceedings{ho2009duplicateinvoices,
+  author    = {Ho, Van Hai and Compton, Paul and Benatallah, Boualem and
+               Vayssi{\`e}re, Julien and Menzel, Lucio and
+               Vogler, Hartmut},
+  title     = {An Incremental Knowledge Acquisition Method for Improving
+               Duplicate Invoices Detection},
+  booktitle = {2009 IEEE 25th International Conference on Data
+               Engineering (ICDE)},
+  pages     = {1415--1418},
+  publisher = {IEEE},
+  year      = {2009},
+  doi       = {10.1109/icde.2009.38}
+}
+
+@inproceedings{liao2026procurementduplicate,
+  author    = {Liao, Cheng-En and Wu, Kun-Da and Wang, Li-Ya and
+               Wang, Shih-Chih and Chen, Ying-Hsu and Lee, Chia-Pei and
+               Peng, Yung-Hsing},
+  title     = {Software Procurement Duplicate Detection Using Fuzzy
+               Matching and {LLM} Verification},
+  booktitle = {2026 IEEE 2nd International Conference on Consumer
+               Technology (ICCT-Pacific)},
+  pages     = {121--124},
+  publisher = {IEEE},
+  year      = {2026},
+  doi       = {10.1109/icct-pacific69083.2026.11518888},
+  note      = {Verified at metadata level only; abstract not obtainable.
+               No claims made about contents. READ BEFORE SUBMITTING}
+}
+
+@article{smart2007purchasingsynergy,
+  author  = {Smart, Alan and Dudas, Andreas},
+  title   = {Developing a decision-making framework for implementing
+             purchasing synergy: a case study},
+  journal = {International Journal of Physical Distribution \&
+             Logistics Management},
+  volume  = {37},
+  number  = {1},
+  pages   = {64--89},
+  year    = {2007},
+  doi     = {10.1108/09600030710723327}
+}
+
+@article{ganesan2020linkprediction,
+  author        = {Ganesan, Balaji and Parkala, Srinivas and
+                   Singh, Neeraj R. and Bhatia, Sumit and
+                   Mishra, Gayatri and Pasha, Matheen Ahmed and
+                   Patel, Hima and Naganna, Somashekar},
+  title         = {Link Prediction using Graph Neural Networks for
+                   Master Data Management},
+  journal       = {arXiv preprint arXiv:2003.04732},
+  year          = {2020},
+  eprint        = {2003.04732},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2003.04732}
+}
+
+@article{ganesan2024xlp,
+  author        = {Ganesan, Balaji and Pasha, Matheen Ahmed and
+                   Parkala, Srinivasa and Singh, Neeraj R. and
+                   Mishra, Gayatri and Bhatia, Sumit and Patel, Hima and
+                   Naganna, Somashekar},
+  title         = {{xLP}: Explainable Link Prediction for Master Data
+                   Management},
+  journal       = {arXiv preprint arXiv:2403.09806},
+  year          = {2024},
+  eprint        = {2403.09806},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2403.09806}
+}
+
+@article{jaitly2022xem,
+  author        = {Jaitly, Sukriti and George, Deepa Mariam and
+                   Ganesan, Balaji and Ameen, Muhammad and
+                   Pusapati, Srinivas},
+  title         = {{xEM}: Explainable Entity Matching in Customer 360},
+  journal       = {arXiv preprint arXiv:2212.00342},
+  year          = {2022},
+  eprint        = {2212.00342},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2212.00342},
+  note          = {arXiv comment states CODS-COMAD 2023 demo track}
+}
+
+@mastersthesis{athanasiadou2019suppliermdm,
+  author      = {Athanasiadou, Ifigeneia},
+  title       = {Evaluating the maturity of companies in supplier master
+                 data management: The design of a maturity model},
+  school      = {Delft University of Technology},
+  year        = {2019},
+  url         = {http://resolver.tudelft.nl/uuid:941be828-dbf1-40ea-90d7-5883d572abf5}
+}
+
+@article{soylu2022dataquality,
+  author  = {Soylu, Ahmet and Corcho, {\'O}scar and
+             Elves{\ae}ter, Brian and Badenes-Olmedo, Carlos and
+             Yedro-Mart{\'\i}nez, Francisco and Kovacic, Matej and
+             Posinkovic, Matej and Medve{\v s}{\v c}ek, Mitja and
+             Makgill, Ian and Taggart, Chris and Simperl, Elena and
+             Lech, Till C. and Roman, Dumitru},
+  title   = {Data Quality Barriers for Transparency in Public
+             Procurement},
+  journal = {Information},
+  volume  = {13},
+  number  = {2},
+  pages   = {99},
+  year    = {2022},
+  doi     = {10.3390/info13020099},
+  note    = {Metadata verified via Crossref; full text not obtainable
+             (publisher returned access denied). No claims made about
+             contents. OBTAIN BEFORE CITING}
+}
+
+
+% =====================================================================
+% 5. LLM AND AGENT FACTUALITY
+% =====================================================================
+
+@article{wei2024simpleqa,
+  author        = {Wei, Jason and Karina, Nguyen and Chung, Hyung Won and
+                   Jiao, Yunxin Joy and Papay, Spencer and
+                   Glaese, Amelia and Schulman, John and Fedus, William},
+  title         = {Measuring short-form factuality in large language
+                   models},
+  journal       = {arXiv preprint arXiv:2411.04368},
+  year          = {2024},
+  eprint        = {2411.04368},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2411.04368},
+  note          = {Introduces SimpleQA. Grading scheme:
+                   correct / incorrect / not attempted}
+}
+
+@article{wei2025browsecomp,
+  author        = {Wei, Jason and Sun, Zhiqing and Papay, Spencer and
+                   McKinney, Scott and Han, Jeffrey and Fulford, Isa and
+                   Chung, Hyung Won and Tachard Passos, Alex and
+                   Fedus, William and Glaese, Amelia},
+  title         = {{BrowseComp}: A Simple Yet Challenging Benchmark for
+                   Browsing Agents},
+  journal       = {arXiv preprint arXiv:2504.12516},
+  year          = {2025},
+  eprint        = {2504.12516},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2504.12516}
+}
+
+@article{chen2025browsecompplus,
+  author        = {Chen, Zijian and Ma, Xueguang and Zhuang, Shengyao and
+                   Nie, Ping and Zou, Kai and Liu, Andrew and
+                   Green, Joshua and Patel, Kshama and Lin, Jimmy},
+  title         = {{BrowseComp-Plus}: A More Fair and Transparent
+                   Evaluation Benchmark of Deep-Research Agent},
+  journal       = {arXiv preprint arXiv:2508.06600},
+  year          = {2025},
+  eprint        = {2508.06600},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2508.06600},
+  note          = {Author list truncated in the arXiv record display;
+                   verify full list before final citation}
+}
+
+@article{wei2024longformfactuality,
+  author        = {Wei, Jerry and Yang, Chengrun and Song, Xinying and
+                   Lu, Yifeng and Hu, Nathan and Huang, Jie and
+                   Tran, Dustin and Peng, Daiyi and Liu, Ruibo and
+                   Huang, Da and Du, Cosmo and Le, Quoc V.},
+  title         = {Long-form factuality in large language models},
+  journal       = {arXiv preprint arXiv:2403.18802},
+  year          = {2024},
+  eprint        = {2403.18802},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2403.18802},
+  note          = {NeurIPS 2024 per arXiv comment. Introduces LongFact
+                   and SAFE. Code:
+                   \url{https://github.com/google-deepmind/long-form-factuality}}
+}
+
+@article{bang2025hallulens,
+  author        = {Bang, Yejin and Ji, Ziwei and Schelten, Alan and
+                   Hartshorn, Anthony and Fowler, Tara and Zhang, Cheng
+                   and Cancedda, Nicola and Fung, Pascale},
+  title         = {{HalluLens}: {LLM} Hallucination Benchmark},
+  journal       = {arXiv preprint arXiv:2504.17550},
+  year          = {2025},
+  eprint        = {2504.17550},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2504.17550}
+}
+
+@article{haas2025simpleqaverified,
+  author        = {Haas, Lukas and Yona, Gal and D'Antonio, Giovanni and
+                   Goldshtein, Sasha and Das, Dipanjan},
+  title         = {{SimpleQA} Verified: A Reliable Factuality Benchmark
+                   to Measure Parametric Knowledge},
+  journal       = {arXiv preprint arXiv:2509.07968},
+  year          = {2025},
+  eprint        = {2509.07968},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2509.07968}
+}
+
+@article{orr2020bootleg,
+  author        = {Orr, Laurel and Leszczynski, Megan and Arora, Simran
+                   and Wu, Sen and Guha, Neel and Ling, Xiao and
+                   R{\'e}, Christopher},
+  title         = {Bootleg: Chasing the Tail with Self-Supervised Named
+                   Entity Disambiguation},
+  journal       = {arXiv preprint arXiv:2010.10363},
+  year          = {2020},
+  eprint        = {2010.10363},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2010.10363}
+}
+
+@article{islam2023financebench,
+  author        = {Islam, Pranab and Kannappan, Anand and Kiela, Douwe
+                   and Qian, Rebecca and Scherrer, Nino and
+                   Vidgen, Bertie},
+  title         = {{FinanceBench}: A New Benchmark for Financial
+                   Question Answering},
+  journal       = {arXiv preprint arXiv:2311.11944},
+  year          = {2023},
+  eprint        = {2311.11944},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2311.11944},
+  note          = {Data:
+                   \url{https://huggingface.co/datasets/PatronusAI/financebench}}
+}
+
+@article{kumar2026finreflectkg,
+  author        = {Kumar, Mahesh and Sarmah, Bhaskarjit and
+                   Pasquali, Stefano},
+  title         = {{FinReflectKG} --- {HalluBench}: {GraphRAG}
+                   Hallucination Benchmark for Financial Question
+                   Answering Systems},
+  journal       = {arXiv preprint arXiv:2603.20252},
+  year          = {2026},
+  eprint        = {2603.20252},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2603.20252},
+  note          = {Verified at metadata level only; contents not read}
+}
+
+@inproceedings{peeters2026webmall,
+  author    = {Peeters, Ralph and Steiner, Aaron and Schwarz, Luca and
+               Caspary, Julian Yuya and Bizer, Christian},
+  title     = {{WebMall} --- A Multi-Shop Benchmark for Evaluating Web
+               Agents},
+  booktitle = {Proceedings of the 49th International ACM SIGIR
+               Conference on Research and Development in Information
+               Retrieval},
+  pages     = {3342--3348},
+  publisher = {ACM},
+  year      = {2026},
+  doi       = {10.1145/3805712.3808592},
+  eprint    = {2508.13024},
+  archivePrefix = {arXiv}
+}
+
+
+% =====================================================================
+% 6. FEDERAL PROCUREMENT / USASPENDING / FPDS RESEARCH
+% =====================================================================
+
+@article{carril2020consolidation,
+  author  = {Carril, Rodrigo and Duggan, Mark},
+  title   = {The impact of industry consolidation on government
+             procurement: Evidence from Department of Defense
+             contracting},
+  journal = {Journal of Public Economics},
+  volume  = {184},
+  pages   = {104141},
+  year    = {2020},
+  doi     = {10.1016/j.jpubeco.2020.104141},
+  note    = {NBER working paper version: w25160,
+             \url{https://doi.org/10.3386/w25160}}
+}
+
+@techreport{carril2018consolidationnber,
+  author      = {Carril, Rodrigo and Duggan, Mark},
+  title       = {The Impact of Industry Consolidation on Government
+                 Procurement: Evidence from Department of Defense
+                 Contracting},
+  institution = {National Bureau of Economic Research},
+  type        = {NBER Working Paper},
+  number      = {25160},
+  year        = {2018},
+  doi         = {10.3386/w25160}
+}
+
+@misc{howlett2016fpds,
+  author       = {Howlett, Michael and Brouillette, Caroline and
+                  Coleman, Jack and Skorzus, Roman},
+  title        = {Policy Consulting in the {USA}: New Evidence from the
+                  Federal Procurement Data System --- Next Generation},
+  howpublished = {SSRN Electronic Journal preprint},
+  year         = {2016},
+  doi          = {10.2139/ssrn.2834776}
+}
+
+@article{thornton2019nonprofits,
+  author  = {Thornton, Jeremy and Lecy, Jesse},
+  title   = {Good Enough for Government Work? An Incomplete Contracts
+             Approach to the Use of Nonprofits in {U.S.} Federal
+             Procurement},
+  journal = {Nonprofit Policy Forum},
+  volume  = {10},
+  number  = {3},
+  year    = {2019},
+  doi     = {10.1515/npf-2019-0037}
+}
+
+@article{mahoney2019acquireorexpire,
+  author  = {Mahoney, Charles W.},
+  title   = {Acquire or Expire: Publicly Traded Defense Contractors,
+             Financial Markets, and Consolidation in the {U.S.} Defense
+             Industry},
+  journal = {Defence and Peace Economics},
+  volume  = {32},
+  number  = {3},
+  pages   = {325--342},
+  year    = {2019},
+  doi     = {10.1080/10242694.2019.1667216},
+  note    = {Crossref registers the issued year as 2019; the issue of
+             record is volume 32 (2021)}
+}
+
+@article{kim2012contractdesign,
+  author  = {Kim, Yong Woon and Brown, Trevor L.},
+  title   = {The Importance of Contract Design},
+  journal = {Public Administration Review},
+  volume  = {72},
+  number  = {5},
+  pages   = {687--696},
+  year    = {2012},
+  doi     = {10.1111/j.1540-6210.2012.02537.x}
+}
+
+
+% =====================================================================
+% 7. PRIMARY DATA SOURCES AND STANDARDS (non-paper)
+% =====================================================================
+
+@misc{gleif_level2,
+  author       = {{Global Legal Entity Identifier Foundation}},
+  title        = {Level 2 Data: Who Owns Whom},
+  howpublished = {\url{https://www.gleif.org/en/lei-data/access-and-use-lei-data/level-2-data-who-owns-whom}},
+  year         = {2026},
+  note         = {Accessed 2026-08-27. Defines the direct and ultimate
+                  accounting consolidating parent relations; Level 2
+                  collection began May 2017}
+}
+
+@techreport{gleif_business_report_q2_2026,
+  author      = {{Global Legal Entity Identifier Foundation}},
+  title       = {Global {LEI} System Business Report, {Q2} 2026},
+  institution = {Global Legal Entity Identifier Foundation},
+  year        = {2026},
+  url         = {https://www.gleif.org/lei-data/global-lei-index/download-global-lei-system-business-reports/download-global-lei-system-business-report-q2-2026/q2-2026-quarterly_business_report.pdf},
+  note        = {Version 1.0, release date 2026-07-23; references the
+                 Level 2 relationship-record CDF Golden Copy of
+                 2026-07-01. Page 08: 3{,}229{,}659 entities reported
+                 Level 2 data; direct parent 4\% with LEI / 4\% without
+                 LEI / 89\% no direct parent / 3\% non-public; ultimate
+                 parent 4\% / 4\% / 88\% / 4\%. Page 09: direct-parent
+                 relationship validation 51.2\% Fully Corroborated,
+                 42.6\% Entity Supplied Only, 6.2\% Partially
+                 Corroborated}
+}
+
+@misc{gleif_data_dictionary,
+  author       = {{Global Legal Entity Identifier Foundation}},
+  title        = {Global {LEI} System Business Reporting Data
+                  Dictionary, Version 1.5},
+  howpublished = {\url{https://www.gleif.org/lei-data/global-lei-index/download-global-lei-system-business-reports/2022-07-19_business-report-dictionary_v1.5.pdf}},
+  year         = {2022},
+  note         = {Defines relationship types IS\_DIRECTLY\_CONSOLIDATED\_BY
+                  and IS\_ULTIMATELY\_CONSOLIDATED\_BY, reporting
+                  exception categories and validation-source values}
+}
+
+@misc{gleif_api,
+  author       = {{Global Legal Entity Identifier Foundation}},
+  title        = {{GLEIF} {API} v1},
+  howpublished = {\url{https://api.gleif.org/api/v1/}},
+  year         = {2026},
+  note         = {Queried 2026-08-27: 3{,}413{,}543 LEI records in the
+                  golden copy dated 2026-08-27. Endpoints
+                  /lei-records/\{lei\}/direct-parent,
+                  /ultimate-parent and /direct-children are functional}
+}
+
+@misc{usaspending_api,
+  author       = {{U.S. Department of the Treasury, Bureau of the Fiscal
+                  Service}},
+  title        = {{USAspending} {API} v2 --- Recipient Endpoints},
+  howpublished = {\url{https://api.usaspending.gov/}},
+  year         = {2026},
+  note         = {API contract at
+                  \url{https://github.com/fedspendingtransparency/usaspending-api}.
+                  Accessed 2026-08-27. recipient\_level is documented as
+                  R (neither parent nor child), P (parent recipient),
+                  C (child recipient); parent\_uei, parent\_duns,
+                  parent\_name and parent\_id are nullable; parents is
+                  an array; the structure is one hop deep with no
+                  grandparent chain}
+}
+
+@misc{deepmatcher_datasets,
+  author       = {Mudgal, Sidharth and Li, Han and
+                  Rekatsinas, Theodoros and Doan, AnHai and
+                  Park, Youngchoon and Krishnan, Ganesh and
+                  Deep, Rohit and Arcaute, Esteban and
+                  Raghavendra, Vijay},
+  title        = {Datasets for the {DeepMatcher} paper},
+  howpublished = {\url{https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md}},
+  year         = {2018},
+  note         = {Accessed 2026-08-27. Documents the Company dataset
+                  construction, including the removal of the first 20
+                  tokens of each document to suppress the company name}
+}
+
+@misc{eubg_ontology_file,
+  author       = {{euBusinessGraph Consortium}},
+  title        = {{euBusinessGraph} Company Data Model ---
+                  ebg-ontology.ttl},
+  howpublished = {\url{https://github.com/euBusinessGraph/eubg-data}},
+  year         = {2021},
+  note         = {Retrieved 2026-08-27. 1{,}253 lines; 34 declared
+                  owl:ObjectProperty terms, none expressing ownership,
+                  parenthood, control or corporate-group membership}
+}
+
+@inproceedings{li2022bridging,
+  title     = {Bridging the Gap between Reality and Ideality of Entity Matching:
+               A Revisiting and Benchmark Re-Construction},
+  author    = {Li, Tianshu and Wang, Jiannan and Zhu, Erkang and Chaudhuri, Surajit},
+  booktitle = {Proceedings of the 31st International Joint Conference on
+               Artificial Intelligence (IJCAI)},
+  year      = {2022},
+  note      = {Documents how skewed positive-class ratios make reported entity-matching
+               scores incomparable across benchmarks.}
+}
+
+@article{cao2023companykg,
+  title   = {CompanyKG: A Large-Scale Heterogeneous Graph for Company Similarity
+             Quantification},
+  author  = {Cao, Lele and Halvardsson, Vilhelm and McCornack, Andrew and
+             von Ehrenheim, Vilhelm and Herog, Astrid},
+  journal = {arXiv preprint arXiv:2306.10649},
+  year    = {2023}
+}
+
+@article{gagliardelli2024blockingbias,
+  title   = {Evaluating Blocking Biases in Entity Matching},
+  author  = {Gagliardelli, Luca and Papadakis, George and Simonini, Giovanni and
+             Bergamaschi, Sonia and Palpanas, Themis},
+  journal = {arXiv preprint arXiv:2409.16410},
+  year    = {2024},
+  note    = {Introduces pair-completeness disparity across subgroups as a blocking
+             evaluation axis.}
+}

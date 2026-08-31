@@ -1,0 +1,43 @@
+% arXiv / preprint build. The manuscript body lives in ../shared/body.tex and is
+% shared verbatim with the PVLDB build in ../pvldb, so the two cannot drift.
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+
+\bibliographystyle{plainnat}
+
+\newcommand{\tabledir}{tables}
+\input{tables/macros}
+
+\title{Corporate-Family Resolution Is Not a String-Matching Problem:\\
+A Public Benchmark Stratified by Name Visibility}
+
+\author{Harshit Gupta\\
+\small Independent Researcher\\
+\small \texttt{harshitg93@gmail.com}}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{../shared/abstract}
+\end{abstract}
+
+\input{../shared/body}
+
+\bibliography{../refs/refs}
+
+\end{document}

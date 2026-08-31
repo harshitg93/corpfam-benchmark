@@ -1,0 +1,53 @@
+{
+  "source_file": "data/raw/usaspending/recipients_contracts.jsonl",
+  "rows": 181451,
+  "levels": {
+    "C": 92474,
+    "P": 88835,
+    "R": 142
+  },
+  "levels_pct": {
+    "C": 50.9636,
+    "P": 48.9581,
+    "R": 0.0783
+  },
+  "amount": {
+    "total": 1563097417075.7,
+    "positive_total": 1570476430676.82,
+    "rows_with_positive_amount": 132599,
+    "rows_with_negative_amount": 15337,
+    "by_level": {
+      "P": 781481610115.9,
+      "C": 781480492217.67,
+      "R": 135314742.13
+    }
+  },
+  "concentration": {
+    "top_10_share_of_positive_spend_pct": 16.2449,
+    "top_100_share_of_positive_spend_pct": 43.0881,
+    "top_1000_share_of_positive_spend_pct": 72.7828,
+    "top_10000_share_of_positive_spend_pct": 93.351,
+    "top_50000_share_of_positive_spend_pct": 99.5685
+  },
+  "uei": {
+    "rows_without_uei": 0,
+    "distinct_uei": 101513,
+    "rows_sharing_a_uei_with_another_row": 79938
+  },
+  "names": {
+    "distinct_raw": 94739,
+    "distinct_normalised": 91770,
+    "distinct_suffix_stripped": 90980,
+    "collapsed_by_normalisation": 2969,
+    "collapsed_by_suffix_stripping": 790,
+    "normalised_names_shared_by_multiple_uei": 7793,
+    "uei_pairs_colliding_after_normalisation": 28231,
+    "suffix_stripped_names_shared_by_multiple_uei": 8385,
+    "uei_pairs_colliding_after_suffix_stripping": 30396
+  },
+  "family_fetch_cost": {
+    "parents_to_query": 88835,
+    "children_expected": 92474,
+    "est_serial_minutes_at_0.45s_each": 666.3
+  }
+}

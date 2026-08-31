@@ -1,0 +1,430 @@
+\begin{thebibliography}{47}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arimond et~al.(2023)Arimond, Molteni, Jany, Manolova, Borth, and
+  Hoepner]{arimond2023elf}
+Alexander Arimond, Mauro Molteni, Dominik Jany, Zornitsa Manolova, Damian
+  Borth, and Andreas G.~F. Hoepner.
+\newblock Transformer-based entity legal form classification.
+\newblock \emph{arXiv preprint arXiv:2310.12766}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.12766}.
+
+\bibitem[Athanasiadou(2019)]{athanasiadou2019suppliermdm}
+Ifigeneia Athanasiadou.
+\newblock Evaluating the maturity of companies in supplier master data
+  management: The design of a maturity model.
+\newblock Master's thesis, Delft University of Technology, 2019.
+\newblock URL
+  \url{http://resolver.tudelft.nl/uuid:941be828-dbf1-40ea-90d7-5883d572abf5}.
+
+\bibitem[Barlaug and Gulla(2021)]{barlaug2021survey}
+Nils Barlaug and Jon~Atle Gulla.
+\newblock Neural networks for entity matching: A survey.
+\newblock \emph{ACM Transactions on Knowledge Discovery from Data}, 15\penalty0
+  (3):\penalty0 1--37, 2021.
+\newblock \doi{10.1145/3442200}.
+
+\bibitem[Cao et~al.(2023)Cao, Halvardsson, McCornack, von Ehrenheim, and
+  Herog]{cao2023companykg}
+Lele Cao, Vilhelm Halvardsson, Andrew McCornack, Vilhelm von Ehrenheim, and
+  Astrid Herog.
+\newblock Companykg: A large-scale heterogeneous graph for company similarity
+  quantification.
+\newblock \emph{arXiv preprint arXiv:2306.10649}, 2023.
+
+\bibitem[Carril and Duggan(2020)]{carril2020consolidation}
+Rodrigo Carril and Mark Duggan.
+\newblock The impact of industry consolidation on government procurement:
+  Evidence from department of defense contracting.
+\newblock \emph{Journal of Public Economics}, 184:\penalty0 104141, 2020.
+\newblock \doi{10.1016/j.jpubeco.2020.104141}.
+\newblock NBER working paper version: w25160,
+  \url{https://doi.org/10.3386/w25160}.
+
+\bibitem[Chan and Milne(2019)]{chan2019lei}
+Ka~Kei Chan and Alistair Milne.
+\newblock The global legal entity identifier system: How can it deliver?
+\newblock \emph{Journal of Risk and Financial Management}, 12\penalty0
+  (1):\penalty0 39, 2019.
+\newblock \doi{10.3390/jrfm12010039}.
+
+\bibitem[Chan and Milne(2013)]{chan2013lei}
+Ka~Kei Chan and Alistair K.~L. Milne.
+\newblock The global legal entity identifier system: Will it deliver?
+\newblock SSRN Electronic Journal preprint, 2013.
+
+\bibitem[Chen et~al.(2025)Chen, Ma, Zhuang, Nie, Zou, Liu, Green, Patel, and
+  Lin]{chen2025browsecompplus}
+Zijian Chen, Xueguang Ma, Shengyao Zhuang, Ping Nie, Kai Zou, Andrew Liu,
+  Joshua Green, Kshama Patel, and Jimmy Lin.
+\newblock {BrowseComp-Plus}: A more fair and transparent evaluation benchmark
+  of deep-research agent.
+\newblock \emph{arXiv preprint arXiv:2508.06600}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2508.06600}.
+\newblock Author list truncated in the arXiv record display; verify full list
+  before final citation.
+
+\bibitem[Crescenzi et~al.(2021)Crescenzi, De~Angelis, Firmani, Mazzei,
+  Merialdo, Piai, and Srivastava]{crescenzi2021alaska}
+Valter Crescenzi, Andrea De~Angelis, Donatella Firmani, Maurizio Mazzei, Paolo
+  Merialdo, Federico Piai, and Divesh Srivastava.
+\newblock Alaska: A flexible benchmark for data integration tasks.
+\newblock \emph{arXiv preprint arXiv:2101.11259}, 2021.
+\newblock URL \url{https://arxiv.org/abs/2101.11259}.
+
+\bibitem[Ebeid et~al.(2021)Ebeid, Talburt, and Siddique]{ebeid2021hierarchical}
+Islam~Akef Ebeid, John~R. Talburt, and Md~Abdus~Salam Siddique.
+\newblock Graph-based hierarchical record clustering for unsupervised entity
+  resolution.
+\newblock In \emph{Advances in Intelligent Systems and Computing}, pages
+  107--118. Springer International Publishing, 2021.
+\newblock \doi{10.1007/978-3-030-97652-1_14}.
+\newblock METADATA DISCREPANCY: Crossref registers the year as 2012, which is
+  inconsistent with the 2021 arXiv posting and the volume. Year 2021 used here;
+  prefer citing the arXiv version.
+
+\bibitem[Flood et~al.(2020)Flood, Kenett, Lumsdaine, and Simon]{flood2020bhc}
+Mark~D. Flood, Dror~Y. Kenett, Robin~L. Lumsdaine, and Jonathan~K. Simon.
+\newblock The complexity of bank holding companies: A topological approach.
+\newblock \emph{Journal of Banking \& Finance}, 118:\penalty0 105789, 2020.
+\newblock \doi{10.1016/j.jbankfin.2020.105789}.
+\newblock NBER working paper version: w23755,
+  \url{https://doi.org/10.3386/w23755}.
+
+\bibitem[Gagliardelli et~al.(2024)Gagliardelli, Papadakis, Simonini,
+  Bergamaschi, and Palpanas]{gagliardelli2024blockingbias}
+Luca Gagliardelli, George Papadakis, Giovanni Simonini, Sonia Bergamaschi, and
+  Themis Palpanas.
+\newblock Evaluating blocking biases in entity matching.
+\newblock \emph{arXiv preprint arXiv:2409.16410}, 2024.
+\newblock Introduces pair-completeness disparity across subgroups as a blocking
+  evaluation axis.
+
+\bibitem[Ganesan et~al.(2020)Ganesan, Parkala, Singh, Bhatia, Mishra, Pasha,
+  Patel, and Naganna]{ganesan2020linkprediction}
+Balaji Ganesan, Srinivas Parkala, Neeraj~R. Singh, Sumit Bhatia, Gayatri
+  Mishra, Matheen~Ahmed Pasha, Hima Patel, and Somashekar Naganna.
+\newblock Link prediction using graph neural networks for master data
+  management.
+\newblock \emph{arXiv preprint arXiv:2003.04732}, 2020.
+\newblock URL \url{https://arxiv.org/abs/2003.04732}.
+
+\bibitem[Ganesan et~al.(2024)Ganesan, Pasha, Parkala, Singh, Mishra, Bhatia,
+  Patel, and Naganna]{ganesan2024xlp}
+Balaji Ganesan, Matheen~Ahmed Pasha, Srinivasa Parkala, Neeraj~R. Singh,
+  Gayatri Mishra, Sumit Bhatia, Hima Patel, and Somashekar Naganna.
+\newblock {xLP}: Explainable link prediction for master data management.
+\newblock \emph{arXiv preprint arXiv:2403.09806}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2403.09806}.
+
+\bibitem[Gantman and Metzger(2021)]{gantman2021vendormaster}
+Sonia Gantman and Lorrie Metzger.
+\newblock Vendor master data cleaning---a project for accounting class.
+\newblock \emph{Journal of Emerging Technologies in Accounting}, 19\penalty0
+  (1):\penalty0 165--171, 2021.
+\newblock \doi{10.2308/jeta-2020-028}.
+\newblock METADATA DISCREPANCY: OpenAlex lists volume 18 and year 2021;
+  Crossref registers volume 19, issue 1, pages 165--171, issued 2021. Crossref
+  preferred.
+
+\bibitem[Garcia-Bernardo et~al.(2017)Garcia-Bernardo, Fichtner, Takes, and
+  Heemskerk]{garciabernardo2017offshore}
+Javier Garcia-Bernardo, Jan Fichtner, Frank~W. Takes, and Eelke~M. Heemskerk.
+\newblock Uncovering offshore financial centers: Conduits and sinks in the
+  global corporate ownership network.
+\newblock \emph{Scientific Reports}, 7\penalty0 (1), 2017.
+\newblock \doi{10.1038/s41598-017-06322-9}.
+
+\bibitem[Ho et~al.(2009)Ho, Compton, Benatallah, Vayssi{\`e}re, Menzel, and
+  Vogler]{ho2009duplicateinvoices}
+Van~Hai Ho, Paul Compton, Boualem Benatallah, Julien Vayssi{\`e}re, Lucio
+  Menzel, and Hartmut Vogler.
+\newblock An incremental knowledge acquisition method for improving duplicate
+  invoices detection.
+\newblock In \emph{2009 IEEE 25th International Conference on Data Engineering
+  (ICDE)}, pages 1415--1418. IEEE, 2009.
+\newblock \doi{10.1109/icde.2009.38}.
+
+\bibitem[Ibrahim et~al.(2021)Ibrahim, Mohamed, and
+  Safie]{ibrahim2021masterdataquality}
+Azira Ibrahim, Ibrahim Mohamed, and Nurhizam Safie.
+\newblock Factors influencing master data quality: A systematic review.
+\newblock \emph{International Journal of Advanced Computer Science and
+  Applications}, 12\penalty0 (2), 2021.
+\newblock \doi{10.14569/ijacsa.2021.0120224}.
+
+\bibitem[Konda et~al.(2016)Konda, Das, Suganthan G.~C., Doan, Ardalan, Ballard,
+  Li, Panahi, Zhang, Naughton, Prasad, Krishnan, Deep, and
+  Raghavendra]{konda2016magellan}
+Pradap Konda, Sanjib Das, Paul Suganthan G.~C., AnHai Doan, Adel Ardalan,
+  Jeffrey~R. Ballard, Han Li, Fatemah Panahi, Haojun Zhang, Jeff Naughton,
+  Shishir Prasad, Ganesh Krishnan, Rohit Deep, and Vijay Raghavendra.
+\newblock Magellan: Toward building entity matching management systems.
+\newblock \emph{Proceedings of the VLDB Endowment}, 9\penalty0 (12):\penalty0
+  1197--1208, 2016.
+\newblock \doi{10.14778/2994509.2994535}.
+
+\bibitem[Li et~al.(2022)Li, Wang, Zhu, and Chaudhuri]{li2022bridging}
+Tianshu Li, Jiannan Wang, Erkang Zhu, and Surajit Chaudhuri.
+\newblock Bridging the gap between reality and ideality of entity matching: A
+  revisiting and benchmark re-construction.
+\newblock In \emph{Proceedings of the 31st International Joint Conference on
+  Artificial Intelligence (IJCAI)}, 2022.
+\newblock Documents how skewed positive-class ratios make reported
+  entity-matching scores incomparable across benchmarks.
+
+\bibitem[Li et~al.(2020)Li, Li, Suhara, Doan, and Tan]{li2020ditto}
+Yuliang Li, Jinfeng Li, Yoshihiko Suhara, AnHai Doan, and Wang-Chiew Tan.
+\newblock Deep entity matching with pre-trained language models.
+\newblock \emph{Proceedings of the VLDB Endowment}, 14\penalty0 (1):\penalty0
+  50--60, 2020.
+\newblock \doi{10.14778/3421424.3421431}.
+
+\bibitem[Liao et~al.(2026)Liao, Wu, Wang, Wang, Chen, Lee, and
+  Peng]{liao2026procurementduplicate}
+Cheng-En Liao, Kun-Da Wu, Li-Ya Wang, Shih-Chih Wang, Ying-Hsu Chen, Chia-Pei
+  Lee, and Yung-Hsing Peng.
+\newblock Software procurement duplicate detection using fuzzy matching and
+  {LLM} verification.
+\newblock In \emph{2026 IEEE 2nd International Conference on Consumer
+  Technology (ICCT-Pacific)}, pages 121--124. IEEE, 2026.
+\newblock \doi{10.1109/icct-pacific69083.2026.11518888}.
+\newblock Verified at metadata level only; abstract not obtainable. No claims
+  made about contents. READ BEFORE SUBMITTING.
+
+\bibitem[Magerman et~al.(2006)Magerman, Van~Looy, and
+  Song]{magerman2006patentee}
+Tom Magerman, Bart Van~Looy, and Xiaoyan Song.
+\newblock Data production methods for harmonized patent statistics: Patentee
+  name harmonization.
+\newblock SSRN Electronic Journal preprint, 2006.
+
+\bibitem[Mizuno et~al.(2020)Mizuno, Doi, and
+  Kurizaki]{mizuno2020corporatecontrol}
+Takayuki Mizuno, Shohei Doi, and Shuhei Kurizaki.
+\newblock The power of corporate control in the global ownership network.
+\newblock \emph{PLOS ONE}, 15\penalty0 (8):\penalty0 e0237862, 2020.
+\newblock \doi{10.1371/journal.pone.0237862}.
+
+\bibitem[Mudgal et~al.(2018)Mudgal, Li, Rekatsinas, Doan, Park, Krishnan, Deep,
+  Arcaute, and Raghavendra]{mudgal2018deepmatcher}
+Sidharth Mudgal, Han Li, Theodoros Rekatsinas, AnHai Doan, Youngchoon Park,
+  Ganesh Krishnan, Rohit Deep, Esteban Arcaute, and Vijay Raghavendra.
+\newblock Deep learning for entity matching: A design space exploration.
+\newblock In \emph{Proceedings of the 2018 International Conference on
+  Management of Data (SIGMOD)}, pages 19--34. ACM, 2018.
+\newblock \doi{10.1145/3183713.3196926}.
+\newblock Introduces the \texttt{Company} dataset: 112{,}632 labelled pairs,
+  28{,}200 positives, one long-text attribute, Wikipedia article to company
+  homepage.
+
+\bibitem[Neuhof et~al.(2024)Neuhof, Fisichella, Papadakis, Nikoletos, Augsten,
+  Nejdl, and Koubarakis]{neuhof2024openbenchmark}
+Franziska Neuhof, Marco Fisichella, George Papadakis, Konstantinos Nikoletos,
+  Nikolaus Augsten, Wolfgang Nejdl, and Manolis Koubarakis.
+\newblock Open benchmark for filtering techniques in entity resolution.
+\newblock \emph{The VLDB Journal}, 33\penalty0 (5):\penalty0 1671--1696, 2024.
+\newblock \doi{10.1007/s00778-024-00868-7}.
+
+\bibitem[Papadakis et~al.(2021)Papadakis, Ioannou, Thanos, and
+  Palpanas]{papadakis2021fourgenerations}
+George Papadakis, Ekaterini Ioannou, Emanouil Thanos, and Themis Palpanas.
+\newblock \emph{The Four Generations of Entity Resolution}.
+\newblock Synthesis Lectures on Data Management. Springer International
+  Publishing, 2021.
+\newblock \doi{10.2200/S01067ED1V01Y202012DTM064}.
+
+\bibitem[Papadakis et~al.(2023)Papadakis, Fisichella, Schoger, Mandilaras,
+  Augsten, and Nejdl]{papadakis2023benchmarking}
+George Papadakis, Marco Fisichella, Franziska Schoger, George Mandilaras,
+  Nikolaus Augsten, and Wolfgang Nejdl.
+\newblock Benchmarking filtering techniques for entity resolution.
+\newblock In \emph{2023 IEEE 39th International Conference on Data Engineering
+  (ICDE)}, pages 653--666. IEEE, 2023.
+\newblock \doi{10.1109/ICDE55515.2023.00389}.
+
+\bibitem[Peeters et~al.(2010)Peeters, Song, Callaert, Grouwels, and
+  Van~Looy]{peeters2010harmonizing}
+Bert Peeters, Xiaoyan Song, Julie Callaert, Joris Grouwels, and Bart Van~Looy.
+\newblock Harmonizing harmonized patentee names: An exploratory assessment of
+  top patentees.
+\newblock Technical report, KU Leuven, 2010.
+\newblock URL
+  \url{https://lirias.kuleuven.be/bitstream/123456789/264238/1/2010-03-18%20-%20HARMONIZING_HARMONIZED_PATENTEE_NAMES_FINAL.pdf}.
+\newblock No DOI located; Lirias repository record.
+
+\bibitem[Peeters and Bizer(2023)]{peeters2023chatgpt}
+Ralph Peeters and Christian Bizer.
+\newblock Using {ChatGPT} for entity matching.
+\newblock In \emph{Advances in Databases and Information Systems (ADBIS)},
+  Communications in Computer and Information Science, pages 221--230. Springer
+  Nature Switzerland, 2023.
+\newblock \doi{10.1007/978-3-031-42941-5_20}.
+
+\bibitem[Peeters et~al.(2024)Peeters, Der, and Bizer]{peeters2024wdcproducts}
+Ralph Peeters, Reng~Chiz Der, and Christian Bizer.
+\newblock {WDC} products: A multi-dimensional entity matching benchmark.
+\newblock In \emph{Proceedings of the 27th International Conference on
+  Extending Database Technology (EDBT)}, pages 22--33. OpenProceedings.org,
+  2024.
+\newblock \doi{10.48786/edbt.2024.03}.
+\newblock DOI verified via DataCite; not registered with Crossref.
+
+\bibitem[Peeters et~al.(2025)Peeters, Steiner, and
+  Bizer]{peeters2025entitymatchingllm}
+Ralph Peeters, Aaron Steiner, and Christian Bizer.
+\newblock Entity matching using large language models.
+\newblock In \emph{Proceedings of the 28th International Conference on
+  Extending Database Technology (EDBT)}, pages 529--541. OpenProceedings.org,
+  2025.
+\newblock \doi{10.48786/edbt.2025.42}.
+\newblock DOI verified via DataCite; not registered with Crossref.
+
+\bibitem[Roman et~al.(2022)Roman, Alexiev, Paniagua, Elves{\ae}ter, von
+  Zernichow, Soylu, Simeonov, and Taggart]{roman2022eubusinessgraph}
+Dumitru Roman, Vladimir Alexiev, Javier Paniagua, Brian Elves{\ae}ter,
+  Bj{\o}rn~Marius von Zernichow, Ahmet Soylu, Boyan Simeonov, and Chris
+  Taggart.
+\newblock The {euBusinessGraph} ontology: A lightweight ontology for
+  harmonizing basic company information.
+\newblock \emph{Semantic Web}, 13\penalty0 (1):\penalty0 41--68, 2022.
+\newblock \doi{10.3233/sw-210424}.
+\newblock Crossref registers the issued date as 2021 (IOS Press pre-press); the
+  issue of record is volume 13 (2022). Ontology file inspected directly at
+  \url{https://github.com/euBusinessGraph/eubg-data}: 34 object properties,
+  none expressing ownership, parenthood or corporate-group membership.
+
+\bibitem[Smart and Dudas(2007)]{smart2007purchasingsynergy}
+Alan Smart and Andreas Dudas.
+\newblock Developing a decision-making framework for implementing purchasing
+  synergy: a case study.
+\newblock \emph{International Journal of Physical Distribution \& Logistics
+  Management}, 37\penalty0 (1):\penalty0 64--89, 2007.
+\newblock \doi{10.1108/09600030710723327}.
+
+\bibitem[Soylu et~al.(2022)Soylu, Corcho, Elves{\ae}ter, Badenes-Olmedo,
+  Blount, Yedro~Mart{\'\i}nez, Kovacic, Posinkovic, Makgill, Taggart, Simperl,
+  Lech, and Roman]{soylu2022theybuyforyou}
+Ahmet Soylu, Oscar Corcho, Brian Elves{\ae}ter, Carlos Badenes-Olmedo, Tom
+  Blount, Francisco Yedro~Mart{\'\i}nez, Matej Kovacic, Matej Posinkovic, Ian
+  Makgill, Chris Taggart, Elena Simperl, Till~C. Lech, and Dumitru Roman.
+\newblock {TheyBuyForYou} platform and knowledge graph: Expanding horizons in
+  public procurement with open linked data.
+\newblock \emph{Semantic Web}, 13\penalty0 (2):\penalty0 265--291, 2022.
+\newblock \doi{10.3233/sw-210442}.
+\newblock Full text inspected: supplier reconciliation to OpenCorporates via
+  owl:sameAs; zero occurrences of ``subsidiary'', ``ultimate'' or
+  ``ownership''; no gold standard and no reconciliation accuracy reported.
+
+\bibitem[Steiner et~al.(2026)Steiner, Peeters, and Bizer]{steiner2026madibench}
+Aaron Steiner, Ralph Peeters, and Christian Bizer.
+\newblock {MaDI-Bench}: An end-to-end data integration benchmark.
+\newblock \emph{arXiv preprint arXiv:2606.30371}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2606.30371}.
+\newblock Verified at metadata level only (DBLP CoRR record); contents not
+  read.
+
+\bibitem[Thirumuruganathan et~al.(2021)Thirumuruganathan, Li, Tang, Ouzzani,
+  Govind, Paulsen, Fung, and Doan]{thirumuruganathan2021blocking}
+Saravanan Thirumuruganathan, Han Li, Nan Tang, Mourad Ouzzani, Yash Govind,
+  Derek Paulsen, Glenn Fung, and AnHai Doan.
+\newblock Deep learning for blocking in entity matching: A design space
+  exploration.
+\newblock \emph{Proceedings of the VLDB Endowment}, 14\penalty0 (11):\penalty0
+  2459--2472, 2021.
+\newblock \doi{10.14778/3476249.3476294}.
+
+\bibitem[Thoma et~al.(2010)Thoma, Torrisi, Gambardella, Guellec, Hall, and
+  Harhoff]{thoma2010harmonizing}
+Grid Thoma, Salvatore Torrisi, Alfonso Gambardella, Dominique Guellec, Bronwyn
+  Hall, and Dietmar Harhoff.
+\newblock Harmonizing and combining large datasets --- an application to
+  firm-level patent and accounting data.
+\newblock NBER Working Paper 15851, National Bureau of Economic Research, 2010.
+
+\bibitem[Tu et~al.(2023)Tu, Fan, Tang, Wang, Li, Du, Jia, and
+  Gao]{tu2023unicorn}
+Jianhong Tu, Ju~Fan, Nan Tang, Peng Wang, Guoliang Li, Xiaoyong Du, Xiaofeng
+  Jia, and Song Gao.
+\newblock Unicorn: A unified multi-tasking model for supporting matching tasks
+  in data integration.
+\newblock \emph{Proceedings of the ACM on Management of Data}, 1\penalty0
+  (1):\penalty0 1--26, 2023.
+\newblock \doi{10.1145/3588938}.
+
+\bibitem[{U.S. Department of the Treasury, Bureau of the Fiscal
+  Service}(2026)]{usaspending_api}
+{U.S. Department of the Treasury, Bureau of the Fiscal Service}.
+\newblock {USAspending} {API} v2 --- recipient endpoints.
+\newblock \url{https://api.usaspending.gov/}, 2026.
+\newblock API contract at
+  \url{https://github.com/fedspendingtransparency/usaspending-api}. Accessed
+  2026-08-27. recipient\_level is documented as R (neither parent nor child), P
+  (parent recipient), C (child recipient); parent\_uei, parent\_duns,
+  parent\_name and parent\_id are nullable; parents is an array; the structure
+  is one hop deep with no grandparent chain.
+
+\bibitem[Vitali et~al.(2011)Vitali, Glattfelder, and
+  Battiston]{vitali2011network}
+Stefania Vitali, James~B. Glattfelder, and Stefano Battiston.
+\newblock The network of global corporate control.
+\newblock \emph{PLoS ONE}, 6\penalty0 (10):\penalty0 e25995, 2011.
+\newblock \doi{10.1371/journal.pone.0025995}.
+
+\bibitem[Wang et~al.(2021)Wang, Li, and Hirota]{wang2021machamp}
+Jin Wang, Yuliang Li, and Wataru Hirota.
+\newblock Machamp: A generalized entity matching benchmark.
+\newblock \emph{arXiv preprint arXiv:2106.08455}, 2021.
+\newblock URL \url{https://arxiv.org/abs/2106.08455}.
+
+\bibitem[Wei et~al.(2024)Wei, Karina, Chung, Jiao, Papay, Glaese, Schulman, and
+  Fedus]{wei2024simpleqa}
+Jason Wei, Nguyen Karina, Hyung~Won Chung, Yunxin~Joy Jiao, Spencer Papay,
+  Amelia Glaese, John Schulman, and William Fedus.
+\newblock Measuring short-form factuality in large language models.
+\newblock \emph{arXiv preprint arXiv:2411.04368}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2411.04368}.
+\newblock Introduces SimpleQA. Grading scheme: correct / incorrect / not
+  attempted.
+
+\bibitem[Wei et~al.(2025)Wei, Sun, Papay, McKinney, Han, Fulford, Chung,
+  Tachard~Passos, Fedus, and Glaese]{wei2025browsecomp}
+Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa
+  Fulford, Hyung~Won Chung, Alex Tachard~Passos, William Fedus, and Amelia
+  Glaese.
+\newblock {BrowseComp}: A simple yet challenging benchmark for browsing agents.
+\newblock \emph{arXiv preprint arXiv:2504.12516}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2504.12516}.
+
+\bibitem[Zeakis et~al.(2023)Zeakis, Papadakis, Skoutas, and
+  Koubarakis]{zeakis2023pretrained}
+Alexandros Zeakis, George Papadakis, Dimitrios Skoutas, and Manolis Koubarakis.
+\newblock Pre-trained embeddings for entity resolution: An experimental
+  analysis.
+\newblock \emph{Proceedings of the VLDB Endowment}, 16\penalty0 (9):\penalty0
+  2225--2238, 2023.
+\newblock \doi{10.14778/3598581.3598594}.
+
+\bibitem[Zhang et~al.(2024)Zhang, Dong, Xiao, and Oyamada]{zhang2024jellyfish}
+Haochen Zhang, Yuyang Dong, Chuan Xiao, and Masafumi Oyamada.
+\newblock Jellyfish: Instruction-tuning local large language models for data
+  preprocessing.
+\newblock In \emph{Proceedings of the 2024 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 8754--8782. Association for
+  Computational Linguistics, 2024.
+\newblock \doi{10.18653/v1/2024.emnlp-main.497}.
+
+\bibitem[Ziv et~al.(2022)Ziv, Gronau, and Fire]{ziv2022companyname2vec}
+Ran Ziv, Ilan Gronau, and Michael Fire.
+\newblock {CompanyName2Vec}: Company entity matching based on job ads.
+\newblock In \emph{2022 IEEE 9th International Conference on Data Science and
+  Advanced Analytics (DSAA)}, pages 1--10. IEEE, 2022.
+\newblock \doi{10.1109/dsaa54385.2022.10032350}.
+\newblock AUTHOR-NAME DISCREPANCY: arXiv and the IEEE DOI record give ``Ran
+  Ziv''; OpenAlex renders it ``Ziv Ran''. arXiv/IEEE form used here.
+
+\end{thebibliography}

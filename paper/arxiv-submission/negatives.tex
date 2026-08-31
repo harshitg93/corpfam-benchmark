@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Negative kind & Exact & Jaccard & SeqRatio & TF--IDF & MiniLM \\
+\midrule
+Random & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+Hard string & 1.0 & 3.6 & 1.6 & 4.6 & 6.5 \\
+Same block & 0.5 & 2.2 & 1.7 & 3.2 & 2.6 \\
+\bottomrule
+\end{tabular}
+\caption{False-positive rate (\%) by negative kind on the test split. Random
+negatives are nearly free; the difficulty is concentrated in negatives that share a
+blocking key or distinctive tokens, which is what a deployed pipeline actually sees
+after blocking.}
+\label{tab:negatives}
+\end{table}

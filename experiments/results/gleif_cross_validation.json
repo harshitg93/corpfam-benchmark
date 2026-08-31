@@ -1,0 +1,960 @@
+{
+  "source_file": "data/raw/usaspending/entity_detail.jsonl",
+  "genuine_links_available": 1033,
+  "informative_links_available": 779,
+  "sampled": 150,
+  "seed": 20260827,
+  "method": "exact match on normalised legal name only; fuzzy candidates counted but never treated as located",
+  "stage1_child_located_in_gleif": {
+    "count": 35,
+    "pct": 23.33,
+    "wilson95_pct": [
+      17.28,
+      30.72
+    ]
+  },
+  "stage2_of_located_has_parent": {
+    "count": 12,
+    "pct": 34.29,
+    "wilson95_pct": [
+      20.83,
+      50.85
+    ]
+  },
+  "stage3_of_those_parent_matches_sam": {
+    "count": 6,
+    "pct": 50.0,
+    "wilson95_pct": [
+      25.38,
+      74.62
+    ]
+  },
+  "end_to_end_confirmed_pct": 4.0,
+  "name_matched_only_fuzzily_not_counted": 57,
+  "rows": [
+    {
+      "child": "END TO END ENTERPRISE SOLUTIONS, LLC",
+      "sam_parent": "D2K TECHNOLOGIES LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ALL NATIVE SERVICES COMPANY",
+      "sam_parent": "HO-CHUNK, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "CPI SATCOM & ANTENNA TECHNOLOGIES INC",
+      "sam_parent": "GENERAL DYNAMICS CORP",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "REBELLION DEFENSE, LLC",
+      "sam_parent": "REBELLION DEFENSE INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ABCAM INC",
+      "sam_parent": "ABCAM PLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "ROSENBAUER AMERICA LLC",
+      "sam_parent": "ROSENBAUER BETEILIGUNGSVERWALTUNG GMBH",
+      "lei": "5493008OROZPEWC77B48",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "MARQUIS COMPANIES II, INC.",
+      "sam_parent": "MARQUIS COMPANIES II  INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "HOSOKAWA MICRON INTERNATIONAL INC",
+      "sam_parent": "HOSOKAWA MICRON CORPORATION",
+      "lei": "549300BGD60QTKIDWF02",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "QUID, LLC",
+      "sam_parent": "NETBASE SOLUTIONS, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "PERFORMANCE POLYMER SOLUTIONS INC.",
+      "sam_parent": "PROOF RESEARCH INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "YORBA LINDA WATER DISTRICT",
+      "sam_parent": "LINDA YORBA WATER DISTRICT",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "PLEX SOLUTIONS, LLC",
+      "sam_parent": "MARKON LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "JOINT RESTORATION FOUNDATION, INC.",
+      "sam_parent": "ALLOSOURCE",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "KBR WYLE SERVICES, LLC",
+      "sam_parent": "KBR  INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "NEVADA POWER COMPANY",
+      "sam_parent": "NV ENERGY INC",
+      "lei": "MJZFGXRJ52U8U4MKJ519",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "PURCELL TIRE & RUBBER CO",
+      "sam_parent": "PURCELL TIRE & RUBBER COMPANY",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "C&W GOVERNMENT SERVICES INC.",
+      "sam_parent": "C&W FACILITY SERVICES INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "COVERBIND CORP",
+      "sam_parent": "COVERBIND CORPORATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "WASHINGTON TRU SOLUTIONS LLC",
+      "sam_parent": "AECOM",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "QIAGEN, LLC",
+      "sam_parent": "QIAGEN N.V.",
+      "lei": "506700ZF68PC46W02T85",
+      "gleif_candidates": 5,
+      "gleif_parent": "QIAGEN N.V.",
+      "agrees": true
+    },
+    {
+      "child": "ALLISON TRANSMISSION INC",
+      "sam_parent": "ALLISON TRANSMISSION HOLDINGS, INC.",
+      "lei": "MWKQ3I0U1GXP2YDSZW75",
+      "gleif_candidates": 2
+    },
+    {
+      "child": "MARYLAND DEPARTMENT OF HEALTH",
+      "sam_parent": "STATE OF MARYLAND",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "PHOTONICA INC",
+      "sam_parent": "PHOTONICA, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "THE JOHNS HOPKINS UNIVERSITY APPLIED PHYSICS LABORATORY LLC",
+      "sam_parent": "THE JOHNS HOPKINS UNIVERSITY",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "RJS CONSTRUCTION INC",
+      "sam_parent": "RJS CONSTRUCTION  INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "ACT COMMODITIES INC",
+      "sam_parent": "ACT COMMODITIES INC.",
+      "lei": "549300T604ND0H8DP678",
+      "gleif_candidates": 2
+    },
+    {
+      "child": "J. BARBER MOVING & STORAGE, INC.",
+      "sam_parent": "J. BARBER MOVING & STORAGE  INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "KANE ENVIRONMENTAL, INC.",
+      "sam_parent": "KANE ENVIRONMENTAL  INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "WESCO AIRCRAFT HARDWARE CORP.",
+      "sam_parent": "CARLYLE PARTNERS IV, L.P.",
+      "lei": "5493002KVWKXQBHRHJ02",
+      "gleif_candidates": 1,
+      "gleif_parent": "WESCO AIRCRAFT HOLDINGS, INC.",
+      "agrees": false
+    },
+    {
+      "child": "UNIVERSITY OF GEORGIA",
+      "sam_parent": "BOARD OF REGENTS OF THE UNIVERSITY SYSTEM OF GEORGIA",
+      "lei": null,
+      "gleif_candidates": 2
+    },
+    {
+      "child": "ALS GROUP USA, CORP",
+      "sam_parent": "ALS LIMITED",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ARCHER WESTERN CONSTRUCTION, LLC",
+      "sam_parent": "WALSH GROUP LTD., THE",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "MBS DIRECT, LLC",
+      "sam_parent": "CAPITAL UNIVERSITY",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "TOWN OF MONTAGUE",
+      "sam_parent": "MONTAGUE  TOWN OF",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "NRC EAST ENVIRONMENTAL SERVICES, INC.",
+      "sam_parent": "US ECOLOGY, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "HANGER PROSTHETICS & ORTHOTICS EAST, INC.",
+      "sam_parent": "SPECTRUM ORTHOTICS & PROSTHETICS INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "JOHNSON CONTROLS, INC",
+      "sam_parent": "JOHNSON CONTROLS, INC.",
+      "lei": "3LB2NG8VUULSCV2NO430",
+      "gleif_candidates": 5,
+      "gleif_parent": "JOHNSON CONTROLS INTERNATIONAL PUBLIC LIMITED COMPANY",
+      "agrees": false
+    },
+    {
+      "child": "PEPSI BOTTLING VENTURES LLC",
+      "sam_parent": "KOTOBUKI REALTY CO.,LTD.",
+      "lei": "549300S8X48RUXMS3P60",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "MERCER (US) LLC",
+      "sam_parent": "MARSH & MCLENNAN COMPANIES INC",
+      "lei": null,
+      "gleif_candidates": 2
+    },
+    {
+      "child": "CREATIVE TRAINING TECHNIQUES, INC.",
+      "sam_parent": "CREATIVE TRAINING TECHNIQUES  INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SUULUTAAQ, INC.",
+      "sam_parent": "SUULUTAAQ INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "REHAB CREATIVE, LLC",
+      "sam_parent": "REHAB CREATIVE  LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "KOREA RAILROAD CORPORATION SEOUL BRANCH",
+      "sam_parent": "JEONBUK NATIONAL UNIVERSITY",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "ENNIS, CITY OF",
+      "sam_parent": "CITY OF ENNIS",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "BITTIUM USA INC.",
+      "sam_parent": "BITTIUM OYJ",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "HONEYWELL INTERNATIONAL INC.",
+      "sam_parent": "RESIDEO TECHNOLOGIES, INC.",
+      "lei": "ISRPG12PN4EIEOEMW547",
+      "gleif_candidates": 3
+    },
+    {
+      "child": "TROPICAL BRACE AND LIMB, LLC",
+      "sam_parent": "TROPICAL BRACE & LIMB LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ASSERTIO SPECIALTY PHARMACEUTICALS, LLC",
+      "sam_parent": "ASSERTIO SPECIALTY PHARMACEUTICALS  LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "MARATHON MACHINING & TOOL, INC.",
+      "sam_parent": "MARATHON MACHINING & TOOL INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "PACIFIC BELL TELEPHONE COMPANY",
+      "sam_parent": "AT&T INC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "ARMY & AIR FORCE EXCHANGE SERVICE",
+      "sam_parent": "GOVERNMENT OF THE UNITED STATES",
+      "lei": null,
+      "gleif_candidates": 3
+    },
+    {
+      "child": "ASHFORD TRS FORT TOWER I LLC",
+      "sam_parent": "ASHFORD TRS SANTA FE LLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "KOMORI AMERICA CORP",
+      "sam_parent": "KOMORI CORPORATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "VANGUARD ELECTRONICS, LLC",
+      "sam_parent": "VANGUARD ELECTRONICS COMPANY",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SJD&B, INC",
+      "sam_parent": "SJD&B  INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ALLERGAN USA INC",
+      "sam_parent": "ALLERGAN, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "BEI PRECISION SYSTEMS & SPACE COMPANY, INC",
+      "sam_parent": "BEI SENSORS & SYSTEMS COMPANY  INC.",
+      "lei": "5493002NBYZMI6GOGV91",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "HANGER PROSTHETICS & ORTHOTICS INC",
+      "sam_parent": "SPECTRUM ORTHOTICS & PROSTHETICS INC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "CALIFORNIA POLYTECHNIC STATE UNIVERSITY",
+      "sam_parent": "STATE OF CALIFORNIA CONTROLLERS OFFICE",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "FEI COMPANY",
+      "sam_parent": "THERMO FISHER SCIENTIFIC INC.",
+      "lei": "ENU6JE4QCEWJ9YIZ4340",
+      "gleif_candidates": 3,
+      "gleif_parent": "THERMO FISHER SCIENTIFIC INC.",
+      "agrees": true
+    },
+    {
+      "child": "CCMH PHILADELPHIA MKT. LLC",
+      "sam_parent": "HOST HOTELS & RESORTS, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "NEW MEXICO GAS COMPANY, INC",
+      "sam_parent": "EMERA INCORPORATED",
+      "lei": "JQ2DTICWDXQ4R2ET8N84",
+      "gleif_candidates": 5,
+      "gleif_parent": "TECO ENERGY, INC.",
+      "agrees": false
+    },
+    {
+      "child": "E3 DIAGNOSTICS, INC.",
+      "sam_parent": "WILLIAM DEMANT FONDEN",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "RAYTHEON COMPANY",
+      "sam_parent": "RTX CORP",
+      "lei": "YR6K3WJN0KKLUPZSNL57",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "PANAMETRICS LLC",
+      "sam_parent": "GE INFRASTRUCTURE SENSING  INC.",
+      "lei": "TW0GNJ8TX57H11EWTB12",
+      "gleif_candidates": 1,
+      "gleif_parent": "BAKER HUGHES HOLDINGS LLC",
+      "agrees": false
+    },
+    {
+      "child": "TK ELEVATOR CORPORATION",
+      "sam_parent": "THYSSENKRUPP MATERIALS NA, INC.",
+      "lei": "549300JMOMNGR4LK2F45",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "DEL MONTE FOODS INC",
+      "sam_parent": "NESTL\u00c9 S.A.",
+      "lei": "549300U9K7TD84Q24R17",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "ZENITH ASSET COMPANY, LLC",
+      "sam_parent": "ZMC HOTELS, INC.",
+      "lei": "54930098FN68TK4P0219",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "WERFEN USA LLC",
+      "sam_parent": "WERFEN ESPANA SA",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "CSC HOLDINGS LLC",
+      "sam_parent": "NEXT LUXEMBOURG S.C.SP",
+      "lei": "3HG2WD2W22M120IUNG49",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "CALIBRE ENGINEERING INC",
+      "sam_parent": "CALIBRE ENGINEERING, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "OCCUPATIONAL HEALTH CENTERS OF THE SOUTHWEST, P.A.",
+      "sam_parent": "OCCUPATIONAL HEALTH CENTERS OF THE SOUTHWEST PA",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "LUMIBIRD PHOTONICS USA, INC.",
+      "sam_parent": "LUMIBIRD",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "CONNECTRONICS CORP",
+      "sam_parent": "HEICO CORP",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "TRAIL OF BITS INC",
+      "sam_parent": "TRAIL OF BITS, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "AUCTANE, INC.",
+      "sam_parent": "STAMPS.COM INC.",
+      "lei": "254900426RTNCTT5L884",
+      "gleif_candidates": 5,
+      "gleif_parent": "Stamps.com, Inc.",
+      "agrees": true
+    },
+    {
+      "child": "HILLARD HEINTZE LLC",
+      "sam_parent": "JENSEN HUGHES, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "HIFUNDA LLC",
+      "sam_parent": "HIFUNDA  LLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "TETRA TECH EC, INC.",
+      "sam_parent": "TETRA TECH, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "METRO AMBULANCE SERVICE (RURAL), INC.",
+      "sam_parent": "MED-TRANS CORPORATION",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "VIRGINIA DEPARTMENT OF WILDLIFE RESOURCES",
+      "sam_parent": "VIRGINIA COMMONWEALTH OF",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "MAVERICK AIR CENTER LLC",
+      "sam_parent": "SANFORD HEALTH PLAN",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "HYDRO-AIRE AEROSPACE CORP.",
+      "sam_parent": "CRANE CO",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "TEVET LLC",
+      "sam_parent": "TEVET, LLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "FIFTH THIRD BANK, NATIONAL ASSOCIATION",
+      "sam_parent": "FIFTH THIRD BANCORP",
+      "lei": "QFROUN1UWUYU0DVIWD51",
+      "gleif_candidates": 5,
+      "gleif_parent": "FIFTH THIRD BANCORP",
+      "agrees": true
+    },
+    {
+      "child": "ORANGE BURKINA FASO SA",
+      "sam_parent": "ORANGE",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "SIMCOM INTERNATIONAL INC",
+      "sam_parent": "SIMCOM INTERNATIONAL, INC.",
+      "lei": "25490030ZG4NTAOW0C91",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "VIRGINIA HEALTH SERVICES INC",
+      "sam_parent": "VIRGINIA HEALTH SERVICES, INC.",
+      "lei": "549300IEVP2OCATDJS96",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "VERTIV SERVICES, INC.",
+      "sam_parent": "EMERSON ELECTRIC CO",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "NEU LIMBS LLC",
+      "sam_parent": "NEU TECHNOLOGY INNOVATIONS, LLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "L3 TECHNOLOGIES, INC.",
+      "sam_parent": "L-3 COMMUNICATIONS HOLDINGS, INC.",
+      "lei": "1Z5XNJ6GMBVHFWE2W878",
+      "gleif_candidates": 5,
+      "gleif_parent": "L3HARRIS TECHNOLOGIES, INC.",
+      "agrees": false
+    },
+    {
+      "child": "GENESIS SYSTEMS LLC",
+      "sam_parent": "SEMITORR GROUP  INC.",
+      "lei": null,
+      "gleif_candidates": 1
+    },
+    {
+      "child": "BOILER SUPPLY COMPANY, INCORPORATED",
+      "sam_parent": "BOILER SUPPLY COMPANY INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "STRUERS INC",
+      "sam_parent": "WALTER HERZOG GMBH",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "BEACON INDUSTRIES, INC.",
+      "sam_parent": "THE BEACON GROUP INC",
+      "lei": "335800F66RR2X6RWPZ84",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SCHINDLER",
+      "sam_parent": "UAB SCHINDLER-LIFTAS",
+      "lei": "984500FX35DB94WB4072",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "HANGER PROSTHETICS & ORTHOTICS, INC.",
+      "sam_parent": "HANGER, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ATC PONDEROSA K LLC",
+      "sam_parent": "AMERICAN TOWER CORPORATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "WADE ANTENNA INC.",
+      "sam_parent": "2037706 ONTARIO INC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "NATIONAL AIR DUCT MAINTENANCE CORP",
+      "sam_parent": "CHICAGO IRON WORKS CORPORATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "GOVERNMENT AFFAIRS INSTITUTE, INC THE",
+      "sam_parent": "GEORGETOWN UNIVERSITY",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ST. ALEXIUS MEDICAL CENTER",
+      "sam_parent": "COMMONSPIRIT HEALTH",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "UNITED ACCESS LLC",
+      "sam_parent": "UNITED ACCESS, L.L.C.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "SYSCO CENTRAL FLORIDA, INC.",
+      "sam_parent": "SYSCO CORP",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "TRIUMPH ACTUATION SYSTEMS - VALENCIA, INC.",
+      "sam_parent": "TRIUMPH GROUP, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "MICHIGAN DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "sam_parent": "STATE OF MICHIGAN",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "CHANGE HEALTHCARE OPERATIONS, LLC",
+      "sam_parent": "MCKESSON CORPORATION",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "DEPUY SYNTHES SALES, INC.",
+      "sam_parent": "JOHNSON & JOHNSON",
+      "lei": "549300Y5N2XX1Q036S74",
+      "gleif_candidates": 5,
+      "gleif_parent": "Johnson & Johnson",
+      "agrees": true
+    },
+    {
+      "child": "RECOLOGY VALLEJO",
+      "sam_parent": "RECOLOGY INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "VAUNIX TECHNOLOGY CORPORATION",
+      "sam_parent": "VAUNIX TECHNOLOGY CORP",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "HRL LABORATORIES, LLC",
+      "sam_parent": "THE BOEING COMPANY",
+      "lei": "254900TCSM63F59YSV04",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "DELOITTE FINANCIAL ADVISORY SERVICES LLP",
+      "sam_parent": "DELOITTE & TOUCHE LLP",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "PATHOLOGISTS BIO-MEDICAL LABORATORIES, PLLC",
+      "sam_parent": "ASSOCIATED PATHOLOGISTS, LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SOUND COM CORPORATION",
+      "sam_parent": "AMETEK INC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "PRIORITY AIR EXPRESS, LLC",
+      "sam_parent": "THERMO ELECTRON CORPORATION",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "POINT ONE USA, LLC",
+      "sam_parent": "POINT ONE USA  LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "MARKETLAB INC",
+      "sam_parent": "WATER STREET HEALTHCARE PARTNERS LLC",
+      "lei": "549300CB0J3WDBEGTG69",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "MUTUAL TELECOM SERVICES INC.",
+      "sam_parent": "BLACK BOX CORPORATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "BUFFALO ROCK COMPANY",
+      "sam_parent": "BUFFALO ROCK CO",
+      "lei": "254900PJLVVNI5BGJL03",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "VITOL INC",
+      "sam_parent": "VITOL HOLDING B.V.",
+      "lei": "R4YOWDNU5R1VQV3H8H28",
+      "gleif_candidates": 3,
+      "gleif_parent": "VITOL US HOLDING CO.",
+      "agrees": false
+    },
+    {
+      "child": "WESTON SOLUTIONS INC",
+      "sam_parent": "WESTON SOLUTIONS HOLDINGS, INC.",
+      "lei": "549300Q070V1HXZY3Z61",
+      "gleif_candidates": 2
+    },
+    {
+      "child": "CEQUEL COMMUNICATIONS LLC",
+      "sam_parent": "CEQUEL III COMMUNICATIONS I  LLC",
+      "lei": "549300YE4FSWBNROZK52",
+      "gleif_candidates": 1
+    },
+    {
+      "child": "CASEGUARD, INC.",
+      "sam_parent": "FINALCOVER LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "AQUAMEDIX, LLC",
+      "sam_parent": "AQUAMEDIX  LLC",
+      "lei": "549300GG276P63CFXO20",
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SDL JAPAN K.K.",
+      "sam_parent": "SDL PLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "MOEVE S.A.",
+      "sam_parent": "GLOBALFOUNDRIES U.S. 2 LLC",
+      "lei": null,
+      "gleif_candidates": 1
+    },
+    {
+      "child": "NAVY, UNITED STATES DEPARTMENT OF THE",
+      "sam_parent": "GOVERNMENT OF THE UNITED STATES",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "INTELLISENSE SYSTEMS INC",
+      "sam_parent": "INTELLISENSE SYSTEMS  INC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "DRS NAVAL POWER SYSTEMS INC",
+      "sam_parent": "LEONARDO SPA",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "WASTE MANAGEMENT OF ILLINOIS, INC.",
+      "sam_parent": "ZIPPY SHELL INCORPORATED",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "U.S. ARKRAY, INC.",
+      "sam_parent": "ARKRAY, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "PR TACTICAL CORPORATION, INC.",
+      "sam_parent": "PR TACTICAL CORPORATION  INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "US FOODS INC",
+      "sam_parent": "US FOODS HOLDING CORP.",
+      "lei": "5493000JOOFAOUY1JZ87",
+      "gleif_candidates": 1,
+      "gleif_parent": "US FOODS HOLDING CORP.",
+      "agrees": true
+    },
+    {
+      "child": "ARMITAGE ARCHITECTURE INC.",
+      "sam_parent": "ARMITAGE ARCHITECTURE  P.C",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "BEIJING BOOK COMPANY, INC.",
+      "sam_parent": "BEIJING BOOK CO INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "ZETEC INC",
+      "sam_parent": "ROPER TECHNOLOGIES, INC.",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "TOHONO O'ODHAM NATION",
+      "sam_parent": "THE TOHONO OODHAM NATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "ECI SOFTWARE SOLUTIONS, INC",
+      "sam_parent": "MANTECH INTERNATIONAL CORPORATION",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "MONARCH ART PLASTICS COMPANY, LLC",
+      "sam_parent": "MONARCH ART PLASTICS COMPANY LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "QUALITY AIR HEATING & COOLING, INC.",
+      "sam_parent": "COMFORT SYSTEMS USA INC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SKANSKA USA CIVIL WEST CALIFORNIA DISTRICT INC.",
+      "sam_parent": "SKANSKA AB",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "LOSS CONTROL AND RECOVERY, INC",
+      "sam_parent": "HOME FRANCHISE CONCEPTS  LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "PHONAK L L C",
+      "sam_parent": "SONOVA HOLDING AG",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "KONGSBERG MARITIME INC",
+      "sam_parent": "KONGSBERG GRUPPEN ASA",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "GOODRICH CORPORATION",
+      "sam_parent": "RTX CORP",
+      "lei": null,
+      "gleif_candidates": 2
+    },
+    {
+      "child": "6FATHOMS CONSULTING, LLC",
+      "sam_parent": "6FATHOMS CONSULTING  LLC",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "SBA TOWERS V LLC",
+      "sam_parent": "SBA COMMUNICATIONS CORPORATION",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "SHEEHY FORD OF SPRINGFIELD, INC.",
+      "sam_parent": "SHEEHY FORD OF RICHMOND, INC.",
+      "lei": null,
+      "gleif_candidates": 5
+    },
+    {
+      "child": "PROGRESSIVE COMMUNICATIONS LLC",
+      "sam_parent": "PROGRESSIVE COMMUNICATIONS  LLC",
+      "lei": null,
+      "gleif_candidates": 0
+    },
+    {
+      "child": "W.W. WILLIAMS COMPANY, THE LLC",
+      "sam_parent": "W W WILLIAMS COMPANY, THE",
+      "lei": null,
+      "gleif_candidates": 1
+    }
+  ]
+}

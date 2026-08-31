@@ -1,0 +1,240 @@
+{
+  "roster_entities": 114230,
+  "naive_pair_space": 6524189335,
+  "true_links": 13716,
+  "true_links_by_visibility": {
+    "visible": 2953,
+    "identical": 7541,
+    "invisible": 3222
+  },
+  "max_block_size_purged_above": 100,
+  "ann_k": 20,
+  "note_identity": "Token blocking and first-token blocking key on core() and the invisible stratum is defined by an empty core() intersection, so their zero recall there is an identity rather than a measurement. The informative rows are the schemes not keyed on core(): q-gram, sorted neighbourhood, phonetic, attribute and embedding ANN.",
+  "schemes": {
+    "Token blocking": {
+      "candidates": 1534063,
+      "pair_completeness_pct": 68.72,
+      "reduction_ratio_pct": 99.9765,
+      "pairs_quality_pct": 0.6144,
+      "build_seconds": 1.81,
+      "keyed_on_core_tokens": true,
+      "by_visibility": {
+        "visible": {
+          "recovered": 2471,
+          "total": 2953,
+          "pair_completeness_pct": 83.68
+        },
+        "identical": {
+          "recovered": 6954,
+          "total": 7541,
+          "pair_completeness_pct": 92.22
+        },
+        "invisible": {
+          "recovered": 0,
+          "total": 3222,
+          "pair_completeness_pct": 0.0
+        }
+      }
+    },
+    "Q-gram blocking (q=4)": {
+      "candidates": 9022384,
+      "pair_completeness_pct": 71.41,
+      "reduction_ratio_pct": 99.8617,
+      "pairs_quality_pct": 0.1086,
+      "build_seconds": 22.15,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 2328,
+          "total": 2953,
+          "pair_completeness_pct": 78.84
+        },
+        "identical": {
+          "recovered": 7377,
+          "total": 7541,
+          "pair_completeness_pct": 97.83
+        },
+        "invisible": {
+          "recovered": 90,
+          "total": 3222,
+          "pair_completeness_pct": 2.79
+        }
+      }
+    },
+    "First-token blocking": {
+      "candidates": 636042,
+      "pair_completeness_pct": 52.92,
+      "reduction_ratio_pct": 99.9903,
+      "pairs_quality_pct": 1.1411,
+      "build_seconds": 0.36,
+      "keyed_on_core_tokens": true,
+      "by_visibility": {
+        "visible": {
+          "recovered": 1323,
+          "total": 2953,
+          "pair_completeness_pct": 44.8
+        },
+        "identical": {
+          "recovered": 5935,
+          "total": 7541,
+          "pair_completeness_pct": 78.7
+        },
+        "invisible": {
+          "recovered": 0,
+          "total": 3222,
+          "pair_completeness_pct": 0.0
+        }
+      }
+    },
+    "Sorted neighbourhood (w=20)": {
+      "candidates": 2170180,
+      "pair_completeness_pct": 71.25,
+      "reduction_ratio_pct": 99.9667,
+      "pairs_quality_pct": 0.4503,
+      "build_seconds": 7.65,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 2170,
+          "total": 2953,
+          "pair_completeness_pct": 73.48
+        },
+        "identical": {
+          "recovered": 7537,
+          "total": 7541,
+          "pair_completeness_pct": 99.95
+        },
+        "invisible": {
+          "recovered": 66,
+          "total": 3222,
+          "pair_completeness_pct": 2.05
+        }
+      }
+    },
+    "Phonetic (Soundex)": {
+      "candidates": 411063,
+      "pair_completeness_pct": 61.31,
+      "reduction_ratio_pct": 99.9937,
+      "pairs_quality_pct": 2.0457,
+      "build_seconds": 1.01,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 1062,
+          "total": 2953,
+          "pair_completeness_pct": 35.96
+        },
+        "identical": {
+          "recovered": 7339,
+          "total": 7541,
+          "pair_completeness_pct": 97.32
+        },
+        "invisible": {
+          "recovered": 8,
+          "total": 3222,
+          "pair_completeness_pct": 0.25
+        }
+      }
+    },
+    "Attribute (ZIP / city-state)": {
+      "candidates": 126843,
+      "pair_completeness_pct": 1.87,
+      "reduction_ratio_pct": 99.9981,
+      "pairs_quality_pct": 0.2018,
+      "build_seconds": 0.12,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 110,
+          "total": 2953,
+          "pair_completeness_pct": 3.73
+        },
+        "identical": {
+          "recovered": 69,
+          "total": 7541,
+          "pair_completeness_pct": 0.91
+        },
+        "invisible": {
+          "recovered": 77,
+          "total": 3222,
+          "pair_completeness_pct": 2.39
+        }
+      }
+    },
+    "Embedding ANN (MiniLM, k=20)": {
+      "candidates": 1761025,
+      "pair_completeness_pct": 72.54,
+      "reduction_ratio_pct": 99.973,
+      "pairs_quality_pct": 0.565,
+      "build_seconds": 214.17,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 2323,
+          "total": 2953,
+          "pair_completeness_pct": 78.67
+        },
+        "identical": {
+          "recovered": 7533,
+          "total": 7541,
+          "pair_completeness_pct": 99.89
+        },
+        "invisible": {
+          "recovered": 93,
+          "total": 3222,
+          "pair_completeness_pct": 2.89
+        }
+      }
+    },
+    "Union: string-keyed": {
+      "candidates": 11875526,
+      "pair_completeness_pct": 75.25,
+      "reduction_ratio_pct": 99.818,
+      "pairs_quality_pct": 0.0869,
+      "build_seconds": 0.0,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 2657,
+          "total": 2953,
+          "pair_completeness_pct": 89.98
+        },
+        "identical": {
+          "recovered": 7541,
+          "total": 7541,
+          "pair_completeness_pct": 100.0
+        },
+        "invisible": {
+          "recovered": 123,
+          "total": 3222,
+          "pair_completeness_pct": 3.82
+        }
+      }
+    },
+    "Union: all schemes": {
+      "candidates": 13074120,
+      "pair_completeness_pct": 76.17,
+      "reduction_ratio_pct": 99.7996,
+      "pairs_quality_pct": 0.0799,
+      "build_seconds": 0.0,
+      "keyed_on_core_tokens": false,
+      "by_visibility": {
+        "visible": {
+          "recovered": 2688,
+          "total": 2953,
+          "pair_completeness_pct": 91.03
+        },
+        "identical": {
+          "recovered": 7541,
+          "total": 7541,
+          "pair_completeness_pct": 100.0
+        },
+        "invisible": {
+          "recovered": 218,
+          "total": 3222,
+          "pair_completeness_pct": 6.77
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# Pinned because results drift across versions. MiniLM cosine scores in particular
+# change between sentence-transformers releases, which would silently move the
+# embedding baseline and the embedding-ANN blocking numbers.
+#
+# The benchmark build, the string baselines, the blocking analysis (except the
+# embedding scheme), the EDGAR reconciliation and the manuscript audit run on the
+# standard library alone. Only the neural baselines need anything below.
+requests>=2.31
+numpy>=1.24
+scikit-learn>=1.3
+torch>=2.8
+transformers>=4.40
+sentence-transformers>=3.0

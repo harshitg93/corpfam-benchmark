@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Stratum & Checked & Confirmed & \% & 95\% CI \\
+\midrule
+Identical & 157 & 107 & 68.2 & [60.5, 74.9] \\
+Visible & 544 & 391 & 71.9 & [68.0, 75.5] \\
+Invisible & 692 & 336 & 48.5 & [44.9, 52.3] \\
+\midrule
+All & 1,393 & 834 & 59.9 &
+[57.3, 62.4] \\
+\midrule
+\multicolumn{5}{l}{\emph{Invisible stratum against controls}} \\
+\quad wrong parent, 20 permutations & -- & -- &
+0.33 & -- \\
+\quad nearest-size wrong parent & -- & -- &
+3.90 & -- \\
+\bottomrule
+\end{tabular}
+\caption{Independent corroboration against SEC Exhibit~21 subsidiary schedules over
+132 filings. Exhibit~21 is filed under securities law by the
+parent's own counsel and shares no provenance with a supplier's procurement
+registration. The control rows re-run the identical matcher against the wrong parent's
+filing: chance corroboration is near zero, so the invisible-stratum rate is not an
+artifact of long filings or a permissive matcher, and the stratum consists of genuine
+corporate relationships rather than registry noise. Non-confirmation is weak evidence
+in the other direction, since Exhibit~21 omits immaterial subsidiaries and its
+formatting is unregulated.}
+\label{tab:edgar}
+\end{table}

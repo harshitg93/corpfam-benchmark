@@ -1,0 +1,16 @@
+{
+  "file": "FY2025_All_Contracts_Full.zip",
+  "url": "https://files.usaspending.gov/award_data_archive/FY2025_All_Contracts_Full.zip",
+  "bytes": 1975007443,
+  "sha256": "69e90f438b61de135a79f30ea3d35f1dfd5a0225b6e68d2a4fa523283174fcbb",
+  "csv_members": [
+    "FY2025_All_Contracts_Full_20260806_1.csv",
+    "FY2025_All_Contracts_Full_20260806_2.csv",
+    "FY2025_All_Contracts_Full_20260806_3.csv",
+    "FY2025_All_Contracts_Full_20260806_4.csv",
+    "FY2025_All_Contracts_Full_20260806_5.csv",
+    "FY2025_All_Contracts_Full_20260806_6.csv",
+    "FY2025_All_Contracts_Full_20260806_7.csv"
+  ],
+  "note": "Recorded so the derivation chain is auditable end to end. Without this the chain is verifiable only downstream of the archive."
+}

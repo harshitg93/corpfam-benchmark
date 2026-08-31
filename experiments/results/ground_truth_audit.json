@@ -1,0 +1,183 @@
+{
+  "input_file": "data/raw/usaspending/entity_detail.jsonl",
+  "records_total": 4806,
+  "recipient_level_breakdown": {
+    "C": 4424,
+    "P": 380,
+    "R": 2
+  },
+  "child_level_records": 4424,
+  "self_parent": {
+    "by_uei_equality": 3664,
+    "by_recipient_id_stem_equality": 3664,
+    "by_name_equality": 3850,
+    "uei_and_stem_agree": true,
+    "pct_of_child_records": 82.82
+  },
+  "genuine_parent_child_links": 760,
+  "child_records_with_no_parent_uei": 0,
+  "partition_check": {
+    "self_plus_genuine_plus_none": 4424,
+    "equals_child_records": true
+  },
+  "parents_array": {
+    "distribution_of_parent_count": {
+      "1": 3359,
+      "2": 765,
+      "3": 176,
+      "4": 73,
+      "5": 28,
+      "6": 11,
+      "7": 6,
+      "8": 3,
+      "9": 3
+    },
+    "records_with_more_than_one_parent": 1065,
+    "max_parents_on_any_record": 9
+  },
+  "hierarchy_depth": {
+    "distinct_parent_ueis": 697,
+    "parents_that_are_also_children": 0,
+    "note": "non-zero means chains deeper than one hop exist in this sample"
+  },
+  "name_visibility": {
+    "pairs_scored": 760,
+    "no_shared_core_token": 231,
+    "pct_no_shared_core_token": 30.39,
+    "neither_name_substring_of_other": 421,
+    "pct_not_substring": 55.39,
+    "examples_name_invisible": [
+      {
+        "child": "PANAMETRICS LLC",
+        "parent": "GE INFRASTRUCTURE SENSING  INC.",
+        "obligated": 599200.0
+      },
+      {
+        "child": "LOCUMTENENS.COM, LLC",
+        "parent": "JACKSON HEALTHCARE, LLC",
+        "obligated": -2076585.17
+      },
+      {
+        "child": "GE VERNOVA ELECTRIFICATION SOFTWARE, LLC",
+        "parent": "GENERAL ELECTRIC COMPANY",
+        "obligated": 162220.86
+      },
+      {
+        "child": "UAV ENGINES LIMITED",
+        "parent": "ELBIT SYSTEMS LTD",
+        "obligated": 0.0
+      },
+      {
+        "child": "MERCER (US) LLC",
+        "parent": "MARSH & MCLENNAN COMPANIES INC",
+        "obligated": 3652507.31
+      },
+      {
+        "child": "J.F. FREDERICKS AERO LLC",
+        "parent": "WENTWORTH MANUFACTURING LLC",
+        "obligated": -19975.0
+      },
+      {
+        "child": "STANDARD AERO (ALLIANCE) INC.",
+        "parent": "STANDARDAERO AVIATION HOLDINGS, INC",
+        "obligated": -118053.5
+      },
+      {
+        "child": "CBX SOLUTIONS, LLC",
+        "parent": "REGIONAL BRANDS INC.",
+        "obligated": 10284.0
+      },
+      {
+        "child": "HII TECHNICAL SOLUTIONS CORPORATION",
+        "parent": "CONTINENTAL MARITIME OF SAN DIEGO  LLC",
+        "obligated": 52927443.03
+      },
+      {
+        "child": "BLUEWATER FEDERAL SOLUTIONS, INC.",
+        "parent": "AOC APPLIED TECHNOLOGIES CORPORATION",
+        "obligated": 24482258.09
+      },
+      {
+        "child": "KITCO FIBER OPTICS INC",
+        "parent": "MICROAIRE SURGICAL INSTRUMENTS LLC",
+        "obligated": 5333010.33
+      },
+      {
+        "child": "IHS GLOBAL INC",
+        "parent": "MARKIT LIMITED",
+        "obligated": 11221211.67
+      },
+      {
+        "child": "CCI FACILITY SUPPORT SERVICES, LLC",
+        "parent": "SES CONSTRUCTION AND FUEL SERVICES LLC",
+        "obligated": 7412201.35
+      },
+      {
+        "child": "HAROLD LEMAY ENTERPRISES, INCORPORATED",
+        "parent": "WASTE CONNECTIONS, INC",
+        "obligated": 5562360.74
+      },
+      {
+        "child": "BETH ISRAEL DEACONESS MEDICAL CENTER, INC.",
+        "parent": "NORTHEAST HOSPITAL CORPORATION",
+        "obligated": 135677952.08
+      },
+      {
+        "child": "WEST STAR AVIATION, LLC",
+        "parent": "PREMIER AIR CENTER, LLC",
+        "obligated": 2481297.83
+      },
+      {
+        "child": "WASHINGTON TRU SOLUTIONS LLC",
+        "parent": "AECOM",
+        "obligated": -192.09
+      },
+      {
+        "child": "NATIONAL AIR DUCT MAINTENANCE CORP",
+        "parent": "CHICAGO IRON WORKS CORPORATION",
+        "obligated": 1550065.0
+      },
+      {
+        "child": "ATC PONDEROSA K LLC",
+        "parent": "AMERICAN TOWER CORPORATION",
+        "obligated": 0.0
+      },
+      {
+        "child": "EATON CORPORATION",
+        "parent": "SURE POWER  INC.",
+        "obligated": 0.0
+      },
+      {
+        "child": "MBS DIRECT, LLC",
+        "parent": "CAPITAL UNIVERSITY",
+        "obligated": 856290.5
+      },
+      {
+        "child": "WADE ANTENNA INC.",
+        "parent": "2037706 ONTARIO INC",
+        "obligated": 196929.0
+      },
+      {
+        "child": "MINISTRY OF DEFENSE",
+        "parent": "GOVERNMENT OF JAPAN",
+        "obligated": 1622701.69
+      },
+      {
+        "child": "IZUMI SUPPORT CORPORATION",
+        "parent": "SUMITOMO HEAVY INDUSTRIES, LTD.",
+        "obligated": 59170.6
+      },
+      {
+        "child": "VALKEN INDUSTRIES, INC.",
+        "parent": "BLOCKTRACE  LLC",
+        "obligated": 5546866.55
+      }
+    ]
+  },
+  "spend_on_genuine_links": {
+    "total_obligated": 75751156458.77005,
+    "n": 760,
+    "top_1pct_share": 79.89,
+    "top_10pct_share": 98.65
+  }
+}

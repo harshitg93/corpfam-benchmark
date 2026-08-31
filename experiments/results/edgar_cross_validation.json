@@ -1,0 +1,12 @@
+{
+  "families_total": 10307,
+  "parents_probed": 500,
+  "outcomes": {
+    "parent_not_an_sec_registrant": 315,
+    "exhibit21_retrieved": 135,
+    "no_exhibit21_in_10k": 30,
+    "no_10k_on_file": 20
+  },
+  "cache": "data/raw/edgar/exhibit21.jsonl",
+  "note": "Retrieval pass only. Matching of declared children against parsed Exhibit 21 subsidiary lists is done by reconcile_edgar.py so the expensive fetch is not repeated."
+}

@@ -1,0 +1,2950 @@
+{
+  "input": "data/raw/usaspending/archive_parents_fy2025.jsonl",
+  "families_total": 10392,
+  "genuine_links_total": 14288,
+  "families_flagged": 158,
+  "links_inside_flagged_families": 1846,
+  "pct_links_flagged": 12.92,
+  "rule": {
+    "dominance_threshold": 0.6,
+    "min_family_size": 3,
+    "note": "flags are for inspection; nothing is dropped by this script"
+  },
+  "reason_counts": {
+    "large_family_needs_manual_review": 28,
+    "children_form_block_excluding_parent": 56,
+    "sovereign_or_government_entity": 78
+  },
+  "flagged": [
+    {
+      "parent_uei": "MHA9XJE5FFN1",
+      "parent_name": "HANGER, INC.",
+      "children": 208,
+      "family_obligated": 32386247.28,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.923,
+      "dominant_token": {
+        "token": "prosthetics",
+        "children_sharing": 198,
+        "share": 0.952
+      },
+      "sample_children": [
+        "HANGER PROSTHETICS & ORTHOTICS INC",
+        "NORTHERN ORTHOPEDICS, INC.",
+        "HANGER PROSTHETICS & ORTHOTICS, INC.",
+        "HANGER PROSTHETICS & ORTHOTICS, INC.",
+        "ADVANCED BIOMECHANICS,INCORPORATED"
+      ]
+    },
+    {
+      "parent_uei": "EGAVSJTA2D81",
+      "parent_name": "ROCKWELL COLLINS AUSTRALIA PTY LIMITED",
+      "children": 111,
+      "family_obligated": 32809568443.64,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.144,
+      "dominant_token": null,
+      "sample_children": [
+        "INTERTRADE LIMITED",
+        "HAMILTON SUNDSTRAND SPACE SYSTEMS INTERNATIONAL, INC.",
+        "RAYTHEON COMPANY",
+        "RAYTHEON COMPANY",
+        "RAYTHEON COMPANY"
+      ]
+    },
+    {
+      "parent_uei": "UTMVXSN87H99",
+      "parent_name": "ZIPPY SHELL INCORPORATED",
+      "children": 103,
+      "family_obligated": 14194288.83,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent",
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "waste",
+        "children_sharing": 94,
+        "share": 0.913
+      },
+      "sample_children": [
+        "USA WASTE OF CALIFORNIA, INC.",
+        "USA WASTE OF CALIFORNIA, INC",
+        "WASTE MANAGEMENT OF NEW JERSEY, INC.",
+        "WASTE MANAGEMENT INC OF FLORIDA",
+        "ADVANCED DISPOSAL SERVICES SOLID WASTE SOUTHEAST INC"
+      ]
+    },
+    {
+      "parent_uei": "NKVZLJL93QT6",
+      "parent_name": "NORTHROP GRUMMAN CORPORATION",
+      "children": 72,
+      "family_obligated": 10191274686.93,
+      "parent_obligated": -49447.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.833,
+      "dominant_token": null,
+      "sample_children": [
+        "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "ALLIANT TECHSYSTEMS OPERATIONS LLC"
+      ]
+    },
+    {
+      "parent_uei": "SJULQDJ8NZU7",
+      "parent_name": "L3HARRIS TECHNOLOGIES, INC",
+      "children": 72,
+      "family_obligated": 7539600992.64,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.292,
+      "dominant_token": null,
+      "sample_children": [
+        "L3HARRIS TECHNOLOGIES, INC.",
+        "L3 TECHNOLOGIES, INC.",
+        "L3HARRIS TECHNOLOGIES INTEGRATED SYSTEMS L.P.",
+        "BWXT ORDNANCE TENNESSEE, INC.",
+        "L3HARRIS TECHNOLOGIES, INC."
+      ]
+    },
+    {
+      "parent_uei": "NW2RJN8TQQW1",
+      "parent_name": "GOVERNMENT OF THE UNITED STATES",
+      "children": 70,
+      "family_obligated": 206416782.22,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity",
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.257,
+      "dominant_token": null,
+      "sample_children": [
+        "FEDERAL PRISON INDUSTRIES, INC",
+        "FEDERAL PRISON INDUSTRIES, INC",
+        "FEDERAL PRISON INDUSTRIES, INC",
+        "PUBLISHING OFFICE, US GOVERNMENT",
+        "DLA TROOP SUPPORT"
+      ]
+    },
+    {
+      "parent_uei": "NU2UC8MX6NK1",
+      "parent_name": "THE BOEING COMPANY",
+      "children": 57,
+      "family_obligated": 22583402164.07,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.772,
+      "dominant_token": null,
+      "sample_children": [
+        "THE BOEING COMPANY",
+        "THE BOEING COMPANY",
+        "BOEING DISTRIBUTION, INC.",
+        "THE BOEING COMPANY",
+        "BOEING DISTRIBUTION SERVICES DEFENSE LLC"
+      ]
+    },
+    {
+      "parent_uei": "ZFN2JJXBLZT3",
+      "parent_name": "LOCKHEED MARTIN CORP",
+      "children": 55,
+      "family_obligated": 65393430043.34,
+      "parent_obligated": -996760.05,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.909,
+      "dominant_token": null,
+      "sample_children": [
+        "LOCKHEED MARTIN CORPORATION",
+        "LOCKHEED MARTIN CORPORATION",
+        "LOCKHEED MARTIN CORP",
+        "LOCKHEED MARTIN CORPORATION",
+        "LOCKHEED MARTIN CORPORATION"
+      ]
+    },
+    {
+      "parent_uei": "LMRMKLLL3LG5",
+      "parent_name": "TETRA TECH, INC.",
+      "children": 52,
+      "family_obligated": 527250760.21,
+      "parent_obligated": 202372658.63,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.75,
+      "dominant_token": null,
+      "sample_children": [
+        "TETRA TECH, INC.",
+        "MANAGEMENT SYSTEMS INTERNATIONAL, INC.",
+        "TETRA TECH, INC.",
+        "TETRA TECH, INC.",
+        "TETRA TECH INC"
+      ]
+    },
+    {
+      "parent_uei": "K1JGB5EK1U53",
+      "parent_name": "REPUBLIC SERVICES INC",
+      "children": 49,
+      "family_obligated": 41348492.23,
+      "parent_obligated": 6170921.76,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.245,
+      "dominant_token": null,
+      "sample_children": [
+        "US ECOLOGY WASHINGTON INC",
+        "BFI WASTE SERVICES, LLC",
+        "ALLIED WASTE TRANSPORTATION INC",
+        "ENVIRONMENTAL, SAFETY & HEALTH CONSULTING SERVICES, INC.",
+        "ALLIED WASTE SYSTEMS OF ARIZONA LLC"
+      ]
+    },
+    {
+      "parent_uei": "FAZSFFE6CST9",
+      "parent_name": "WICO LIMITED",
+      "children": 48,
+      "family_obligated": 8864083378.99,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent",
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "general",
+        "children_sharing": 33,
+        "share": 0.688
+      },
+      "sample_children": [
+        "GENERAL DYNAMICS MISSION SYSTEMS, INC.",
+        "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+        "GENERAL DYNAMICS ORDNANCE AND TACTICAL SYSTEMS - SIMUNITION OPERATIONS, INC.",
+        "GENERAL DYNAMICS MISSION SYSTEMS, INC.",
+        "GENERAL DYNAMICS ONE SOURCE LLC"
+      ]
+    },
+    {
+      "parent_uei": "TU4KCXMM9AP6",
+      "parent_name": "PAE-PARSONS GLOBAL LOGISTICS SERVICES, LLC",
+      "children": 44,
+      "family_obligated": 6257027541.57,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.159,
+      "dominant_token": null,
+      "sample_children": [
+        "PAE GOVERNMENT SERVICES, INC.",
+        "AMENTUM TECHNOLOGY, INC.",
+        "AMENTUM SERVICES, INC.",
+        "JT4 LLC",
+        "AMENTUM TECHNOLOGY, INC."
+      ]
+    },
+    {
+      "parent_uei": "KG5KCNG22BK6",
+      "parent_name": "HDR, INC",
+      "children": 43,
+      "family_obligated": 230608525.32,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "HDR APTIM LLC",
+        "HDR ENVIRONMENTAL, OPERATIONS AND CONSTRUCTION, INC.",
+        "HDR ARCHITECTURE, INC.",
+        "HDR ENGINEERING, INC.",
+        "HDR ARCHITECTURE, INC."
+      ]
+    },
+    {
+      "parent_uei": "N5KEKMFCWUR1",
+      "parent_name": "AMETEK INC",
+      "children": 39,
+      "family_obligated": 44903082.7,
+      "parent_obligated": 6532.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.308,
+      "dominant_token": null,
+      "sample_children": [
+        "VISION RESEARCH, INC",
+        "NSI-MI TECHNOLOGIES INC.",
+        "AMETEK AMERON, LLC",
+        "NAVITAR ,INC.",
+        "AMETEK AIRCRAFT PARTS & ACCESSORIES INC"
+      ]
+    },
+    {
+      "parent_uei": "NACNFSZD87F6",
+      "parent_name": "AECOM",
+      "children": 35,
+      "family_obligated": 126784858.52,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.743,
+      "dominant_token": null,
+      "sample_children": [
+        "AECOM SERVICES, LLC",
+        "ENVIRONMENTAL MANAGEMENT & PLANNING SOLUTIONS LLC",
+        "AECOM SERVICES, LLC",
+        "AECOM-BAKER-CARDNO NAVFAC ATLANTIC PLANNING JV",
+        "AECOM - B&V CIVIL WORKS JV"
+      ]
+    },
+    {
+      "parent_uei": "WF9TN8AWH8K5",
+      "parent_name": "HEICO CORP",
+      "children": 34,
+      "family_obligated": 118270778.23,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "TTT-CUBED INC",
+        "TRANSFORMATIONAL SECURITY, LLC",
+        "BLUE AEROSPACE LLC",
+        "ROCKY MOUNTAIN HYDROSTATICS, LLC",
+        "SEAL DYNAMICS LLC"
+      ]
+    },
+    {
+      "parent_uei": "EUY1C3NM2WN3",
+      "parent_name": "TRANSDIGM GROUP INCORPORATED",
+      "children": 33,
+      "family_obligated": 185261171.34,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.03,
+      "dominant_token": null,
+      "sample_children": [
+        "BREEZE-EASTERN LLC",
+        "AIRBORNE SYSTEMS NORTH AMERICA OF NJ INC.",
+        "TACTAIR FLUID CONTROLS INC",
+        "AIRBORNE SYSTEMS NORTH AMERICA OF CA INC",
+        "ARKWIN INDUSTRIES, INC."
+      ]
+    },
+    {
+      "parent_uei": "ZL41ERXMPAR3",
+      "parent_name": "LEIDOS HOLDINGS, INC.",
+      "children": 31,
+      "family_obligated": 10234155723.52,
+      "parent_obligated": -16861.97,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.613,
+      "dominant_token": null,
+      "sample_children": [
+        "LEIDOS, INC.",
+        "LEIDOS, INC.",
+        "LEIDOS, INC.",
+        "LEIDOS BIOMEDICAL RESEARCH INC",
+        "LEIDOS, INC."
+      ]
+    },
+    {
+      "parent_uei": "UU26FKF1MML6",
+      "parent_name": "BERKSHIRE HATHAWAY INC.",
+      "children": 30,
+      "family_obligated": 41343210.52,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.033,
+      "dominant_token": null,
+      "sample_children": [
+        "MID AMERICAN ENERGY COMPANY",
+        "KITCO FIBER OPTICS INC",
+        "FATIGUE TECHNOLOGY, INC",
+        "TTI INC.",
+        "MOUSER ELECTRONICS, INC"
+      ]
+    },
+    {
+      "parent_uei": "FKBHDS7BRJF4",
+      "parent_name": "HONEYWELL SAFETY PRODUCTS USA, INC.",
+      "children": 29,
+      "family_obligated": 6868286315.91,
+      "parent_obligated": 464298.68,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.793,
+      "dominant_token": null,
+      "sample_children": [
+        "HONEYWELL INTERNATIONAL INC.",
+        "HONEYWELL INTERNATIONAL INC.",
+        "HONEYWELL INTERNATIONAL, INC",
+        "NATIONAL TECHNOLOGY & ENGINEERING SOLUTIONS OF SANDIA, LLC",
+        "HONEYWELL INTERNATIONAL INC."
+      ]
+    },
+    {
+      "parent_uei": "MS4JKPLLQ4X9",
+      "parent_name": "JACOBS ENGINEERING GROUP INC.",
+      "children": 29,
+      "family_obligated": 519204545.37,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.724,
+      "dominant_token": null,
+      "sample_children": [
+        "JACOBS ENGINEERING GROUP INC.",
+        "JACOBS GOVERNMENT SERVICES COMPANY",
+        "JACOBS ENGINEERING GROUP INC",
+        "CH2M HILL CONSTRUCTORS, INC.",
+        "JACOBS ENGINEERING GROUP INC."
+      ]
+    },
+    {
+      "parent_uei": "VF58HFRNGEL8",
+      "parent_name": "GENERAL DYNAMICS CORP",
+      "children": 29,
+      "family_obligated": 533058049.69,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.655,
+      "dominant_token": null,
+      "sample_children": [
+        "GENERAL DYNAMICS-OTS, INC.",
+        "CSRA LLC",
+        "GENERAL DYNAMICS EUROPEAN LAND SYSTEMS-BRIDGE SYSTEMS GMBH",
+        "GENERAL DYNAMICS INFORMATION TECHNOLOGY INC.",
+        "GENERAL DYNAMICS LAND SYSTEMS - CANADA CORPORATION"
+      ]
+    },
+    {
+      "parent_uei": "SQ2DSCE69F15",
+      "parent_name": "TELEDYNE TECHNOLOGIES INCORPORATED",
+      "children": 28,
+      "family_obligated": 281207438.38,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.964,
+      "dominant_token": null,
+      "sample_children": [
+        "TELEDYNE DIGITAL IMAGING INC",
+        "NOVA RESEARCH, INC.",
+        "TELEDYNE FLIR DEFENSE, INC.",
+        "TELEDYNE SCIENTIFIC & IMAGING, LLC",
+        "TELEDYNE DEFENSE ELECTRONICS, LLC"
+      ]
+    },
+    {
+      "parent_uei": "S87NWCKDBAT5",
+      "parent_name": "BAY DISPOSAL, LLC",
+      "children": 28,
+      "family_obligated": 2362058.57,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.214,
+      "dominant_token": null,
+      "sample_children": [
+        "E.L. HARVEY & SONS INC.",
+        "WASTE CONNECTIONS OF ARKANSAS, INC.",
+        "EVERGREEN DISPOSAL, INC.",
+        "NEVADA SITE SERVICES",
+        "WASTE CONNECTIONS OF ARKANSAS, INC."
+      ]
+    },
+    {
+      "parent_uei": "ST9KNX1YNBA7",
+      "parent_name": "UNIFIRST CORPORATION",
+      "children": 27,
+      "family_obligated": 983567.89,
+      "parent_obligated": 1746972.69,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.926,
+      "dominant_token": null,
+      "sample_children": [
+        "UNIFIRST CORPORATION",
+        "UNIFIRST CORPORATION",
+        "UNIFIRST CORPORATION",
+        "UNIFIRST CORPORATION",
+        "UNITECH SERVICES GROUP INC"
+      ]
+    },
+    {
+      "parent_uei": "W8PTMRME1496",
+      "parent_name": "LEONARDO SPA",
+      "children": 26,
+      "family_obligated": 1641088634.64,
+      "parent_obligated": 21550035.53,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.308,
+      "dominant_token": null,
+      "sample_children": [
+        "DRS SUSTAINMENT SYSTEMS, INC",
+        "DRS NETWORK & IMAGING SYSTEMS LLC",
+        "DRS TRAINING & CONTROL SYSTEMS, LLC",
+        "LAUREL TECHNOLOGIES PARTNERSHIP",
+        "DRS SYSTEMS, INC"
+      ]
+    },
+    {
+      "parent_uei": "PLYSMJBAYE42",
+      "parent_name": "PUROLATOR FACET, INC.",
+      "children": 25,
+      "family_obligated": 408175643.05,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "PARKER-HANNIFIN CORPORATION",
+        "MEGGITT DEFENSE SYSTEMS, INC.",
+        "INVERIS TRAINING SOLUTIONS, INC",
+        "MEGGITT AIRCRAFT BRAKING SYSTEMS CORPORATION",
+        "LORD CORPORATION"
+      ]
+    },
+    {
+      "parent_uei": "CY16XXPHX213",
+      "parent_name": "ARCTIC SLOPE REGIONAL CORPORATION",
+      "children": 25,
+      "family_obligated": 1096679854.58,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent",
+        "large_family_needs_manual_review"
+      ],
+      "parent_name_reach_in_children": 0.04,
+      "dominant_token": {
+        "token": "asrc",
+        "children_sharing": 15,
+        "share": 0.6
+      },
+      "sample_children": [
+        "ASRC BUILDERS LLC",
+        "NETCENTRIC TECHNOLOGY, LLC",
+        "BROADLEAF, INC.",
+        "ANALYTICAL SERVICES, INC.",
+        "ASRC FEDERAL FACILITIES LOGISTICS LLC"
+      ]
+    },
+    {
+      "parent_uei": "HPDLRXR4FYX5",
+      "parent_name": "COMPAGNIE DE DEVELOPPEMENT DE L'EAU S.A.",
+      "children": 21,
+      "family_obligated": 4234021123.51,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "bae",
+        "children_sharing": 19,
+        "share": 0.905
+      },
+      "sample_children": [
+        "BAE SYSTEMS LAND & ARMAMENTS L.P.",
+        "BAE SYSTEMS TECHNOLOGY SOLUTIONS & SERVICES INC.",
+        "BAE SYSTEMS LAND AND ARMAMENTS L.P.",
+        "BAE SYSTEMS LAND & ARMAMENTS L.P.",
+        "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC."
+      ]
+    },
+    {
+      "parent_uei": "K8FRQA4T3TM8",
+      "parent_name": "ZMFH",
+      "children": 20,
+      "family_obligated": 160100434.67,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "safran",
+        "children_sharing": 14,
+        "share": 0.7
+      },
+      "sample_children": [
+        "SAFRAN DEFENSE & SPACE, INC.",
+        "ZODIAC OF NORTH AMERICA, INC.",
+        "OROLIA GOVERNMENT SYSTEMS, INC.",
+        "SAFRAN LANDING SYSTEMS WHEEL & BRAKE SERVICES LLC",
+        "AIR CRUISERS COMPANY, LLC"
+      ]
+    },
+    {
+      "parent_uei": "WQ2PSL2K3BD7",
+      "parent_name": "MCKIBBON BROTHERS, INC.",
+      "children": 12,
+      "family_obligated": 822074.94,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "apple",
+        "children_sharing": 12,
+        "share": 1.0
+      },
+      "sample_children": [
+        "APPLE NINE HOSPITALITY MANAGEMENT, INC.",
+        "APPLE TEN ALABAMA SERVICES, LLC",
+        "APPLE SEVEN HOSPITALITY MANAGEMENT INC",
+        "APPLE SEVEN SERVICES SOUTHEAST, L.P.",
+        "APPLE SEVEN SERVICES SOUTHEAST, L.P."
+      ]
+    },
+    {
+      "parent_uei": "H8ZXCH5PPEQ1",
+      "parent_name": "KIKIKTAGRUK INUPIAT CORP",
+      "children": 12,
+      "family_obligated": 14443379.5,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "sun",
+        "children_sharing": 10,
+        "share": 0.833
+      },
+      "sample_children": [
+        "MIDNIGHT SUN TECHNOLOGIES LLC",
+        "MIDNIGHT SUN-CENTENNIAL SATKU JV, LLC",
+        "MIDNIGHT SUN PROFESSIONAL SOLUTIONS LLC",
+        "MIDNIGHT SUN AUS, LLC",
+        "MIDNIGHT SUN AUS LLC"
+      ]
+    },
+    {
+      "parent_uei": "UVUTB62B9AV3",
+      "parent_name": "BALL CORPORATION",
+      "children": 11,
+      "family_obligated": 953329172.44,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "bae",
+        "children_sharing": 10,
+        "share": 0.909
+      },
+      "sample_children": [
+        "BAE SYSTEMS INFORMATION & ELECTRONIC SYSTEMS INTEGRATION INC",
+        "BAE SYSTEMS GCS INTERNATIONAL LIMITED",
+        "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC.",
+        "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC.",
+        "BAE SYSTEMS ORDNANCE SYSTEMS INC"
+      ]
+    },
+    {
+      "parent_uei": "N5GNZ3HEYMR3",
+      "parent_name": "THE ENSIGN GROUP INC",
+      "children": 10,
+      "family_obligated": 8737054.75,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "healthcare",
+        "children_sharing": 8,
+        "share": 0.8
+      },
+      "sample_children": [
+        "HOLLY HEIGHTS NURSING HOME, INC.",
+        "MIDLAND NAMPA HEALTHCARE LLC",
+        "TORTOLITA HEALTHCARE, INC",
+        "SENTINEL PEAK HEALTHCARE LLC",
+        "YOUNGTOWN HEALTH, INC"
+      ]
+    },
+    {
+      "parent_uei": "NSA8T7PLC9K3",
+      "parent_name": "STATE OF RHODE ISLAND",
+      "children": 10,
+      "family_obligated": 2018495.82,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.9,
+      "dominant_token": null,
+      "sample_children": [
+        "UNIVERSITY OF RHODE ISLAND",
+        "RHODE ISLAND TURNPIKE AND BRIDGE AUTHORITY",
+        "HUMAN RIGHTS RHODE ISLAND COMMISSION FOR",
+        "UNIVERSITY OF RHODE ISLAND",
+        "STATE OF RHODE ISLAND DEPARTMENT OF HEALTH"
+      ]
+    },
+    {
+      "parent_uei": "CTZWUSPKUMG8",
+      "parent_name": "RESIDEO TECHNOLOGIES, INC.",
+      "children": 9,
+      "family_obligated": 129517649.13,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "honeywell",
+        "children_sharing": 7,
+        "share": 0.778
+      },
+      "sample_children": [
+        "HONEYWELL INTERNATIONAL INC.",
+        "HONEYWELL INTERNATIONAL INC.",
+        "HONEYWELL INTERNATIONAL INC.",
+        "GRIMES AEROSPACE COMPANY",
+        "HONEYWELL INTERNATIONAL INC."
+      ]
+    },
+    {
+      "parent_uei": "G94RXHL8AQ91",
+      "parent_name": "UKPEAGVIK INUPIAT CORPORATION",
+      "children": 9,
+      "family_obligated": 66813858.09,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "bowhead",
+        "children_sharing": 7,
+        "share": 0.778
+      },
+      "sample_children": [
+        "BOWHEAD PROFESSIONAL SOLUTIONS LLC",
+        "ROCKFORD CORPORATION",
+        "BOWHEAD TOTAL ENTERPRISE SOLUTIONS, LLC",
+        "UIC OIL & GAS SUPPORT SERVICES, LLC",
+        "BOWHEAD BUSINESS AND TECHNOLOGY SOLUTIONS, LLC"
+      ]
+    },
+    {
+      "parent_uei": "DZ8RD2EBBMK5",
+      "parent_name": "GENUINE PARTS COMPANY",
+      "children": 9,
+      "family_obligated": 1364898.91,
+      "parent_obligated": 32266.56,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.111,
+      "dominant_token": {
+        "token": "motion",
+        "children_sharing": 7,
+        "share": 0.778
+      },
+      "sample_children": [
+        "COLLEGE STATION AUTO PARTS CO.",
+        "MOTION INDUSTRIES, INC.",
+        "MOTION INDUSTRIES, INC.",
+        "MOTION INDUSTRIES INC",
+        "MOTION INDUSTRIES, INC."
+      ]
+    },
+    {
+      "parent_uei": "VF1VWJSM8TW5",
+      "parent_name": "MIM SOFTWARE INC.",
+      "children": 8,
+      "family_obligated": 196403808.69,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.125,
+      "dominant_token": {
+        "token": "healthcare",
+        "children_sharing": 5,
+        "share": 0.625
+      },
+      "sample_children": [
+        "GE PRECISION HEALTHCARE LLC",
+        "GE HEALTHCARE INC",
+        "GE MEDICAL SYSTEMS INFORMATION TECHNOLOGIES, INC.",
+        "MIM SOFTWARE INC",
+        "GE HEALTHCARE IITS USA CORP."
+      ]
+    },
+    {
+      "parent_uei": "XEAUKVYXD3W1",
+      "parent_name": "ALTAIR ENGINEERING INC.",
+      "children": 7,
+      "family_obligated": 345658310.98,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "siemens",
+        "children_sharing": 5,
+        "share": 0.714
+      },
+      "sample_children": [
+        "SIEMENS HEALTHCARE DIAGNOSTICS INC.",
+        "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+        "SIEMENS GOVERNMENT TECHNOLOGIES INC",
+        "VARIAN MEDICAL SYSTEMS, INC",
+        "PETNET SOLUTIONS, INC."
+      ]
+    },
+    {
+      "parent_uei": "SC5PC1PJRDQ5",
+      "parent_name": "UBM PLC",
+      "children": 7,
+      "family_obligated": 1530982.21,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "informa",
+        "children_sharing": 6,
+        "share": 0.857
+      },
+      "sample_children": [
+        "INFORMA UK LIMITED",
+        "INFORMA BUSINESS MEDIA, INC.",
+        "TAYLOR & FRANCIS GROUP LLC",
+        "INFORMA TECH LLC",
+        "INFORMA TECH HOLDINGS LLC"
+      ]
+    },
+    {
+      "parent_uei": "PCJQZRE36Z73",
+      "parent_name": "DAVITA INC.",
+      "children": 7,
+      "family_obligated": 2136321.85,
+      "parent_obligated": 533649880.45,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "renal",
+        "children_sharing": 7,
+        "share": 1.0
+      },
+      "sample_children": [
+        "TOTAL RENAL CARE, INC",
+        "RENAL TREATMENT CENTERS - WEST, INC",
+        "RENAL TREATMENT CENTERS - SOUTHEAST LP",
+        "RENAL TREATMENT CENTERS-CALIFORNIA, INC.",
+        "TOTAL RENAL CARE INC"
+      ]
+    },
+    {
+      "parent_uei": "S355Q1T9MKK8",
+      "parent_name": "MYTHICS, INC.",
+      "children": 6,
+      "family_obligated": 367725807.87,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.167,
+      "dominant_token": {
+        "token": "williams",
+        "children_sharing": 4,
+        "share": 0.667
+      },
+      "sample_children": [
+        "EMERGENT, LLC",
+        "MYTHICS, LLC",
+        "W.W. WILLIAMS COMPANY, THE LLC",
+        "THE W.W. WILLIAMS COMPANY, LLC",
+        "THE W.W. WILLIAMS COMPANY, LLC"
+      ]
+    },
+    {
+      "parent_uei": "LSEFDJT8QA57",
+      "parent_name": "AMBER INFRASTRUCTURE LLC",
+      "children": 6,
+      "family_obligated": 276113152.21,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "light",
+        "children_sharing": 6,
+        "share": 1.0
+      },
+      "sample_children": [
+        "CITY LIGHT & POWER, INC.",
+        "CITY LIGHT & POWER AWP, LLC",
+        "CITY LIGHT & POWER FTR, LLC",
+        "CITY LIGHT & POWER JBLM LLC",
+        "CITY LIGHT & POWER FTC LLC"
+      ]
+    },
+    {
+      "parent_uei": "W2GWNM866LQ5",
+      "parent_name": "R O B E R T B O S C H S T I F T U N G GESELLSCHAFT MIT BESCHR\u00c4NKTER HAFTUNG",
+      "children": 6,
+      "family_obligated": 5419547.26,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "bosch",
+        "children_sharing": 4,
+        "share": 0.667
+      },
+      "sample_children": [
+        "BOSCH SECURITY SYSTEMS, LLC",
+        "BOSCH SICHERHEITSSYSTEME GMBH",
+        "BOSCH REXROTH CORPORATION",
+        "ELPRO SERVICES INC",
+        "BOSCH BUILDING TECHNOLOGIES, LLC"
+      ]
+    },
+    {
+      "parent_uei": "K92AELC1RN96",
+      "parent_name": "PARK HOTELS & RESORTS INC.",
+      "children": 6,
+      "family_obligated": 855454.81,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "lessee",
+        "children_sharing": 5,
+        "share": 0.833
+      },
+      "sample_children": [
+        "KING STREET STATION HOTEL ASSOCIATES LESSEE LLC",
+        "CRYSTAL CITY LESSEE LLC",
+        "INTERNATIONAL RIVERCENTER LESSEE, L.L.C.",
+        "SAN DIEGO LESSEE LLC",
+        "CHICAGO LESSEE LLC"
+      ]
+    },
+    {
+      "parent_uei": "S2SVA1GNRVK5",
+      "parent_name": "COOK INLET REGION INC",
+      "children": 6,
+      "family_obligated": -345611.56,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "north",
+        "children_sharing": 5,
+        "share": 0.833
+      },
+      "sample_children": [
+        "NORTH WIND SITE SERVICES, LLC",
+        "LBYD INC",
+        "NORTH WIND, INC.",
+        "NORTH WIND-EA JV, LLC",
+        "NORTH WIND CONSTRUCTION SERVICES, LLC"
+      ]
+    },
+    {
+      "parent_uei": "UB23ZUH97ET3",
+      "parent_name": "STATE OF SOUTH DAKOTA-DIVISION OF OASI",
+      "children": 6,
+      "family_obligated": 667457.67,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.833,
+      "dominant_token": {
+        "token": "department",
+        "children_sharing": 5,
+        "share": 0.833
+      },
+      "sample_children": [
+        "STATE OF SOUTH DAKOTA DEPARTMENT OF TRANSPORTATION",
+        "SOUTH DAKOTA DEPARTMENT OF AGRICULTURE AND NATURAL RESOURCES ANIMAL FEED & REMEDY PROGRAM",
+        "SOUTH DAKOTA DEPARTMENT OF HEALTH",
+        "INFORMATION AND TELECOMMUNICATIONS, SOUTH DAKOTA BUREAU OF",
+        "DEPARTMENT OF EDUCATION"
+      ]
+    },
+    {
+      "parent_uei": "VAZGNJMT5UZ7",
+      "parent_name": "ARTERA SERVICES, LLC",
+      "children": 5,
+      "family_obligated": 3818377.41,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "gas",
+        "children_sharing": 3,
+        "share": 0.6
+      },
+      "sample_children": [
+        "VECTREN ENERGY DELIVERY OF OHIO, LLC",
+        "CENTERPOINT ENERGY RESOURCES CORP.",
+        "INDIANA GAS COMPANY, INC",
+        "ENABLE GAS TRANSMISSION LLC",
+        "SOUTHERN INDIANA GAS AND ELECTRIC COMPANY"
+      ]
+    },
+    {
+      "parent_uei": "NGTNPRCG6BE1",
+      "parent_name": "DIAZYME LABORATORIES, INC.",
+      "children": 5,
+      "family_obligated": 401088721.25,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.2,
+      "dominant_token": {
+        "token": "atomics",
+        "children_sharing": 4,
+        "share": 0.8
+      },
+      "sample_children": [
+        "GENERAL ATOMICS",
+        "GENERAL ATOMICS INTERNATIONAL SERVICES CORP",
+        "GENERAL ATOMICS SYSTEMS INTEGRATION, LLC",
+        "DIAZYME LABORATORIES INC",
+        "GENERAL ATOMICS"
+      ]
+    },
+    {
+      "parent_uei": "GQ46SB5L2HK4",
+      "parent_name": "STATE OF ILLINOIS",
+      "children": 5,
+      "family_obligated": 7827452.78,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": {
+        "token": "department",
+        "children_sharing": 4,
+        "share": 0.8
+      },
+      "sample_children": [
+        "ILLINOIS DEPARTMENT OF HUMAN SERVICE",
+        "DEPARTMENT OF PUBLIC HEALTH ILLINOIS",
+        "ILLINOIS DEPARTMENT OF AGRICULTURE",
+        "ILLINOIS ENVIRONMENTAL PROTECTION AGENCY",
+        "DEPARTMENT OF HUMAN RIGHTS ILLINOIS"
+      ]
+    },
+    {
+      "parent_uei": "TCLRCC4S6BH8",
+      "parent_name": "AFOGNAK NATIVE CORPORATION",
+      "children": 5,
+      "family_obligated": 42809610.79,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "alutiiq",
+        "children_sharing": 5,
+        "share": 1.0
+      },
+      "sample_children": [
+        "ALUTIIQ SOLUTIONS, LLC",
+        "ALUTIIQ TECHNICAL SERVICES LLC",
+        "ALUTIIQ GENERAL CONTRACTORS, LLC",
+        "ALUTIIQ GENERAL CONTRACTORS LLC",
+        "ALUTIIQ PACIFIC, LLC"
+      ]
+    },
+    {
+      "parent_uei": "YLQMY5SGNE55",
+      "parent_name": "3M COMPANY",
+      "children": 5,
+      "family_obligated": 29566777.36,
+      "parent_obligated": 57989209.41,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0,
+      "dominant_token": {
+        "token": "solventum",
+        "children_sharing": 3,
+        "share": 0.6
+      },
+      "sample_children": [
+        "SOLVENTUM HEALTH INFORMATION SYSTEMS, INC.",
+        "SOLVENTUM ORTHODONTICS CORPORATION",
+        "SOLVENTUM US LLC",
+        "KINETIC CONCEPTS, INC.",
+        "3M TECHNICAL CERAMICS INC"
+      ]
+    },
+    {
+      "parent_uei": "EN2ESM6GU2Y3",
+      "parent_name": "COMPAGNIE INDUSTRIELLE DE DELLE",
+      "children": 5,
+      "family_obligated": 85163799.09,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "chemring",
+        "children_sharing": 3,
+        "share": 0.6
+      },
+      "sample_children": [
+        "CHEMRING ENERGETIC DEVICES INC",
+        "CHEMRING SENSORS AND ELECTRONIC SYSTEMS, INC.",
+        "KILGORE FLARES COMPANY LLC",
+        "ALLOY SURFACES CO INC",
+        "CHEMRING SENSORS AND ELECTRONIC SYSTEMS, INC."
+      ]
+    },
+    {
+      "parent_uei": "QF9PHLXT2886",
+      "parent_name": "THE PARSONS CORPORATION",
+      "children": 5,
+      "family_obligated": 33751451.06,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "baker",
+        "children_sharing": 4,
+        "share": 0.8
+      },
+      "sample_children": [
+        "MICHAEL BAKER INTERNATIONAL, INC.",
+        "MICHAEL BAKER INTERNATIONAL, INC.",
+        "QRC, LLC",
+        "MICHAEL BAKER INTERNATIONAL, INC",
+        "MICHAEL BAKER INTERNATIONAL, INC."
+      ]
+    },
+    {
+      "parent_uei": "JJ2PKRRJULE3",
+      "parent_name": "VOLKSWAGEN AKTIENGESELLSCHAFT",
+      "children": 5,
+      "family_obligated": 4130892.58,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "everllence",
+        "children_sharing": 3,
+        "share": 0.6
+      },
+      "sample_children": [
+        "EVERLLENCE USA INC.",
+        "RENK CORP",
+        "ND DEFENSE LLC",
+        "EVERLLENCE SINGAPORE PTE. LTD.",
+        "EVERLLENCE JAPAN LTD."
+      ]
+    },
+    {
+      "parent_uei": "QW12SATJLKM9",
+      "parent_name": "ALLIED SECURITY HOLDINGS LLC",
+      "children": 5,
+      "family_obligated": 3100492.54,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "g4s",
+        "children_sharing": 4,
+        "share": 0.8
+      },
+      "sample_children": [
+        "G4S (RDC)",
+        "G4S KENYA LIMITED",
+        "G4S, DRU?BA ZA VAROVANJE D.O.O.",
+        "G4S SECURE SOLUTIONS INTERNATIONAL INC.",
+        "WACKENHUT PARAGUAY SA"
+      ]
+    },
+    {
+      "parent_uei": "DGWJPMN2QD69",
+      "parent_name": "STATE OF IOWA",
+      "children": 5,
+      "family_obligated": 2179956.57,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.8,
+      "dominant_token": {
+        "token": "department",
+        "children_sharing": 4,
+        "share": 0.8
+      },
+      "sample_children": [
+        "IOWA DEPARTMENT OF PUBLIC DEFENSE",
+        "WORKFORCE DEVELOPMENT CENTER",
+        "IOWA DEPARTMENT OF PUBLIC HEALTH",
+        "IOWA DEPARTMENT OF AGRICULTURE AND LAND STEWARDSHIP",
+        "IOWA DEPARTMENT OF REVENUE"
+      ]
+    },
+    {
+      "parent_uei": "K9S7KL73XBE3",
+      "parent_name": "NOVETTA SOLUTIONS, LLC",
+      "children": 4,
+      "family_obligated": 3246856650.67,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "accenture",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "ACCENTURE FEDERAL SERVICES LLC",
+        "ACCENTURE FEDERAL SERVICES LLC",
+        "ASM RESEARCH, LLC",
+        "ACCENTURE LLP"
+      ]
+    },
+    {
+      "parent_uei": "JGSNSER23GR6",
+      "parent_name": "FRANCISCO PARTNERS MANAGEMENT, L.P.",
+      "children": 4,
+      "family_obligated": 3319966452.51,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "dell",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "DELL FEDERAL SYSTEMS L.P",
+        "DELL COMPUTER HOLDINGS L.P.",
+        "DELL MARKETING L.P.",
+        "EMC CORPORATION"
+      ]
+    },
+    {
+      "parent_uei": "TN75GJE1S7G3",
+      "parent_name": "COMMONWEALTH OF PENNSYLVANIA",
+      "children": 4,
+      "family_obligated": 6631844.3,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": {
+        "token": "department",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "PENNSYLVANIA DEPARTMENT OF HEALTH",
+        "PENNSYLVANIA DEPARTMENT OF ENVIRONMENTAL PROTECTION",
+        "PENNSYLVANIA DEPT OF EDUCATION",
+        "DEPARTMENT OF AGRICULTURE PENNSYLVANIA"
+      ]
+    },
+    {
+      "parent_uei": "KPCKZCMEARN7",
+      "parent_name": "JAMES MADISON UNIVERSITY",
+      "children": 4,
+      "family_obligated": 19694635.89,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "virginia",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "DEPARTMENT OF CORRECTIONS VIRGINIA",
+        "BLIND AND VISION IMPAIRED, VIRGINIA DEPARTMENT FOR THE",
+        "VIRGINIA STATE POLICE",
+        "VA DEPARTMENT OF TRANSPORTATION"
+      ]
+    },
+    {
+      "parent_uei": "SDACDT7L3ZQ5",
+      "parent_name": "GOVERNMENT OF THE DISTRICT OF COLUMBIA",
+      "children": 4,
+      "family_obligated": 692559.05,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "DISTRICT OF COLUMBIA, GOVERNMENT OF",
+        "DISTRICT OF COLUMBIA, GOVERNMENT OF",
+        "DISTRICT OF COLUMBIA GOVERNMENT",
+        "DISTRICT OF COLUMBIA, GOVERNMENT OF"
+      ]
+    },
+    {
+      "parent_uei": "RCDPG27MJ3W3",
+      "parent_name": "NISOURCE INC.",
+      "children": 4,
+      "family_obligated": 1819942.5,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "columbia",
+        "children_sharing": 4,
+        "share": 1.0
+      },
+      "sample_children": [
+        "COLUMBIA GAS OF VIRGINIA, INC.",
+        "COLUMBIA GAS OF OHIO INC",
+        "COLUMBIA GAS OF KENTUCKY, INC.",
+        "COLUMBIA GAS OF PENNSYLVANIA INC"
+      ]
+    },
+    {
+      "parent_uei": "TZY5BKQHCF21",
+      "parent_name": "VIATRIS INC.",
+      "children": 4,
+      "family_obligated": -0.01,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "mylan",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "GREENSTONE LLC",
+        "MYLAN PHARMACEUTICALS INC",
+        "MYLAN INSTITUTIONAL LLC",
+        "MYLAN INSTITUTIONAL INC"
+      ]
+    },
+    {
+      "parent_uei": "CMT4S6G76QB5",
+      "parent_name": "BWX TECHNOLOGIES, INC.",
+      "children": 4,
+      "family_obligated": 66871239.3,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "bwxt",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "NUCLEAR FUEL SERVICES INC",
+        "BWXT NUCLEAR OPERATIONS GROUP, INC.",
+        "BWXT Y - 12, LLC",
+        "BWXT NOG TECHNOLOGIES, INC."
+      ]
+    },
+    {
+      "parent_uei": "VNLBKB7MW313",
+      "parent_name": "HARNISH GROUP INC.",
+      "children": 4,
+      "family_obligated": 38585.92,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "machinery",
+        "children_sharing": 3,
+        "share": 0.75
+      },
+      "sample_children": [
+        "TRACTOR & EQUIPMENT CO",
+        "N C MACHINERY CO",
+        "NC MACHINERY CO",
+        "N C MACHINERY CO."
+      ]
+    },
+    {
+      "parent_uei": "WEXUHLRCSUM5",
+      "parent_name": "VECTOR CAPITAL MANAGEMENT, L.P.",
+      "children": 3,
+      "family_obligated": 25245448.64,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "experian",
+        "children_sharing": 3,
+        "share": 1.0
+      },
+      "sample_children": [
+        "EXPERIAN INFORMATION SOLUTIONS, INC.",
+        "EXPERIAN INFORMATION SOLUTIONS, INC.",
+        "EXPERIAN MARKETING SOLUTIONS, LLC"
+      ]
+    },
+    {
+      "parent_uei": "JASUAUM4NXM8",
+      "parent_name": "ASAHI KASEI CORPORATION",
+      "children": 3,
+      "family_obligated": 68712546.44,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "zoll",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "ZOLL MEDICAL CORPORATION",
+        "VELOXIS PHARMACEUTICALS, INC",
+        "ZOLL RESPICARDIA INC"
+      ]
+    },
+    {
+      "parent_uei": "DHCUYV5NWA43",
+      "parent_name": "TRANSPLANT TECHNOLOGY INC",
+      "children": 3,
+      "family_obligated": 5642225.95,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "nuvasive",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "NUVASIVE CLINICAL SERVICES MONITORING, INC.",
+        "GLOBUS MEDICAL, INC.",
+        "NUVASIVE, INC"
+      ]
+    },
+    {
+      "parent_uei": "PRRXANJSLS26",
+      "parent_name": "IPC INDUSTRIES, INC.",
+      "children": 3,
+      "family_obligated": 33032081.22,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "industrial",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "MULTIQUIP INC.",
+        "OLSSON INDUSTRIAL ELECTRIC, INC",
+        "GREENBERRY INDUSTRIAL LLC"
+      ]
+    },
+    {
+      "parent_uei": "FKMWECSN4983",
+      "parent_name": "K'OYITL'OTS'INA, LIMITED",
+      "children": 3,
+      "family_obligated": 49827837.34,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "kcorp",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "KCORP SUPPORT SERVICES, INC",
+        "YUKON FIRE PROTECTION SERVICES, INC.",
+        "KCORP TECHNOLOGY SERVICES, INC."
+      ]
+    },
+    {
+      "parent_uei": "QGSQK26MBMR6",
+      "parent_name": "NANA REGIONAL CORPORATION, INC.",
+      "children": 3,
+      "family_obligated": 101335899.13,
+      "parent_obligated": 192497.64,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "akima",
+        "children_sharing": 3,
+        "share": 1.0
+      },
+      "sample_children": [
+        "AKIMA DATA MANAGEMENT LLC",
+        "AKIMA LOGISTICS SERVICES LLC",
+        "AKIMA RANGE READINESS OPERATIONS LLC"
+      ]
+    },
+    {
+      "parent_uei": "PCUAKJCDD8G3",
+      "parent_name": "ECOLAB INC",
+      "children": 3,
+      "family_obligated": 1020132.28,
+      "parent_obligated": 2536853.69,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "water",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "BARCLAY WATER MANAGEMENT, INC.",
+        "MICROTEK MEDICAL, INC.",
+        "NALCO WATER PRETREATMENT SOLUTIONS, LLC"
+      ]
+    },
+    {
+      "parent_uei": "S7FSEMFEH9K6",
+      "parent_name": "THE PASHA GROUP",
+      "children": 3,
+      "family_obligated": 78287103.47,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "matson",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "MATSON NAVIGATION COMPANY, INC.",
+        "HAWAII STEVEDORES, INC",
+        "MATSON LOGISTICS, INC."
+      ]
+    },
+    {
+      "parent_uei": "DZ6DK62GRZ39",
+      "parent_name": "LINCOLN COUNTY R-IV SCHOOL DISTRICT",
+      "children": 3,
+      "family_obligated": 7457883.47,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "skf",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "SKF USA INC.",
+        "SKF USA INC.",
+        "KAYDON RING & SEAL INC"
+      ]
+    },
+    {
+      "parent_uei": "USNGPAZNVLM3",
+      "parent_name": "ONEAL INDUSTRIES INC",
+      "children": 3,
+      "family_obligated": 8605380.31,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "metals",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "TW METALS, INC.",
+        "SUPPLY DYNAMICS, INC.",
+        "UNITED PERFORMANCE METALS, LLC"
+      ]
+    },
+    {
+      "parent_uei": "P7THM4E13J37",
+      "parent_name": "SUEZ",
+      "children": 3,
+      "family_obligated": 2315745.41,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "veolia",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "VEOLIA ES (UK) LIMITED",
+        "VEOLIA SUSTAINABLE BUILDINGS USA WEST, INC.",
+        "VICINITY ENERGY OKLAHOMA CITY, LLC"
+      ]
+    },
+    {
+      "parent_uei": "CLQCVJYH4UN5",
+      "parent_name": "ASHTEAD GROUP PUBLIC LIMITED COMPANY",
+      "children": 3,
+      "family_obligated": 2638733.1,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "rentals",
+        "children_sharing": 3,
+        "share": 1.0
+      },
+      "sample_children": [
+        "SUNBELT RENTALS, INC",
+        "SUNBELT RENTALS, INC.",
+        "SUNBELT RENTALS INC"
+      ]
+    },
+    {
+      "parent_uei": "VAFXUGJBLML4",
+      "parent_name": "ABBVIE INC",
+      "children": 3,
+      "family_obligated": 587248.54,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "allergan",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "ALLERGAN USA INC",
+        "IMMUNOGEN INC",
+        "ALLERGAN, INC."
+      ]
+    },
+    {
+      "parent_uei": "J9T9WB4B2PG8",
+      "parent_name": "FORTIS INC",
+      "children": 3,
+      "family_obligated": 5490525.85,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "electric",
+        "children_sharing": 3,
+        "share": 1.0
+      },
+      "sample_children": [
+        "CENTRAL HUDSON GAS & ELECTRIC CORPORATION",
+        "UNS ELECTRIC, INC.",
+        "TUCSON ELECTRIC POWER COMPANY"
+      ]
+    },
+    {
+      "parent_uei": "XD4VL3GRNBE7",
+      "parent_name": "BGC PARTNERS, L.P.",
+      "children": 3,
+      "family_obligated": 439715.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "newmark",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "NEWMARK & COMPANY REAL ESTATE, INC.",
+        "NEWMARK VALUATION & ADVISORY, LLC",
+        "POTEN & PARTNERS, INC."
+      ]
+    },
+    {
+      "parent_uei": "WB3ZMXUNBMZ9",
+      "parent_name": "MELROSE INDUSTRIES PLC",
+      "children": 3,
+      "family_obligated": 2081865.82,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "aerospace",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "GKN AEROSPACE CHEM-TRONICS INC",
+        "GKN AEROSPACE TRANSPARENCY SYSTEMS INC.",
+        "ROCKFORD POWERTRAIN INC"
+      ]
+    },
+    {
+      "parent_uei": "X7P2MMALYNU3",
+      "parent_name": "TRAVELPORT WORLDWIDE LIMITED",
+      "children": 3,
+      "family_obligated": 10167884.58,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "nightwing",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "NIGHTWING INTELLIGENCE SOLUTIONS, LLC",
+        "COPELAND COLD CHAIN LP",
+        "NIGHTWING INTELLIGENCE SOLUTIONS, LLC"
+      ]
+    },
+    {
+      "parent_uei": "XMRBFR868NS3",
+      "parent_name": "ADOLF W\u00dcRTH GMBH & CO. KG",
+      "children": 3,
+      "family_obligated": 74896.28,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "wurth",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "WURTH U.S.A. INC",
+        "WURTH INDUSTRY USA INC.",
+        "NORTHERN SAFETY CO INC"
+      ]
+    },
+    {
+      "parent_uei": "FQCEMRCLKK71",
+      "parent_name": "SOUTH CAROLINA, STATE OF",
+      "children": 3,
+      "family_obligated": 1801382.96,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": {
+        "token": "medical",
+        "children_sharing": 3,
+        "share": 1.0
+      },
+      "sample_children": [
+        "MEDICAL UNIVERSITY OF SOUTH CAROLINA",
+        "MEDICAL UNIVERSITY OF SOUTH CAROLINA",
+        "MEDICAL UNIVERSITY OF SOUTH CAROLINA THE"
+      ]
+    },
+    {
+      "parent_uei": "QQNBR4AWYGQ4",
+      "parent_name": "ARAMSCO HOLDINGS, INC.",
+      "children": 3,
+      "family_obligated": 5309638.36,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "spectrum",
+        "children_sharing": 2,
+        "share": 0.667
+      },
+      "sample_children": [
+        "SPECTRUM CONTROL INC",
+        "SPECTRUM MICROWAVE INC",
+        "QIOPTIQ LIMITED"
+      ]
+    },
+    {
+      "parent_uei": "WFUNCR9DV4K1",
+      "parent_name": "WILLIAM DEMANT FONDEN",
+      "children": 3,
+      "family_obligated": 44516.88,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "children_form_block_excluding_parent"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": {
+        "token": "diagnostics",
+        "children_sharing": 3,
+        "share": 1.0
+      },
+      "sample_children": [
+        "E3 DIAGNOSTICS, INC.",
+        "E3 DIAGNOSTICS, INC.",
+        "E3 DIAGNOSTICS, INC."
+      ]
+    },
+    {
+      "parent_uei": "RQ4AD2FZ3F29",
+      "parent_name": "STATE OF MONTANA EXECUTIVE BRANCH",
+      "children": 2,
+      "family_obligated": 104565.17,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "LIBRARY, MONTANA STATE",
+        "NATURAL RESOURCES & CONSERVATION, MONTANA DEPT OF"
+      ]
+    },
+    {
+      "parent_uei": "LKZVYNPALSL9",
+      "parent_name": "STATE OF WASHINGTON",
+      "children": 2,
+      "family_obligated": 1702571.06,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "STATE OF WASHINGTON DEPARTMENT OF AGRICULTURE",
+        "WASHINGTON STATE PATROL"
+      ]
+    },
+    {
+      "parent_uei": "HYNBDW8BGZ34",
+      "parent_name": "EXECUTIVE OFFICE OF THE STATE OF LOUISIANA",
+      "children": 2,
+      "family_obligated": 133317.65,
+      "parent_obligated": 83500.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "LOUISIANA DEPARTMENT OF WILDLIFE AND FISHERIES",
+        "AGRICULTURE & FORESTRY, LOUISIANA DEPARTMENT OF"
+      ]
+    },
+    {
+      "parent_uei": "H859NHK2DVU3",
+      "parent_name": "STATE OF MARYLAND EXECUTIVE OFFICE",
+      "children": 2,
+      "family_obligated": 244551.29,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "THE ENVIRONMENT MARYLAND DEPARTMENT OF",
+        "STATE OF MARYLAND DEPARTMENT OF NATURAL RESOURCES"
+      ]
+    },
+    {
+      "parent_uei": "L25DE3FSY6M4",
+      "parent_name": "CITY OF DENTON",
+      "children": 2,
+      "family_obligated": 387034.2,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF DENTON",
+        "COUNTY OF DENTON"
+      ]
+    },
+    {
+      "parent_uei": "K3LGS8BABNH9",
+      "parent_name": "CITY OF PHILADELPHIA",
+      "children": 2,
+      "family_obligated": 967988.25,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF PHILADELPHIA",
+        "CITY OF PHILADELPHIA DEPARTMENT OF REVENUE WATER REVENUE BUREAU B0610658047"
+      ]
+    },
+    {
+      "parent_uei": "MR2LQC5ZZ3E7",
+      "parent_name": "COUNTY OF IMPERIAL",
+      "children": 2,
+      "family_obligated": 55000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "IMPERIAL COUNTY",
+        "COUNTY OF IMPERIAL"
+      ]
+    },
+    {
+      "parent_uei": "HPVMN6F4P7J7",
+      "parent_name": "ALABAMA, STATE OF",
+      "children": 1,
+      "family_obligated": 473077.61,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ALABAMA DEPARTMENT OF PUBLIC HEALTH"
+      ]
+    },
+    {
+      "parent_uei": "HJEPRMTQMMR4",
+      "parent_name": "VILLANOVA UNIVERSITY IN THE STATE OF PENNSYLVANIA",
+      "children": 1,
+      "family_obligated": 3399002.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "VILLANOVA UNIVERSITY IN THE STATE OF PENNSYLVANIA"
+      ]
+    },
+    {
+      "parent_uei": "YLJ3MQYJFG29",
+      "parent_name": "KINGDOM OF SAUDI ARABIA",
+      "children": 1,
+      "family_obligated": 2657491.17,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "STC BAHRAIN B.S.C CLOSED"
+      ]
+    },
+    {
+      "parent_uei": "S8MFKFN1T9Y3",
+      "parent_name": "GOVERNMENT OF ABU DHABI",
+      "children": 1,
+      "family_obligated": 81634646.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "GLOBALFOUNDRIES U.S. 2 LLC"
+      ]
+    },
+    {
+      "parent_uei": "ENS6MKS1ZL18",
+      "parent_name": "CITY OF FORT WORTH",
+      "children": 1,
+      "family_obligated": -10770.0,
+      "parent_obligated": 93740.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "FORT WORTH, CITY OF"
+      ]
+    },
+    {
+      "parent_uei": "JXG6UN5FMB88",
+      "parent_name": "CITY OF LITTLE ROCK",
+      "children": 1,
+      "family_obligated": 31105.33,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "LITTLE ROCK, CITY OF"
+      ]
+    },
+    {
+      "parent_uei": "G8SCFJ32K4N5",
+      "parent_name": "CITY OF GULFPORT",
+      "children": 1,
+      "family_obligated": 67132.96,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "GULFPORT, CITY OF"
+      ]
+    },
+    {
+      "parent_uei": "YUWKM2N6N4G4",
+      "parent_name": "CITY OF TACOMA WASHINGTON",
+      "children": 1,
+      "family_obligated": -2100.0,
+      "parent_obligated": 14560.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF TACOMA"
+      ]
+    },
+    {
+      "parent_uei": "XDPYSY54JYN5",
+      "parent_name": "GOVERNMENT OF ABU DHABI",
+      "children": 1,
+      "family_obligated": 4385568.41,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ABU DHABI NATIONAL OIL COMPANY FOR DISTRIBUTION PJSC"
+      ]
+    },
+    {
+      "parent_uei": "ZK45GWUKWMH2",
+      "parent_name": "COUNTY OF ALAMEDA",
+      "children": 1,
+      "family_obligated": -200.0,
+      "parent_obligated": 18000.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ALAMEDA COUNTY SHERIFF'S OFFICE"
+      ]
+    },
+    {
+      "parent_uei": "FXV5JB3EPZ99",
+      "parent_name": "THE COMMONWEALTH OF MASSACHUSETTS",
+      "children": 1,
+      "family_obligated": -127360.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ADMINISTRATION AND FINANCE, MASSACHUSETTS EXECUTIVE OFFICE FOR"
+      ]
+    },
+    {
+      "parent_uei": "D7U7ERJWB5T8",
+      "parent_name": "STATE OF UTAH DIVISION OF TECHNOLOGY SERVICES",
+      "children": 1,
+      "family_obligated": 35450.0,
+      "parent_obligated": 12600.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "UTAH STATE GOVERNMENT LIBRARY DIVISION UTAH STATE LIBRARY"
+      ]
+    },
+    {
+      "parent_uei": "K4HGMWBXSXE1",
+      "parent_name": "CITY OF PEKIN",
+      "children": 1,
+      "family_obligated": 807352.26,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF PEKIN"
+      ]
+    },
+    {
+      "parent_uei": "F3D7ST2UGD21",
+      "parent_name": "COUNTY OF SCOTT",
+      "children": 1,
+      "family_obligated": 40870.11,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF SCOTT"
+      ]
+    },
+    {
+      "parent_uei": "GCJLGKR6PJ64",
+      "parent_name": "COUNTY OF ERIE",
+      "children": 1,
+      "family_obligated": 111500.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF ERIE"
+      ]
+    },
+    {
+      "parent_uei": "LMLJL24FC6E4",
+      "parent_name": "GOVERNMENT OF GHANA",
+      "children": 1,
+      "family_obligated": 0.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY"
+      ]
+    },
+    {
+      "parent_uei": "KFU5QJ4DNRK5",
+      "parent_name": "CITY OF DOLORES",
+      "children": 1,
+      "family_obligated": 16000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "DOLORES VOLUNTEER FIRE DEPARTMENT"
+      ]
+    },
+    {
+      "parent_uei": "XMLQEM3MEH17",
+      "parent_name": "CITY OF WATERLOO",
+      "children": 1,
+      "family_obligated": -44775.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF WATERLOO"
+      ]
+    },
+    {
+      "parent_uei": "UHS1SSVWXNE7",
+      "parent_name": "CITY OF MIDWEST CITY",
+      "children": 1,
+      "family_obligated": -881172.86,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "MIDWEST CITY PUBLIC SCHOOLS I-52"
+      ]
+    },
+    {
+      "parent_uei": "G5NPS7CPL7A3",
+      "parent_name": "KINGDOM OF SAUDI ARABIA",
+      "children": 1,
+      "family_obligated": 794696.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "SAUDI TELECOM COMPANY"
+      ]
+    },
+    {
+      "parent_uei": "G6XSV1B8MVB9",
+      "parent_name": "ANCHORAGE, MUNICIPALITY OF (INC)",
+      "children": 1,
+      "family_obligated": -2300.0,
+      "parent_obligated": 29050.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ANCHORAGE, MUNICIPALITY OF (INC)"
+      ]
+    },
+    {
+      "parent_uei": "H1SWFB9K83W3",
+      "parent_name": "COUNTY OF PERSHING",
+      "children": 1,
+      "family_obligated": 322973.67,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF PERSHING"
+      ]
+    },
+    {
+      "parent_uei": "ZPJNA9HVBUK7",
+      "parent_name": "CITY OF CLARKSBURG",
+      "children": 1,
+      "family_obligated": 263368.35,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CLARKSBURG WATER BOARD"
+      ]
+    },
+    {
+      "parent_uei": "KJT5RFPMWTK5",
+      "parent_name": "CITY OF MIAMI",
+      "children": 1,
+      "family_obligated": 0.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "MIAMI, CITY OF"
+      ]
+    },
+    {
+      "parent_uei": "LZFNZUUCC715",
+      "parent_name": "STATE OF MONTANA",
+      "children": 1,
+      "family_obligated": 115180.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "MONTANA VETERINARY DIAGNOSTIC LABOR"
+      ]
+    },
+    {
+      "parent_uei": "FS3AZ3FV8JG8",
+      "parent_name": "CITY OF MADISON",
+      "children": 1,
+      "family_obligated": 27810.0,
+      "parent_obligated": 67277.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "MADISON, CITY OF"
+      ]
+    },
+    {
+      "parent_uei": "ZLTTBUG57899",
+      "parent_name": "CITY OF PHILADELPHIA",
+      "children": 1,
+      "family_obligated": 102485.99,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "PHILADELPHIA WATER DEPARTMENT"
+      ]
+    },
+    {
+      "parent_uei": "MFC7HF5XUMG9",
+      "parent_name": "STATE OF NEW YORK",
+      "children": 1,
+      "family_obligated": 6020770.16,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CHILDREN & FAMILY SERVICES, NEW YORK OFFICE OF"
+      ]
+    },
+    {
+      "parent_uei": "D4KCZVHCLEG6",
+      "parent_name": "COMMONWEALTH OF PUERTO RICO",
+      "children": 1,
+      "family_obligated": 173760.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "AUTORIDAD METROPOLITANA DE AUTOBUSES"
+      ]
+    },
+    {
+      "parent_uei": "MMAZGB3ERDF5",
+      "parent_name": "STATE OF WYOMING",
+      "children": 1,
+      "family_obligated": 200606.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "WYOMING DEPARTMENT OF EDUCATION"
+      ]
+    },
+    {
+      "parent_uei": "NCRMJ9KJ3S58",
+      "parent_name": "STATE OF NEW HAMPSHIRE",
+      "children": 1,
+      "family_obligated": 300.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ENVIRONMENTAL SERVICES, NEW HAMPSHIRE DEPARTMENT OF"
+      ]
+    },
+    {
+      "parent_uei": "FU1BH7EBV9X3",
+      "parent_name": "OHIO STATE OF",
+      "children": 1,
+      "family_obligated": 26150.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "OHIO DEPARTMENT OF PUBLIC SAFETY, STATE HIGHWAY PATROL"
+      ]
+    },
+    {
+      "parent_uei": "CE8WGGXB5LM7",
+      "parent_name": "COUNTY OF ST LOUIS",
+      "children": 1,
+      "family_obligated": 687812.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "ST. LOUIS COUNTY, MISSOURI"
+      ]
+    },
+    {
+      "parent_uei": "CSCLSRXU38C8",
+      "parent_name": "COUNTY OF HILLSBOROUGH",
+      "children": 1,
+      "family_obligated": 1171.6,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "HILLSBOROUGH COUNTY OF"
+      ]
+    },
+    {
+      "parent_uei": "NV36UDRMCSN3",
+      "parent_name": "COUNTY OF LEE",
+      "children": 1,
+      "family_obligated": 15374.16,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF LEE"
+      ]
+    },
+    {
+      "parent_uei": "J7ZCXVNB6J71",
+      "parent_name": "COUNTY OF POLK",
+      "children": 1,
+      "family_obligated": 2000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "POLK COUNTY AUDITOR"
+      ]
+    },
+    {
+      "parent_uei": "PWPGLAUR6JW7",
+      "parent_name": "COUNTY OF CHATHAM",
+      "children": 1,
+      "family_obligated": 464697.83,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF CHATHAM"
+      ]
+    },
+    {
+      "parent_uei": "X84ESAZNLPV6",
+      "parent_name": "STATE OF MISSOURI COMMISSION ON HUMAN RIGHTS",
+      "children": 1,
+      "family_obligated": -8390.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "STATE OF MISSOURI COMMISSION ON HUMAN RIGHTS"
+      ]
+    },
+    {
+      "parent_uei": "EJEEH8S7HW17",
+      "parent_name": "STATE OF MARYLAND",
+      "children": 1,
+      "family_obligated": -2961.0,
+      "parent_obligated": -209200.11,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "PUBLIC SAFETY & CORRECTIONAL SERVICES, MARYLAND DEPT OF"
+      ]
+    },
+    {
+      "parent_uei": "PDBHW7H4J6E9",
+      "parent_name": "CITY OF ALBANY",
+      "children": 1,
+      "family_obligated": 5796.37,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF ALBANY"
+      ]
+    },
+    {
+      "parent_uei": "K2NLUMNEJJV4",
+      "parent_name": "IOWA, STATE OF",
+      "children": 1,
+      "family_obligated": 0.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "STATE OF IOWA DEPARTMENT OF COMMERCE ALCHOHOLIC BEVERAGES DIVISION"
+      ]
+    },
+    {
+      "parent_uei": "TGQANJMKHL13",
+      "parent_name": "GOVERNMENT OF JAPAN",
+      "children": 1,
+      "family_obligated": 861627521.86,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "MINISTRY OF DEFENSE"
+      ]
+    },
+    {
+      "parent_uei": "CKCXHWGMHJT7",
+      "parent_name": "CITY OF EUGENE",
+      "children": 1,
+      "family_obligated": 4879.3,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF EUGENE"
+      ]
+    },
+    {
+      "parent_uei": "MTMJASJLURL1",
+      "parent_name": "WYOMING, STATE OF",
+      "children": 1,
+      "family_obligated": 600.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "STATE OF WYOMING OCIO"
+      ]
+    },
+    {
+      "parent_uei": "HMSXEMXEGF38",
+      "parent_name": "MINISTRY OF HEALTH, LABOUR AND WELFARE",
+      "children": 1,
+      "family_obligated": -24000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 0.0,
+      "dominant_token": null,
+      "sample_children": [
+        "NATIONAL CANCER CENTER"
+      ]
+    },
+    {
+      "parent_uei": "W2NEWLAM2YM6",
+      "parent_name": "COUNTY OF CROOK",
+      "children": 1,
+      "family_obligated": -18816.0,
+      "parent_obligated": -13478.15,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CROOK COUNTY"
+      ]
+    },
+    {
+      "parent_uei": "PA32TLEZLKH7",
+      "parent_name": "STATE OF SOUTH DAKOTA",
+      "children": 1,
+      "family_obligated": -454.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "REVENUE AND REGULATION, SOUTH DAKOTA DEPARTMENT OF"
+      ]
+    },
+    {
+      "parent_uei": "JL58G7FLLMT4",
+      "parent_name": "COUNTY OF RIVERSIDE",
+      "children": 1,
+      "family_obligated": -4435.37,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "RIVERSIDE, COUNTY OF"
+      ]
+    },
+    {
+      "parent_uei": "NB1PENG4EFU5",
+      "parent_name": "CITY OF RIGGINS",
+      "children": 1,
+      "family_obligated": 12929.61,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF RIGGINS"
+      ]
+    },
+    {
+      "parent_uei": "XCUBLG2VK698",
+      "parent_name": "CITY OF HENDERSONVILLE",
+      "children": 1,
+      "family_obligated": 24000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF HENDERSONVILLE"
+      ]
+    },
+    {
+      "parent_uei": "EHJ5LMQM4DZ4",
+      "parent_name": "GOVERNMENT OF THE REPUBLIC OF KOREA",
+      "children": 1,
+      "family_obligated": 11444.12,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "KOREA RAILROAD CORPORATION SEOUL BRANCH"
+      ]
+    },
+    {
+      "parent_uei": "JA1NU8CHNTC1",
+      "parent_name": "COUNTY OF GRANT",
+      "children": 1,
+      "family_obligated": -10000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "GRANT, COUNTY OF"
+      ]
+    },
+    {
+      "parent_uei": "E48TWBYADSQ5",
+      "parent_name": "COUNTY OF MARIN",
+      "children": 1,
+      "family_obligated": -2043.75,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF MARIN"
+      ]
+    },
+    {
+      "parent_uei": "WWMNH261LJT7",
+      "parent_name": "COUNTY OF WARREN",
+      "children": 1,
+      "family_obligated": 15369.51,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "WARREN COUNTY COMMISSIONERS"
+      ]
+    },
+    {
+      "parent_uei": "CERTDD6LKE95",
+      "parent_name": "COUNTY OF RIVERSIDE",
+      "children": 1,
+      "family_obligated": -6183.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "RIVERSIDE, COUNTY OF"
+      ]
+    },
+    {
+      "parent_uei": "YLX2B1GBX891",
+      "parent_name": "COUNTY OF NAPA",
+      "children": 1,
+      "family_obligated": 289317.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF NAPA"
+      ]
+    },
+    {
+      "parent_uei": "NEY4K8UGN985",
+      "parent_name": "COUNTY OF HEMPSTEAD",
+      "children": 1,
+      "family_obligated": 33920.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "COUNTY OF HEMPSTEAD"
+      ]
+    },
+    {
+      "parent_uei": "JFEXUQU4LQV4",
+      "parent_name": "CITY OF BOULDER CITY",
+      "children": 1,
+      "family_obligated": 250000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF BOULDER CITY"
+      ]
+    },
+    {
+      "parent_uei": "CTCMTRLMYMS9",
+      "parent_name": "STATE OF GEORGIA",
+      "children": 1,
+      "family_obligated": 46968.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "GEORGIA PUBLIC TELECOMMUNICATIONS COMMISSION"
+      ]
+    },
+    {
+      "parent_uei": "VK2DNC86A4Q2",
+      "parent_name": "COMMONWEALTH OF KENTUCKY",
+      "children": 1,
+      "family_obligated": -1263370.2,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "PUBLIC PROTECTION CABINET- KENTUCKY"
+      ]
+    },
+    {
+      "parent_uei": "UWH4ZXKP9PG4",
+      "parent_name": "COUNTY OF BUTTE",
+      "children": 1,
+      "family_obligated": 4000.0,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "BUTTE, COUNTY OF"
+      ]
+    },
+    {
+      "parent_uei": "FFQGKM77GAV3",
+      "parent_name": "COUNTY OF KITSAP",
+      "children": 1,
+      "family_obligated": 10647.09,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "KITSAP 911 PUBLIC AUTHORITY"
+      ]
+    },
+    {
+      "parent_uei": "X9UKXNMYN768",
+      "parent_name": "CITY OF DETROIT",
+      "children": 1,
+      "family_obligated": 83058.65,
+      "parent_obligated": 0.0,
+      "reasons": [
+        "sovereign_or_government_entity"
+      ],
+      "parent_name_reach_in_children": 1.0,
+      "dominant_token": null,
+      "sample_children": [
+        "CITY OF DETROIT WATER & SEWERAGE"
+      ]
+    }
+  ]
+}

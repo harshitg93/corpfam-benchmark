@@ -1,0 +1,21 @@
+{
+  "population": "all positive links in the benchmark",
+  "links": 13716,
+  "total_obligated": 329013152403.44,
+  "links_with_zero_obligated": 2092,
+  "spend_concentration": {
+    "top_1pct_share_pct": 77.43,
+    "top_5pct_share_pct": 92.79,
+    "top_10pct_share_pct": 96.79
+  },
+  "supersedes": "ground_truth_audit.json spend_on_genuine_links, which was computed on an interrupted sorted API fetch in which nearly every UEI begins with 'C' and which is not a population sample",
+  "parent_footprint": {
+    "distinct_parents": 10307,
+    "distinct_children": 13716,
+    "parents_appearing_as_an_award_recipient": 608,
+    "parents_with_no_operating_footprint": 9699,
+    "pct_parents_transacting": 5.9,
+    "pct_parents_no_footprint": 94.1,
+    "why_it_matters": "A parent that never receives an award has no address, phone or location in this data. Attribute-based matching has nothing to compare on the parent side for the large majority of families, which is a structural property of holding companies rather than a shortcoming of the source."
+  }
+}
